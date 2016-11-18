@@ -1,8 +1,11 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,7 +17,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
+        implements NavigationView.OnNavigationItemSelectedListener,
+        MainFragment.OnFragmentInteractionListener {
+
+    FragmentManager fm = getSupportFragmentManager();
+    FragmentTransaction ft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +29,12 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Host main Fragment
+        ft = fm.beginTransaction();
+        ft.replace(R.id.mainFragmenLayout, new MainFragment());
+        ft.addToBackStack("tag");
+        ft.commit();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -81,25 +94,63 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_hotel) {
-            // Handle the camera action
+            // Handle the hotel action here
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.addToBackStack("tag");
+            ft.commit();
+
         } else if (id == R.id.nav_restaurants) {
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.addToBackStack("tag");
+            ft.commit();
 
         } else if (id == R.id.nav_beach) {
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.addToBackStack("tag");
+            ft.commit();
 
         } else if (id == R.id.nav_clubs) {
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.addToBackStack("tag");
+            ft.commit();
 
         } else if (id == R.id.nav_airport) {
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.addToBackStack("tag");
+            ft.commit();
 
         } else if (id == R.id.nav_other) {
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.addToBackStack("tag");
+            ft.commit();
 
-        }else if (id == R.id.nav_transport){
+        } else if (id == R.id.nav_transport) {
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.addToBackStack("tag");
+            ft.commit();
 
-        }else if (id == R.id.nav_emergency){
+        } else if (id == R.id.nav_emergency) {
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.addToBackStack("tag");
+            ft.commit();
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
