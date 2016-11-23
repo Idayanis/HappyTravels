@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity
         ft.replace(R.id.mainFragmenLayout, new MainFragment());
         ft.addToBackStack("tag");
         ft.commit();
+<<<<<<< HEAD
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+=======
+>>>>>>> maihan
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -80,7 +83,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_reset) {
             return true;
         }
 
