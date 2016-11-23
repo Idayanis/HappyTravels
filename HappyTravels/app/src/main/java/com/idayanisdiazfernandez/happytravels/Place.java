@@ -6,7 +6,7 @@ import java.lang.reflect.Array;
  * Created by idasarav on 2016-11-16.
  */
 
-public class Places {
+public class Place {
 
     String name;
     String Description;
