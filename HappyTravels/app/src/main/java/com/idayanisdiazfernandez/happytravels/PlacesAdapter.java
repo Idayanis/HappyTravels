@@ -52,7 +52,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
         Place place = placeList.get(position);
         holder.title.setText(place.getName());
 
-        // loading album cover using Glide library
+        // loading place cover using Glide library
         holder.thumbnail.setImageResource(place.getThumbnail());
 
         holder.thumbnail.setOnClickListener(new View.OnClickListener() {

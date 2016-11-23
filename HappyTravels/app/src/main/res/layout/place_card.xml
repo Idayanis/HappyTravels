@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/thumbnail"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/album_cover_height"
+            android:layout_height="@dimen/place_cover_height"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:scaleType="fitXY" />
@@ -26,10 +26,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/thumbnail"
-            android:paddingLeft="@dimen/album_title_padding"
-            android:paddingRight="@dimen/album_title_padding"
-            android:paddingTop="@dimen/album_title_padding"
-            android:textSize="@dimen/album_title" />
+            android:paddingLeft="@dimen/place_title_padding"
+            android:paddingRight="@dimen/place_title_padding"
+            android:paddingTop="@dimen/place_title_padding"
+            android:textSize="@dimen/place_title" />
 
     </android.support.v7.widget.CardView>
 
