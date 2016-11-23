@@ -465,8 +465,6 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="backdrop_subtitle">18dp</dimen>
-    <dimen name="backdrop_title">30dp</dimen>
     <dimen name="card_margin">5dp</dimen>
     <dimen name="card_place_radius">0dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
@@ -510,7 +508,6 @@
     <dimen name="design_tab_scrollable_min_width">72dp</dimen>
     <dimen name="design_tab_text_size">14sp</dimen>
     <dimen name="design_tab_text_size_2line">12sp</dimen>
-    <dimen name="detail_backdrop_height">250dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
