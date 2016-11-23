@@ -96,7 +96,7 @@ public class MainFragment extends Fragment {
         initPlaces();
 
         try {
-            Glide.with(getActivity().getApplicationContext().getClassLoader(R.drawable.cover).into((ImageView) view.findViewById(R.id.backgrop)))
+            Glide.with(getActivity().getApplicationContext()).load(R.drawable.place1).into((ImageView) view.findViewById(R.id.backdrop));
         } catch (Exception e){
             e.printStackTrace();
         }
