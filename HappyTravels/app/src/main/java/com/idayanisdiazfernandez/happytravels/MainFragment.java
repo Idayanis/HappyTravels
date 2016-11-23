@@ -1,18 +1,19 @@
 package com.idayanisdiazfernandez.happytravels;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,17 +96,11 @@ public class MainFragment extends Fragment {
         // Initialize places
         initPlaces();
 
-        try {
-            Glide.with(getActivity().getApplicationContext()).load(R.drawable.place1).into((ImageView) view.findViewById(R.id.backdrop));
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-
         return view;
     }
 
     /**
-     * Adding few albums for testing
+     * Adding few places for testing
      */
     private void initPlaces() {
         int[] covers = new int[]{

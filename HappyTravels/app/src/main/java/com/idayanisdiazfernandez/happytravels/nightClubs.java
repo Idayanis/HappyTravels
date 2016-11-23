@@ -7,4 +7,8 @@ package com.idayanisdiazfernandez.happytravels;
 public class nightClubs extends Place {
 
     String drinks;
+
+    public nightClubs(String name, double price, int thumbnail) {
+        super(name, price, thumbnail);
+    }
 }

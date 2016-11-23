@@ -7,4 +7,8 @@ package com.idayanisdiazfernandez.happytravels;
 public class Airports extends Place {
 
     String flightsAvailability;
+
+    public Airports(String name, double price, int thumbnail) {
+        super(name, price, thumbnail);
+    }
 }

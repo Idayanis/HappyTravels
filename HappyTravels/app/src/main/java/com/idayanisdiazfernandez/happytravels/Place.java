@@ -13,6 +13,11 @@ public class Place {
     String photos;
     int thumbnail;
 
+    // Empty constructor
+    public Place(){
+
+    }
+
 
     public Place(String name, double price, int thumbnail) {
         this.name = name;

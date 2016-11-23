@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-
 import java.util.List;
+
+import static com.idayanisdiazfernandez.happytravels.R.id.thumbnail;
 
 /**
  * Created by MaihanNijat on 2016-11-22.
@@ -25,13 +25,12 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title;
-        public ImageView thumbnail, overflow;
+        public ImageView thumbnail;
 
         public MyViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
-            //overflow = (ImageView) view.findViewById(R.id.overflow);
         }
     }
 
@@ -41,7 +40,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
     }
 
     @Override
-    public PlacesAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.place_card, parent, false);
 
@@ -54,9 +53,9 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
         holder.title.setText(place.getName());
 
         // loading album cover using Glide library
-        Glide.with(mContext).load(place.getThumbnail()).into(holder.thumbnail);
+        holder.thumbnail.setImageResource(place.getThumbnail());
 
-        holder.overflow.setOnClickListener(new View.OnClickListener() {
+        holder.thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(mContext, "The place is tapped.", Toast.LENGTH_SHORT).show();
