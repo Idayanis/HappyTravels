@@ -8,13 +8,17 @@ import java.lang.reflect.Array;
 
 public class Place {
 
-    String name;
-    String Description;
-    String Price;
-    String Timing;
-    String Photos;
-    String Address;
-    String ContactInfo;
-    String[] Tips = {};
+    String name, description, timing, address, contactInfo;
+    double price;
+    String photos;
+    int thumbnail;
+
+
+    public Place(String name, double price, int thumbnail) {
+        this.name = name;
+        this.price = price;
+        this.thumbnail = thumbnail;
+    }
+
 
 }
