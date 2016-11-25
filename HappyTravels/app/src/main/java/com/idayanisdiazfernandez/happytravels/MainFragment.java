@@ -1,12 +1,31 @@
 package com.idayanisdiazfernandez.happytravels;
 
 import android.content.Context;
+<<<<<<< HEAD
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+=======
+import android.content.res.Resources;
+import android.graphics.Rect;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import java.util.ArrayList;
+import java.util.List;
+>>>>>>> maihan
 
 
 /**
@@ -18,6 +37,15 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class MainFragment extends Fragment {
+<<<<<<< HEAD
+=======
+
+    // Create RecycleView, PlaceAdapter and List variables
+    private RecyclerView recyclerView;
+    private PlacesAdapter adapter;
+    private List<Place> placeList;
+
+>>>>>>> maihan
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -64,7 +92,77 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+<<<<<<< HEAD
         return inflater.inflate(R.layout.fragment_main, container, false);
+=======
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+
+        placeList = new ArrayList<>();
+        adapter = new PlacesAdapter(getActivity().getApplicationContext(), placeList);
+
+        // The GridLayout is used for displaying content instead of default list.
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 2);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator()); // use default animation.
+        recyclerView.setAdapter(adapter);
+
+        // Initialize places
+        initPlaces();
+
+        return view;
+    }
+
+    /**
+     * Adding few places for testing
+     */
+    private void initPlaces() {
+        int[] covers = new int[]{
+                R.drawable.place1,
+                R.drawable.place2,
+                R.drawable.place3,
+                R.drawable.place4,
+                R.drawable.place5,
+                R.drawable.place6,
+                R.drawable.place7,
+                R.drawable.place8,
+                R.drawable.place9,
+                R.drawable.place10,
+                R.drawable.place11};
+
+        Place a = new Place("True Romance", 13, covers[0]);
+        placeList.add(a);
+
+        a = new Place("Xscpae", 8, covers[1]);
+        placeList.add(a);
+
+        a = new Place("Maroon 5", 11, covers[2]);
+        placeList.add(a);
+
+        a = new Place("Born to Die", 12, covers[3]);
+        placeList.add(a);
+
+        a = new Place("Honeymoon", 14, covers[4]);
+        placeList.add(a);
+
+        a = new Place("I Need a Doctor", 1, covers[5]);
+        placeList.add(a);
+
+        a = new Place("Loud", 11, covers[6]);
+        placeList.add(a);
+
+        a = new Place("Legend", 14, covers[7]);
+        placeList.add(a);
+
+        a = new Place("Hello", 11, covers[8]);
+        placeList.add(a);
+
+        a = new Place("Greatest Hits", 17, covers[9]);
+        placeList.add(a);
+
+        adapter.notifyDataSetChanged();
+>>>>>>> maihan
     }
 
     // TODO: Rename method, update argument and hook method into UI event
