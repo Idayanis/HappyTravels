@@ -6,7 +6,7 @@ package com.idayanisdiazfernandez.happytravels;
 
 public class Hotels extends Place {
 
-    public Hotels(String name, double price, int thumbnail) {
-        super(name, price, thumbnail);
+    public Hotels(String name, double price, int thumbnail, String placeType) {
+        super(name, price, thumbnail, placeType);
     }
 }

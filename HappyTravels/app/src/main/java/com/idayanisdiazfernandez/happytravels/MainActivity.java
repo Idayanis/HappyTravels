@@ -35,18 +35,6 @@ public class MainActivity extends AppCompatActivity
         ft.replace(R.id.mainFragmenLayout, new MainFragment());
         ft.addToBackStack("tag");
         ft.commit();
-<<<<<<< HEAD
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-=======
->>>>>>> maihan
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
