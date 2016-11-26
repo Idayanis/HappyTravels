@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c4ed13a-9b07-4f27-be00-860d308d6e3b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_hotel.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_hotel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_emergency.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_emergency.xml" />
     </list>
     <ignored path="HappyTravels.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,24 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fragment_restaurants.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_restaurants.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_hotel.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hotel.xml">
+      <file leaf-file-name="fragment_emergency.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_emergency.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="345">
+              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
               <folding>
                 <element signature="e#861#888#0" expanded="true" />
                 <element signature="e#1262#1290#0" expanded="true" />
@@ -1821,6 +1808,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/place_card.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_restaurants.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_hotel.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_emergency.xml" />
       </list>
     </option>
   </component>
@@ -2629,17 +2617,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_trasportation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="39" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/place1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2689,6 +2666,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding>
+            <element signature="e#861#888#0" expanded="true" />
+            <element signature="e#1262#1290#0" expanded="true" />
+            <element signature="e#1328#1356#0" expanded="true" />
+            <element signature="e#1392#1420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_trasportation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="39" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_emergency.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
           <folding>
             <element signature="e#861#888#0" expanded="true" />
             <element signature="e#1262#1290#0" expanded="true" />
