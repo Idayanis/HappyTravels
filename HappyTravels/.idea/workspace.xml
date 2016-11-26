@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c4ed13a-9b07-4f27-be00-860d308d6e3b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_clubs_fragments.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_clubs_fragments.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_beach.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_beach.xml" />
     </list>
     <ignored path="HappyTravels.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,16 +54,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_clubs_fragments.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_clubs_fragments.xml">
+      <file leaf-file-name="fragment_beach.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_beach.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+            <state relative-caret-position="120">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding>
-                <element signature="e#862#889#0" expanded="true" />
-                <element signature="e#1263#1291#0" expanded="true" />
-                <element signature="e#1329#1357#0" expanded="true" />
-                <element signature="e#1393#1421#0" expanded="true" />
+                <element signature="e#861#888#0" expanded="true" />
+                <element signature="e#1262#1290#0" expanded="true" />
+                <element signature="e#1328#1356#0" expanded="true" />
+                <element signature="e#1392#1420#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1810,6 +1810,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_hotel.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_emergency.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_clubs_fragments.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_beach.xml" />
       </list>
     </option>
   </component>
@@ -2628,11 +2629,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/place9.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_hotel.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -2696,11 +2692,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/place4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/place10.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2715,6 +2706,32 @@
             <element signature="e#1263#1291#0" expanded="true" />
             <element signature="e#1329#1357#0" expanded="true" />
             <element signature="e#1393#1421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/place9.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/place4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_beach.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding>
+            <element signature="e#861#888#0" expanded="true" />
+            <element signature="e#1262#1290#0" expanded="true" />
+            <element signature="e#1328#1356#0" expanded="true" />
+            <element signature="e#1392#1420#0" expanded="true" />
           </folding>
         </state>
       </provider>
