@@ -1,5 +1,8 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,13 +14,12 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import static com.idayanisdiazfernandez.happytravels.R.id.thumbnail;
-
 /**
  * Created by MaihanNijat on 2016-11-22.
  */
 
 public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHolder> {
+
 
     // Create variables
     private Context mContext;
@@ -45,12 +47,15 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                 .inflate(R.layout.place_card, parent, false);
 
         return new MyViewHolder(itemView);
+
+
     }
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        Place place = placeList.get(position);
+        final Place place = placeList.get(position);
         holder.title.setText(place.getName());
+
 
         // loading place cover using Glide library
         holder.thumbnail.setImageResource(place.getThumbnail());
@@ -58,9 +63,18 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
         holder.thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext, "The place is tapped.", Toast.LENGTH_SHORT).show();
+                FragmentManager fm = (((Activity)mContext).getFragmentManager());
+                FragmentTransaction ft = fm.beginTransaction();
+
+                if(place.getPlaceType() == "hotel") {
+                    ft.replace(R.id.mainFragmenLayout, new restaurantsFragment());
+                    Toast.makeText(mContext, "The hotel is tapped.", Toast.LENGTH_SHORT).show();
+                } else if(place.getPlaceType() == "restaurant"){
+                    Toast.makeText(mContext, "The restaurant is tapped.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
     }
 
     @Override

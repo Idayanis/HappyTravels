@@ -8,7 +8,7 @@ public class Airports extends Place {
 
     String flightsAvailability;
 
-    public Airports(String name, double price, int thumbnail) {
-        super(name, price, thumbnail);
+    public Airports(String name, double price, int thumbnail, String placeType) {
+        super(name, price, thumbnail, placeType);
     }
 }

@@ -8,7 +8,7 @@ import java.lang.reflect.Array;
 
 public class Place {
 
-    String name, description, timing, address, contactInfo;
+    String name, description, timing, address, contactInfo, placeType;
     double price;
     String photos;
     int thumbnail;
@@ -19,9 +19,10 @@ public class Place {
     }
 
 
-    public Place(String name, double price, int thumbnail) {
+    public Place(String name, double price, int thumbnail, String placeType) {
         this.name = name;
         this.price = price;
+        this.placeType = placeType;
         this.thumbnail = thumbnail;
     }
 
@@ -49,5 +50,13 @@ public class Place {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPlaceType() {
+        return placeType;
+    }
+
+    public void setPlaceType(String placeType) {
+        this.placeType = placeType;
     }
 }

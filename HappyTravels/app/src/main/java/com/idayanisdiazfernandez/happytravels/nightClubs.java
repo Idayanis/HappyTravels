@@ -8,7 +8,7 @@ public class nightClubs extends Place {
 
     String drinks;
 
-    public nightClubs(String name, double price, int thumbnail) {
-        super(name, price, thumbnail);
+    public nightClubs(String name, double price, int thumbnail, String placeType) {
+        super(name, price, thumbnail, placeType);
     }
 }
