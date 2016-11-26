@@ -33,7 +33,6 @@
                 android:paddingRight="@dimen/place_title_padding"
                 android:paddingTop="@dimen/place_title_padding"
                 android:text="TRANSPORTATION"
-                android:textAlignment="viewStart"
                 android:textSize="20dp"
                 android:fontFamily="sans-serif-smallcaps" />
         </LinearLayout>
