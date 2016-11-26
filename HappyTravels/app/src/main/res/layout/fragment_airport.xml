@@ -1,13 +1,42 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.idayanisdiazfernandez.happytravels.airportFragment">
+    android:layout_height="wrap_content">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:src="@drawable/place11"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/place_cover_height"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/hotelTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/place_title_padding"
+                android:paddingRight="@dimen/place_title_padding"
+                android:paddingTop="@dimen/place_title_padding"
+                android:text="AIRPORT"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-smallcaps" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
 </FrameLayout>
