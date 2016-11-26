@@ -9,8 +9,8 @@ public class Restaurant extends Place {
     String TypeOfFood;
 
 
-    public Restaurant(String name, double price, int thumbnail) {
-        super(name, price, thumbnail);
+    public Restaurant(String name, double price, int thumbnail, String placeType) {
+        super(name, price, thumbnail, placeType);
     }
 
 }
