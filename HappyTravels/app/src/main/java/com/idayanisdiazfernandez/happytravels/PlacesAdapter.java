@@ -19,6 +19,7 @@ import java.util.List;
  */
 
 public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHolder> {
+    FragmentManager fragmentManager = null;
 
 
     // Create variables
@@ -36,9 +37,10 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
         }
     }
 
-    public PlacesAdapter(Context mContext, List<Place> placeList) {
+    public PlacesAdapter(Context mContext, List<Place> placeList, FragmentManager fragmentManager) {
         this.mContext = mContext;
         this.placeList = placeList;
+        this.fragmentManager = fragmentManager;
     }
 
     @Override
@@ -63,11 +65,12 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
         holder.thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fm = (((Activity)mContext).getFragmentManager());
-                FragmentTransaction ft = fm.beginTransaction();
+                //FragmentManager fm = (((Activity)mContext).getFragmentManager());
+                FragmentTransaction ft = fragmentManager.beginTransaction();
 
                 if(place.getPlaceType() == "hotel") {
-                    ft.replace(R.id.mainFragmenLayout, new restaurantsFragment());
+                    ft.replace(R.id.mainFragmenLayout, new hotelFragment());
+                    ft.addToBackStack("tag").commit();
                     Toast.makeText(mContext, "The hotel is tapped.", Toast.LENGTH_SHORT).show();
                 } else if(place.getPlaceType() == "restaurant"){
                     Toast.makeText(mContext, "The restaurant is tapped.", Toast.LENGTH_SHORT).show();

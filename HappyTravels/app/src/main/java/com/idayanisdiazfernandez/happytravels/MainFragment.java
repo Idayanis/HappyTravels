@@ -1,11 +1,10 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -27,6 +26,7 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class MainFragment extends Fragment {
+    FragmentManager fragmentManager = null;
 
     // Create RecycleView, PlaceAdapter and List variables
     private RecyclerView recyclerView;
@@ -84,8 +84,10 @@ public class MainFragment extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
 
+        fragmentManager = getFragmentManager();
+
         placeList = new ArrayList<>();
-        adapter = new PlacesAdapter(getActivity().getApplicationContext(), placeList);
+        adapter = new PlacesAdapter(getActivity().getApplicationContext(), placeList, fragmentManager);
 
         // The GridLayout is used for displaying content instead of default list.
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 2);
