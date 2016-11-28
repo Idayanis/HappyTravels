@@ -1,6 +1,8 @@
 package com.idayanisdiazfernandez.happytravels;
 
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.FragmentManager;
@@ -12,17 +14,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        MainFragment.OnFragmentInteractionListener {
+        MainFragment.OnFragmentInteractionListener,
+        ThemeFragment.OnFragmentInteractionListener{
 
     FragmentManager fm = getFragmentManager();
     FragmentTransaction ft;
 
+    public static SharedPreferences mSharedPreferences;
+    public static SharedPreferences.Editor mEditor;
+    public static String STYLE_KEY = "STYLE_KEY";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Apply custom theme using SharedPreferences and getTheme().applyStyle.
+        mSharedPreferences = this.getPreferences(Context.MODE_PRIVATE);
+        mEditor = mSharedPreferences.edit();
+
+        if (mSharedPreferences == null) {
+            getTheme().applyStyle(R.style.AppTheme, true);
+        } else getTheme().applyStyle(mSharedPreferences.getInt(STYLE_KEY, -1), true);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -68,8 +85,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_reset) {
-            return true;
+        if (id == R.id.action_themes) {
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new ThemeFragment()).addToBackStack("tag").commit();
         }
 
         return super.onOptionsItemSelected(item);
@@ -141,4 +159,11 @@ public class MainActivity extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+    // Custom Shared Preferences method for applying theme.
+    public static void setStyleKey(int styleKey){
+        mEditor.putInt(STYLE_KEY, styleKey);
+        mEditor.apply();
+    }
+
 }

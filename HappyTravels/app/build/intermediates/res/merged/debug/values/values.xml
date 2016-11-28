@@ -493,6 +493,7 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_toolbar_margin">20dp</dimen>
     <dimen name="card_margin">5dp</dimen>
     <dimen name="card_place_radius">0dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
@@ -568,6 +569,12 @@
     <dimen name="place_cover_height">160dp</dimen>
     <dimen name="place_title">15dp</dimen>
     <dimen name="place_title_padding">10dp</dimen>
+    <dimen name="text_horizontal_padding">5dp</dimen>
+    <dimen name="text_size">17sp</dimen>
+    <dimen name="text_vertical_padding">10dp</dimen>
+    <dimen name="theme_button_margin">5dp</dimen>
+    <dimen name="title_margin">10dp</dimen>
+    <dimen name="title_text_size">18sp</dimen>
     <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
     <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
     <item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item>
@@ -630,13 +637,25 @@
     <string name="action_settings">Settings</string>
     <string name="app_name">HappyTravels</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="blue">Blue</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="brown">Brown</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="cyan">Cyan</string>
+    <string name="deep_orange">Deep Orange</string>
+    <string name="green">Green</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="indigo">Indigo</string>
+    <string name="light_green">Light Green</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="orange">Orange</string>
+    <string name="pink">Pink</string>
+    <string name="purple">Purple</string>
+    <string name="red">Red</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="teal">Teal</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -645,7 +664,7 @@
         <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryDark">@color/dark_blue</item>
         <item name="colorAccent">@color/color_accent</item>
@@ -1675,7 +1694,7 @@
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
     </style>
-    <style name="BrownTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="BrownTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/brown</item>
         <item name="colorPrimaryDark">@color/dark_brown</item>
         <item name="colorAccent">@color/color_accent</item>
@@ -1689,43 +1708,43 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
-    <style name="CyanTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="CyanTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/cyan</item>
         <item name="colorPrimaryDark">@color/dark_cyan</item>
         <item name="colorAccent">@color/color_accent</item>
         <item name="colorButtonNormal">@color/cyan</item>
     </style>
-    <style name="DeepOrange" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="DeepOrange" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/deep_orange</item>
         <item name="colorPrimaryDark">@color/dark_deep_orange</item>
         <item name="colorAccent">@color/color_accent</item>
         <item name="colorButtonNormal">@color/deep_orange</item>
     </style>
-    <style name="GreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="GreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/green</item>
         <item name="colorPrimaryDark">@color/dark_green</item>
         <item name="colorAccent">@color/color_accent</item>
         <item name="colorButtonNormal">@color/green</item>
     </style>
-    <style name="IndigoTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="IndigoTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/indigo</item>
         <item name="colorPrimaryDark">@color/dark_indigo</item>
         <item name="colorAccent">@color/color_accent</item>
         <item name="colorButtonNormal">@color/indigo</item>
     </style>
-    <style name="LightGreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="LightGreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/light_green</item>
         <item name="colorPrimaryDark">@color/dark_deep_green</item>
         <item name="colorAccent">@color/color_accent</item>
         <item name="colorButtonNormal">@color/light_green</item>
     </style>
-    <style name="OrangeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="OrangeTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/orange</item>
         <item name="colorPrimaryDark">@color/dark_orange</item>
         <item name="colorAccent">@color/color_accent</item>
         <item name="colorButtonNormal">@color/orange</item>
     </style>
-    <style name="PinkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="PinkTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/pink</item>
         <item name="colorPrimaryDark">@color/dark_pink</item>
         <!-- The accent color for other styles is pink which doesn't match with pink-->
@@ -1838,13 +1857,13 @@
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>
     <style name="Platform.Widget.AppCompat.Spinner" parent="android:Widget.Spinner"/>
-    <style name="PurpleTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="PurpleTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/purple</item>
         <item name="colorPrimaryDark">@color/dark_purple</item>
         <item name="colorAccent">@color/color_accent</item>
         <item name="colorButtonNormal">@color/purple</item>
     </style>
-    <style name="RedTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="RedTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/red</item>
         <item name="colorPrimaryDark">@color/dark_red</item>
         <!-- The accent color for other styles is pink which doesn't match with red-->
@@ -1897,7 +1916,7 @@
         <item name="android:paddingLeft">@dimen/abc_action_bar_overflow_padding_start_material</item>
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
     </style>
-    <style name="TealTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="TealTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/teal</item>
         <item name="colorPrimaryDark">@color/dark_teal</item>
         <item name="colorAccent">@color/color_accent</item>

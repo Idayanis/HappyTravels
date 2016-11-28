@@ -1,16 +1,16 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.app.DialogFragment;
+import android.app.Fragment;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import static com.idayanisdiazfernandez.happytravels.MainActivity.setStyleKey;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,7 +20,7 @@ import android.widget.Button;
  * Use the {@link ThemeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ThemeFragment extends Fragment implements View.OnClickListener {
+public class ThemeFragment extends DialogFragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,12 +29,6 @@ public class ThemeFragment extends Fragment implements View.OnClickListener {
     // Create style buttons
     Button redButton, pinkButton, purpleButton, indigoButton, blueButton, cyanButton, tealButton,
             greenButton, lightGreenButton, orangeButton, deepOrangeButton, brownButton;
-
-    // Create shared preferences
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor perferencesEditor = sharedPreferences.edit();
-
-    public static final String STYLE_KEY = "STYLE_KEY";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -151,51 +145,51 @@ public class ThemeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_red: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.RedTheme);
+                setStyleKey(R.style.RedTheme);
                 break;
             }
             case R.id.button_pink: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.PinkTheme);
+                setStyleKey(R.style.PinkTheme);
                 break;
             }
             case R.id.button_purple: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.PurpleTheme);
+                setStyleKey(R.style.PurpleTheme);
                 break;
             }
             case R.id.button_indigo: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.IndigoTheme);
+                setStyleKey(R.style.IndigoTheme);
                 break;
             }
             case R.id.button_blue: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.AppTheme); // default theme
+                setStyleKey(R.style.AppTheme); // default theme
                 break;
             }
             case R.id.button_cyan: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.CyanTheme);
+                setStyleKey(R.style.CyanTheme);
                 break;
             }
             case R.id.button_teal: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.TealTheme);
+                //preferencesEditor.putInt(STYLE_KEY, R.style.TealTheme);
                 break;
             }
             case R.id.button_green: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.GreenTheme);
+                setStyleKey(R.style.GreenTheme);
                 break;
             }
             case R.id.button_light_green: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.LightGreenTheme);
+                setStyleKey(R.style.LightGreenTheme);
                 break;
             }
             case R.id.button_orange: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.OrangeTheme);
+                setStyleKey(R.style.OrangeTheme);
                 break;
             }
             case R.id.button_deep_orange: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.DeepOrange);
+                setStyleKey(R.style.DeepOrange);
                 break;
             }
             case R.id.button_brown: {
-                perferencesEditor.putInt(STYLE_KEY, R.style.BrownTheme);
+                setStyleKey(R.style.BrownTheme);
                 break;
             }
         }
