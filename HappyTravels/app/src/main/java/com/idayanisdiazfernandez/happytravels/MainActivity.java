@@ -19,8 +19,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        MainFragment.OnFragmentInteractionListener,
-        ThemeFragment.OnFragmentInteractionListener{
+        MainFragment.OnFragmentInteractionListener {
 
     FragmentManager fm = getFragmentManager();
     FragmentTransaction ft;
@@ -87,10 +86,9 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_themes) {
-            ft = fm.beginTransaction();
-            ft.replace(R.id.mainFragmenLayout, new ThemeFragment()).addToBackStack("tag").commit();
-        } else if(id == R.id.action_reset){
             showDialog();
+        } else if (id == R.id.action_reset) {
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -164,11 +162,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     // Custom Shared Preferences method for applying theme.
-    public static void setStyleKey(int styleKey){
+    public static void setStyleKey(int styleKey) {
         mEditor.putInt(STYLE_KEY, styleKey);
         mEditor.apply();
     }
 
+    /**
+     * The showDialog method which instantiates object from ThemeDialogFragment.
+     */
     void showDialog() {
         // Create the fragment and show it as a dialog.
         DialogFragment themeDialogFragment = ThemeDialogFragment.newInstance();
