@@ -53,6 +53,17 @@
         android:fontFamily="serif" />
 
     <TextView
+        android:text="Phone Number:  +53 24 468414"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phoneNumber"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="normal|bold"
+        android:fontFamily="serif"/>
+
+    <TextView
         android:text="Location: Carretera Central, Via Bayamo Km 15, Holguin, Cuba"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
