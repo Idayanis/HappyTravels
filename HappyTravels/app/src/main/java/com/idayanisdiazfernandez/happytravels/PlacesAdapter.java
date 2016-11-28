@@ -82,7 +82,23 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                     ft.replace(R.id.mainFragmenLayout, new clubsFragments());
                     ft.addToBackStack("tag").commit();
 
+                }else if (place.getPlaceType() == "airports"){
+                    ft.replace(R.id.mainFragmenLayout, new airportFragment());
+                    ft.addToBackStack("tag").commit();
+
+                }else if (place.getPlaceType() == "transportation"){
+                    ft.replace(R.id.mainFragmenLayout, new trasportationFragment());
+                    ft.addToBackStack("tag").commit();
+
+                }else if (place.getPlaceType() == "emergency"){
+                    ft.replace(R.id.mainFragmenLayout, new emergencyFragment());
+                    ft.addToBackStack("tag").commit();
+
+                }else if (place.getPlaceType() ==  "place"){
+                    ft.replace(R.id.mainFragmenLayout, new placeFragment());
+                    ft.addToBackStack("tag").commit();
                 }
+
             }
         });
 
