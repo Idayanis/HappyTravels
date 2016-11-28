@@ -1,9 +1,13 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +26,10 @@ public class GalleryFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    // Create Adapter and ViewPager
+    private GallerySliderAdapter gallerySliderAdapter;
+    ViewPager viewPager;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -64,7 +72,13 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+        View view =  inflater.inflate(R.layout.fragment_gallery, container, false);
+
+        gallerySliderAdapter = new GallerySliderAdapter(getActivity().getSupportFragmentManager());
+        viewPager = (ViewPager) view.findViewById(R.id.viewPager);
+        viewPager.setAdapter(gallerySliderAdapter);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -104,5 +118,23 @@ public class GalleryFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public class GallerySliderAdapter extends FragmentPagerAdapter {
+
+        public GallerySliderAdapter(android.support.v4.app.FragmentManager fragmentManager) {
+            super(fragmentManager);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return new GalleryFragment();
+        }
+
+        @Override
+        public int getCount() {
+            // Show 4 total pages.
+            return 5;
+        }
     }
 }

@@ -23,7 +23,8 @@ import java.io.File;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        MainFragment.OnFragmentInteractionListener {
+        MainFragment.OnFragmentInteractionListener,
+        GalleryFragment.OnFragmentInteractionListener{
 
     FragmentManager fm = getFragmentManager();
     FragmentTransaction ft;
