@@ -71,10 +71,34 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                 if(place.getPlaceType() == "hotel") {
                     ft.replace(R.id.mainFragmenLayout, new hotelFragment());
                     ft.addToBackStack("tag").commit();
-                    Toast.makeText(mContext, "The hotel is tapped.", Toast.LENGTH_SHORT).show();
-                } else if(place.getPlaceType() == "restaurant"){
-                    Toast.makeText(mContext, "The restaurant is tapped.", Toast.LENGTH_SHORT).show();
+                } else if(place.getPlaceType() == "beach"){
+                   ft.replace(R.id.mainFragmenLayout, new beachFragment());
+                    ft.addToBackStack("tag").commit();
+                }else if(place.getPlaceType() == "restaurant"){
+                    ft.replace(R.id.mainFragmenLayout, new restaurantsFragment());
+                    ft.addToBackStack("tag").commit();
+
+                }else if (place.getPlaceType() == "nightClub"){
+                    ft.replace(R.id.mainFragmenLayout, new clubsFragments());
+                    ft.addToBackStack("tag").commit();
+
+                }else if (place.getPlaceType() == "airports"){
+                    ft.replace(R.id.mainFragmenLayout, new airportFragment());
+                    ft.addToBackStack("tag").commit();
+
+                }else if (place.getPlaceType() == "transportation"){
+                    ft.replace(R.id.mainFragmenLayout, new trasportationFragment());
+                    ft.addToBackStack("tag").commit();
+
+                }else if (place.getPlaceType() == "emergency"){
+                    ft.replace(R.id.mainFragmenLayout, new emergencyFragment());
+                    ft.addToBackStack("tag").commit();
+
+                }else if (place.getPlaceType() ==  "place"){
+                    ft.replace(R.id.mainFragmenLayout, new placeFragment());
+                    ft.addToBackStack("tag").commit();
                 }
+
             }
         });
 
