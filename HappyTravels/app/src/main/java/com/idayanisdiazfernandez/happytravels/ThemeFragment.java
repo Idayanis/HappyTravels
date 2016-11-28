@@ -1,12 +1,15 @@
 package com.idayanisdiazfernandez.happytravels;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -17,11 +20,21 @@ import android.view.ViewGroup;
  * Use the {@link ThemeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ThemeFragment extends Fragment {
+public class ThemeFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    // Create style buttons
+    Button redButton, pinkButton, purpleButton, indigoButton, blueButton, cyanButton, tealButton,
+            greenButton, lightGreenButton, orangeButton, deepOrangeButton, brownButton;
+
+    // Create shared preferences
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor perferencesEditor = sharedPreferences.edit();
+
+    public static final String STYLE_KEY = "STYLE_KEY";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -64,7 +77,35 @@ public class ThemeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_theme, container, false);
+        View view = inflater.inflate(R.layout.fragment_theme, container, false);
+
+        redButton = (Button) view.findViewById(R.id.button_red);
+        pinkButton = (Button) view.findViewById(R.id.button_pink);
+        purpleButton = (Button) view.findViewById(R.id.button_purple);
+        indigoButton = (Button) view.findViewById(R.id.button_indigo);
+        blueButton = (Button) view.findViewById(R.id.button_blue);
+        cyanButton = (Button) view.findViewById(R.id.button_cyan);
+        tealButton = (Button) view.findViewById(R.id.button_teal);
+        greenButton = (Button) view.findViewById(R.id.button_green);
+        lightGreenButton = (Button) view.findViewById(R.id.button_light_green);
+        orangeButton = (Button) view.findViewById(R.id.button_orange);
+        deepOrangeButton = (Button) view.findViewById(R.id.button_deep_orange);
+        brownButton = (Button) view.findViewById(R.id.button_brown);
+
+        redButton.setOnClickListener(this);
+        pinkButton.setOnClickListener(this);
+        purpleButton.setOnClickListener(this);
+        indigoButton.setOnClickListener(this);
+        blueButton.setOnClickListener(this);
+        cyanButton.setOnClickListener(this);
+        tealButton.setOnClickListener(this);
+        greenButton.setOnClickListener(this);
+        lightGreenButton.setOnClickListener(this);
+        orangeButton.setOnClickListener(this);
+        deepOrangeButton.setOnClickListener(this);
+        brownButton.setOnClickListener(this);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -104,5 +145,59 @@ public class ThemeFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button_red: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.RedTheme);
+                break;
+            }
+            case R.id.button_pink: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.PinkTheme);
+                break;
+            }
+            case R.id.button_purple: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.PurpleTheme);
+                break;
+            }
+            case R.id.button_indigo: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.IndigoTheme);
+                break;
+            }
+            case R.id.button_blue: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.AppTheme); // default theme
+                break;
+            }
+            case R.id.button_cyan: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.CyanTheme);
+                break;
+            }
+            case R.id.button_teal: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.TealTheme);
+                break;
+            }
+            case R.id.button_green: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.GreenTheme);
+                break;
+            }
+            case R.id.button_light_green: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.LightGreenTheme);
+                break;
+            }
+            case R.id.button_orange: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.OrangeTheme);
+                break;
+            }
+            case R.id.button_deep_orange: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.DeepOrange);
+                break;
+            }
+            case R.id.button_brown: {
+                perferencesEditor.putInt(STYLE_KEY, R.style.BrownTheme);
+                break;
+            }
+        }
     }
 }
