@@ -1,12 +1,12 @@
 package com.idayanisdiazfernandez.happytravels;
 
-import android.app.ActivityManager;
+import android.app.AlertDialog;
 import android.app.DialogFragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.app.FragmentManager;
 import android.support.design.widget.NavigationView;
@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.io.File;
 
@@ -91,7 +92,9 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_themes) {
             showDialog();
         } else if (id == R.id.action_reset) {
-            resetData();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Are you sure to reset data?").setPositiveButton("Yes", dialogClickListener)
+                    .setNegativeButton("No", dialogClickListener).show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -180,9 +183,28 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
+     * Create Dialog box to ask user to confirm the request to reset app data.
+     */
+    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    resetData();
+                    break;
+
+                case DialogInterface.BUTTON_NEGATIVE:
+                    dialog.dismiss();
+                    break;
+            }
+        }
+    };
+
+    /**
      * Delete the directory which holds temporary data for the application.
      */
     public void resetData() {
+        Toast.makeText(this, "Data reset completed.", Toast.LENGTH_SHORT).show();
         File cache = getCacheDir();
         File appDir = new File(cache.getParent());
         if (appDir.exists()) {
