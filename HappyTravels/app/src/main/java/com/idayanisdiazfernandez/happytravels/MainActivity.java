@@ -24,7 +24,7 @@ import java.io.File;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         MainFragment.OnFragmentInteractionListener,
-        GalleryFragment.OnFragmentInteractionListener{
+        GalleryFragmentPager.OnFragmentInteractionListener{
 
     FragmentManager fm = getFragmentManager();
     FragmentTransaction ft;
