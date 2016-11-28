@@ -1,5 +1,6 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.app.DialogFragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -88,6 +89,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_themes) {
             ft = fm.beginTransaction();
             ft.replace(R.id.mainFragmenLayout, new ThemeFragment()).addToBackStack("tag").commit();
+        } else if(id == R.id.action_reset){
+            showDialog();
         }
 
         return super.onOptionsItemSelected(item);
@@ -164,6 +167,12 @@ public class MainActivity extends AppCompatActivity
     public static void setStyleKey(int styleKey){
         mEditor.putInt(STYLE_KEY, styleKey);
         mEditor.apply();
+    }
+
+    void showDialog() {
+        // Create the fragment and show it as a dialog.
+        DialogFragment themeDialogFragment = ThemeDialogFragment.newInstance();
+        themeDialogFragment.show(getFragmentManager(), "dialog");
     }
 
 }
