@@ -1,10 +1,12 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.app.ActivityManager;
 import android.app.DialogFragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.app.FragmentManager;
 import android.support.design.widget.NavigationView;
@@ -15,7 +17,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -88,7 +91,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_themes) {
             showDialog();
         } else if (id == R.id.action_reset) {
-
+            resetData();
         }
 
         return super.onOptionsItemSelected(item);
@@ -174,6 +177,43 @@ public class MainActivity extends AppCompatActivity
         // Create the fragment and show it as a dialog.
         DialogFragment themeDialogFragment = ThemeDialogFragment.newInstance();
         themeDialogFragment.show(getFragmentManager(), "dialog");
+    }
+
+    /**
+     * Delete the directory which holds temporary data for the application.
+     */
+    public void resetData() {
+        File cache = getCacheDir();
+        File appDir = new File(cache.getParent());
+        if (appDir.exists()) {
+            String[] children = appDir.list();
+            for (String s : children) {
+                if (!s.equals("lib")) {
+                    deleteDir(new File(appDir, s));
+
+                }
+            }
+        }
+    }
+
+    /**
+     * Helper method for resetData() to delete directories.
+     *
+     * @param dir Receives dir as parameter from the resetData() method to delete it.
+     * @return dir.delete()
+     */
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+        }
+
+        return dir.delete();
     }
 
 }
