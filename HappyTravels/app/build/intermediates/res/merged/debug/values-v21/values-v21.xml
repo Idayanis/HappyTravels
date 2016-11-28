@@ -4,6 +4,12 @@
     <dimen name="notification_content_margin_start">0dp</dimen>
     <dimen name="notification_main_column_padding_top">0dp</dimen>
     <dimen name="notification_media_narrow_margin">12dp</dimen>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/dark_blue</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/blue</item>
+    </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -229,6 +235,55 @@
     <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="android:Widget.Material.TextView.SpinnerItem"/>
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="android:Widget.Material.Toolbar.Button.Navigation">
     </style>
+    <style name="BrownTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/brown</item>
+        <item name="colorPrimaryDark">@color/dark_brown</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/brown</item>
+    </style>
+    <style name="CyanTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/cyan</item>
+        <item name="colorPrimaryDark">@color/dark_cyan</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/cyan</item>
+    </style>
+    <style name="DeepOrange" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/deep_orange</item>
+        <item name="colorPrimaryDark">@color/dark_deep_orange</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/deep_orange</item>
+    </style>
+    <style name="GreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/dark_green</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/green</item>
+    </style>
+    <style name="IndigoTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/indigo</item>
+        <item name="colorPrimaryDark">@color/dark_indigo</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/indigo</item>
+    </style>
+    <style name="LightGreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_green</item>
+        <item name="colorPrimaryDark">@color/dark_deep_green</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/light_green</item>
+    </style>
+    <style name="OrangeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryDark">@color/dark_orange</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/orange</item>
+    </style>
+    <style name="PinkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryDark">@color/dark_pink</item>
+        <!-- The accent color for other styles is pink which doesn't match with pink-->
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:colorButtonNormal">@color/pink</item>
+    </style>
     <style name="Platform.AppCompat" parent="Platform.V21.AppCompat"/>
     <style name="Platform.AppCompat.Light" parent="Platform.V21.AppCompat.Light"/>
     <style name="Platform.ThemeOverlay.AppCompat" parent="">
@@ -266,6 +321,25 @@
 
         <item name="android:buttonBarStyle">?attr/buttonBarStyle</item>
         <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
+    </style>
+    <style name="PurpleTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryDark">@color/dark_purple</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/purple</item>
+    </style>
+    <style name="RedTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/dark_red</item>
+        <!-- The accent color for other styles is pink which doesn't match with red-->
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:colorButtonNormal">@color/red</item>
+    </style>
+    <style name="TealTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/teal</item>
+        <item name="colorPrimaryDark">@color/dark_teal</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:colorButtonNormal">@color/teal</item>
     </style>
     <style name="TextAppearance.AppCompat.Notification" parent="@android:style/TextAppearance.Material.Notification"/>
     <style name="TextAppearance.AppCompat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info"/>
