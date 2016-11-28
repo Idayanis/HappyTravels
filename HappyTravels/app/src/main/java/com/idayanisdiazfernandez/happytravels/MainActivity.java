@@ -1,6 +1,11 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.app.AlertDialog;
+import android.app.DialogFragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.FragmentManager;
@@ -12,6 +17,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -20,9 +28,22 @@ public class MainActivity extends AppCompatActivity
     FragmentManager fm = getFragmentManager();
     FragmentTransaction ft;
 
+    public static SharedPreferences mSharedPreferences;
+    public static SharedPreferences.Editor mEditor;
+    public static String STYLE_KEY = "STYLE_KEY";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Apply custom theme using SharedPreferences and getTheme().applyStyle.
+        mSharedPreferences = this.getPreferences(Context.MODE_PRIVATE);
+        mEditor = mSharedPreferences.edit();
+
+        if (mSharedPreferences == null) {
+            getTheme().applyStyle(R.style.AppTheme, true);
+        } else getTheme().applyStyle(mSharedPreferences.getInt(STYLE_KEY, -1), true);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -68,8 +89,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_reset) {
-            return true;
+        if (id == R.id.action_themes) {
+            showDialog();
+        } else if (id == R.id.action_reset) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Are you sure to reset data?").setPositiveButton("Yes", dialogClickListener)
+                    .setNegativeButton("No", dialogClickListener).show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -141,4 +166,76 @@ public class MainActivity extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+    // Custom Shared Preferences method for applying theme.
+    public static void setStyleKey(int styleKey) {
+        mEditor.putInt(STYLE_KEY, styleKey);
+        mEditor.apply();
+    }
+
+    /**
+     * The showDialog method which instantiates object from ThemeDialogFragment.
+     */
+    void showDialog() {
+        // Create the fragment and show it as a dialog.
+        DialogFragment themeDialogFragment = ThemeDialogFragment.newInstance();
+        themeDialogFragment.show(getFragmentManager(), "dialog");
+    }
+
+    /**
+     * Create Dialog box to ask user to confirm the request to reset app data.
+     */
+    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    resetData();
+                    break;
+
+                case DialogInterface.BUTTON_NEGATIVE:
+                    dialog.dismiss();
+                    break;
+            }
+        }
+    };
+
+    /**
+     * Delete the directory which holds temporary data for the application.
+     */
+    public void resetData() {
+        Toast.makeText(this, "Data reset completed.", Toast.LENGTH_SHORT).show();
+        File cache = getCacheDir();
+        File appDir = new File(cache.getParent());
+        if (appDir.exists()) {
+            String[] children = appDir.list();
+            for (String s : children) {
+                if (!s.equals("lib")) {
+                    deleteDir(new File(appDir, s));
+
+                }
+            }
+        }
+    }
+
+    /**
+     * Helper method for resetData() to delete directories.
+     *
+     * @param dir Receives dir as parameter from the resetData() method to delete it.
+     * @return dir.delete()
+     */
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+        }
+
+        return dir.delete();
+    }
+
 }
