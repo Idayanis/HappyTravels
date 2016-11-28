@@ -1,6 +1,6 @@
 package com.idayanisdiazfernandez.happytravels;
 
-import android.app.DialogFragment;
+import android.support.v4.app.DialogFragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;

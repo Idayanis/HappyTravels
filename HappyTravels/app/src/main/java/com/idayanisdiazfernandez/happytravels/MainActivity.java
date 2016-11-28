@@ -1,14 +1,14 @@
 package com.idayanisdiazfernandez.happytravels;
 
 import android.app.AlertDialog;
-import android.app.DialogFragment;
-import android.app.FragmentTransaction;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.FragmentManager;
+import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -24,9 +24,11 @@ import java.io.File;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         MainFragment.OnFragmentInteractionListener,
-        GalleryFragmentPager.OnFragmentInteractionListener{
+        GalleryFragmentPager.OnFragmentInteractionListener,
+        hotelFragment.OnFragmentInteractionListener,
+        GalleryFragment.OnFragmentInteractionListener{
 
-    FragmentManager fm = getFragmentManager();
+    FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft;
 
     public static SharedPreferences mSharedPreferences;
@@ -180,7 +182,7 @@ public class MainActivity extends AppCompatActivity
     void showDialog() {
         // Create the fragment and show it as a dialog.
         DialogFragment themeDialogFragment = ThemeDialogFragment.newInstance();
-        themeDialogFragment.show(getFragmentManager(), "dialog");
+        themeDialogFragment.show(getSupportFragmentManager(), "dialog");
     }
 
     /**

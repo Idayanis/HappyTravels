@@ -4,7 +4,8 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -115,21 +116,20 @@ public class GalleryFragmentPager extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    public class GallerySliderAdapter extends FragmentPagerAdapter {
+    public class GallerySliderAdapter extends FragmentStatePagerAdapter {
 
-        public GallerySliderAdapter(android.support.v4.app.FragmentManager fragmentManager) {
+        public GallerySliderAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
         }
 
         @Override
         public Fragment getItem(int position) {
-            return GalleryFragment.newInstance(R.drawable.place1);
+            return null;
         }
 
         @Override
         public int getCount() {
-            // Show 4 total pages.
-            return 2;
+            return 0;
         }
     }
 }
