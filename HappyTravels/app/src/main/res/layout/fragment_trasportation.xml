@@ -39,7 +39,129 @@
 
     </android.support.v7.widget.CardView>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <TextView
+        android:text="Bus:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bus"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/busDescript"
+        android:text="Most tourists who arrive by plane at Holguin already have their transfers included in their flight-hotel package"
+        android:textSize="18sp"
+        android:fontFamily="serif"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:text="Taxi:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taxi"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taxiDescript"
+        android:textSize="18sp"
+        android:fontFamily="serif"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Taxis are available in front of the terminal. The transfer from the airport to the hotels Guardalavaca (60 minutes) costs 40 CUC. IMPORTANT! Always negotiate the price with the driver BEFORE boarding the vehicle. Meters are almost inexistent in Cuba! You can change your currency to CUC at the airport." />
+
+            <TextView
+                android:text="Car Rental:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rental"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rentalDescript"
+                android:textSize="18sp"
+                android:fontFamily="serif"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="agencies (Cubacar, Rex, and Havanautos Transtur) are located in the arrivals area in the outdoor parking lot. It is recommended to book your car in advance, especially during peak season when demand for rental cars exceeds supply"/>
 
 
+            <TextView
+                android:text="Old Taxi:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/oldTaxis"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/oldTaxisDescription"
+                android:textSize="18sp"
+                android:fontFamily="serif"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="These are the old American cars converted in taxi. Many of these taxis are owned by individuals. There are a lot in the area of Guardalavaca, near the flea market. The cost is comparable to taxis, but the experience is worth it!"/>
+
+            <TextView
+                android:text="Panoramic Bus:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/panoBus"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/panoBusDescription"
+                android:textSize="18sp"
+                android:fontFamily="serif"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="There is now scenic bus that makes the round trip between hotels in Playa Pesquero, Playa Esmeralda and Playa Yuraguanal down to Playa Guardalavaca. There is no stop at the Dolphinarium or for customers at the hotel Villa Don Lino (Playa Blanca)."/>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
