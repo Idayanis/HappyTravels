@@ -71,10 +71,16 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                 if(place.getPlaceType() == "hotel") {
                     ft.replace(R.id.mainFragmenLayout, new hotelFragment());
                     ft.addToBackStack("tag").commit();
-                } else if(place.getPlaceType() == "restaurant"){
+                //} else if(place.getPlaceType() == "beach"){
+                   // ft.replace(R.id.mainFragmenLayout, new beachFragment());
+                    //ft.addToBackStack("tag").commit();
+                }else if(place.getPlaceType() == "restaurant"){
                     ft.replace(R.id.mainFragmenLayout, new restaurantsFragment());
                     ft.addToBackStack("tag").commit();
-                }else if(place.getPlaceType() == "hotel"){
+
+                }else if (place.getPlaceType() == "nightClub"){
+                    ft.replace(R.id.mainFragmenLayout, new clubsFragments());
+                    ft.addToBackStack("tag").commit();
 
                 }
             }
