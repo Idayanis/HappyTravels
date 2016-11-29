@@ -20,15 +20,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.idayanisdiazfernandez.happytravels.Tools.GalleryFragmentPager;
+
 import java.io.File;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         MainFragment.OnFragmentInteractionListener,
-        hotelFragment.OnFragmentInteractionListener,
+        HotelFragment.OnFragmentInteractionListener,
         GalleryFragment.OnFragmentInteractionListener,
-        GalleryFragmentPager.OnFragmentInteractionListener {
+        GalleryFragmentPager.OnFragmentInteractionListener,
+        BeachFragment.OnFragmentInteractionListener,
+        RestaurantFragment.OnFragmentInteractionListener,
+        AirportFragment.OnFragmentInteractionListener,
+        TransportationFragment.OnFragmentInteractionListener{
 
     FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft;

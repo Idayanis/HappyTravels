@@ -1,6 +1,5 @@
-package com.idayanisdiazfernandez.happytravels;
+package com.idayanisdiazfernandez.happytravels.Tools;
 
-import android.app.Activity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
@@ -10,7 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.idayanisdiazfernandez.happytravels.AirportFragment;
+import com.idayanisdiazfernandez.happytravels.BeachFragment;
+import com.idayanisdiazfernandez.happytravels.HotelFragment;
+import com.idayanisdiazfernandez.happytravels.Models.Place;
+import com.idayanisdiazfernandez.happytravels.NightClubFragment;
+import com.idayanisdiazfernandez.happytravels.PlaceFragment;
+import com.idayanisdiazfernandez.happytravels.R;
+import com.idayanisdiazfernandez.happytravels.EmergencyFragment;
+import com.idayanisdiazfernandez.happytravels.RestaurantFragment;
+import com.idayanisdiazfernandez.happytravels.TransportationFragment;
 
 import java.util.List;
 
@@ -69,33 +78,32 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                 FragmentTransaction ft = fragmentManager.beginTransaction();
 
                 if(place.getPlaceType() == "hotel") {
-                    ft.replace(R.id.mainFragmenLayout, new hotelFragment());
+                    ft.replace(R.id.mainFragmenLayout, new HotelFragment());
                     ft.addToBackStack("tag").commit();
                 } else if(place.getPlaceType() == "beach"){
-                   ft.replace(R.id.mainFragmenLayout, new beachFragment());
+                   ft.replace(R.id.mainFragmenLayout, new BeachFragment());
                     ft.addToBackStack("tag").commit();
                 }else if(place.getPlaceType() == "restaurant"){
-                    ft.replace(R.id.mainFragmenLayout, new restaurantsFragment());
+                    ft.replace(R.id.mainFragmenLayout, new RestaurantFragment());
                     ft.addToBackStack("tag").commit();
 
                 }else if (place.getPlaceType() == "nightClub"){
-                    ft.replace(R.id.mainFragmenLayout, new clubsFragments());
+                    ft.replace(R.id.mainFragmenLayout, new NightClubFragment());
                     ft.addToBackStack("tag").commit();
-
                 }else if (place.getPlaceType() == "airports"){
-                    ft.replace(R.id.mainFragmenLayout, new airportFragment());
+                    ft.replace(R.id.mainFragmenLayout, new AirportFragment());
                     ft.addToBackStack("tag").commit();
 
                 }else if (place.getPlaceType() == "transportation"){
-                    ft.replace(R.id.mainFragmenLayout, new trasportationFragment());
+                    ft.replace(R.id.mainFragmenLayout, new TransportationFragment());
                     ft.addToBackStack("tag").commit();
 
                 }else if (place.getPlaceType() == "emergency"){
-                    ft.replace(R.id.mainFragmenLayout, new emergencyFragment());
+                    ft.replace(R.id.mainFragmenLayout, new EmergencyFragment());
                     ft.addToBackStack("tag").commit();
 
                 }else if (place.getPlaceType() ==  "place"){
-                    ft.replace(R.id.mainFragmenLayout, new placeFragment());
+                    ft.replace(R.id.mainFragmenLayout, new PlaceFragment());
                     ft.addToBackStack("tag").commit();
                 }
 

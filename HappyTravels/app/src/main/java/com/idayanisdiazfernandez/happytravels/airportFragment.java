@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link airportFragment.OnFragmentInteractionListener} interface
+ * {@link AirportFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link airportFragment#newInstance} factory method to
+ * Use the {@link AirportFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class airportFragment extends Fragment {
+public class AirportFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class airportFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public airportFragment() {
+    public AirportFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class airportFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment airportFragment.
+     * @return A new instance of fragment AirportFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static airportFragment newInstance(String param1, String param2) {
-        airportFragment fragment = new airportFragment();
+    public static AirportFragment newInstance(String param1, String param2) {
+        AirportFragment fragment = new AirportFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
