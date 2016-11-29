@@ -1,6 +1,5 @@
 package com.idayanisdiazfernandez.happytravels;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.res.Configuration;
 import android.support.v4.app.DialogFragment;
@@ -209,7 +208,7 @@ public class MainActivity extends AppCompatActivity
 
         // check which language is already set.
         int langSelected;
-        if(mSharedPreferences.getString(LANG_KEY, "en_US") == "en_US"){
+        if (mSharedPreferences.getString(LANG_KEY, "en_US") == "en_US") {
             langSelected = 0;
         } else {
             langSelected = 1;
