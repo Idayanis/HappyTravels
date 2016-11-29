@@ -1,6 +1,8 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.res.Configuration;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
@@ -20,16 +22,24 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         MainFragment.OnFragmentInteractionListener,
         hotelFragment.OnFragmentInteractionListener,
         GalleryFragment.OnFragmentInteractionListener,
-        GalleryFragmentPager.OnFragmentInteractionListener{
+        GalleryFragmentPager.OnFragmentInteractionListener {
 
     FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft;
+
+    String languageToLoad;
+    // Create array to store languages.
+    String[] languagesArray = {"English", "Spanish"};
+
+    // Language Dialog
+    AlertDialog langDialog;
 
     public static SharedPreferences mSharedPreferences;
     public static SharedPreferences.Editor mEditor;
@@ -65,7 +75,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
     }
 
     @Override
@@ -100,8 +109,7 @@ public class MainActivity extends AppCompatActivity
             builder.setMessage("Are you sure to reset data?").setPositiveButton("Yes", dialogClickListener)
                     .setNegativeButton("No", dialogClickListener).show();
         } else {
-
-            ft.show(new LanguageFragment()).addToBackStack("tag").commit();
+            languageDialog();
         }
 
         return super.onOptionsItemSelected(item);
@@ -178,6 +186,47 @@ public class MainActivity extends AppCompatActivity
     public static void setStyleKey(int styleKey) {
         mEditor.putInt(STYLE_KEY, styleKey);
         mEditor.apply();
+    }
+
+    /**
+     * Creating and Building the AlertDialog for Language
+     */
+    public void languageDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Select Language");
+
+        builder.setSingleChoiceItems(languagesArray, -1, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int item) {
+                switch (item) {
+                    case 0:
+                        languageToLoad = "en_US";
+                        break;
+                    case 1:
+                        languageToLoad = "es_ES";
+                        break;
+                }
+            }
+        }).setPositiveButton("Set", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK, so change the language.
+                Locale locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                Context mContext = getApplicationContext();
+                mContext.getResources().updateConfiguration(config, mContext.getResources().getDisplayMetrics());
+                recreate(); // recreate activity to apply changes.
+            }
+        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                langDialog.dismiss();
+            }
+        });
+
+        langDialog = builder.create();
+        langDialog.show();
     }
 
     /**
