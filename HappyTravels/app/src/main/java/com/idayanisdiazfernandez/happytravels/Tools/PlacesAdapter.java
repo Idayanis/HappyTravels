@@ -90,7 +90,6 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                 }else if (place.getPlaceType() == "nightClub"){
                     ft.replace(R.id.mainFragmenLayout, new NightClubFragment());
                     ft.addToBackStack("tag").commit();
-
                 }else if (place.getPlaceType() == "airports"){
                     ft.replace(R.id.mainFragmenLayout, new AirportFragment());
                     ft.addToBackStack("tag").commit();
