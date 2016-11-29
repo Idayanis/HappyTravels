@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.idayanisdiazfernandez.happytravels.DummyContent.DummyContent;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter;
 
@@ -108,42 +109,12 @@ public class MainFragment extends Fragment {
      * Adding few places for testing
      */
     private void initPlaces() {
-        int[] covers = new int[]{
-                R.drawable.place1,
-                R.drawable.place2,
-                R.drawable.place3,
-                R.drawable.place4,
-                R.drawable.place5,
-                R.drawable.place6,
-                R.drawable.place7,
-                R.drawable.place8,
-                R.drawable.place9,
-                R.drawable.place10,
-                R.drawable.place11};
 
-        Place a = new Place("Hotel", 13, covers[0], "hotel");
-        placeList.add(a);
+        DummyContent dummyContent = new DummyContent();
 
-        a = new Place("Beach", 8, covers[1], "beach");
-        placeList.add(a);
-
-        a = new Place("Restaurants", 11, covers[2], "restaurant");
-        placeList.add(a);
-
-        a = new Place("Night Clubs", 12, covers[3], "nightClub");
-        placeList.add(a);
-
-        a = new Place("Transportation", 1, covers[5], "transportation");
-        placeList.add(a);
-
-        a = new Place("Airport", 11, covers[6], "airport");
-        placeList.add(a);
-
-        a = new Place("Emergency", 14, covers[7], "emergency");
-        placeList.add(a);
-
-        a = new Place("Other Places", 17, covers[9], "place");
-        placeList.add(a);
+        for(Place place:dummyContent.getObjectsList()){
+            placeList.add(place);
+        }
 
         adapter.notifyDataSetChanged();
 

@@ -8,10 +8,10 @@ import java.lang.reflect.Array;
 
 public class Place {
 
-    String name, description, timing, address, contactInfo, placeType;
+    String name, description, timing, address, placeType;
     double price;
     int[] photos;
-    int thumbnail;
+    int contactInfo,thumbnail;
 
     // Empty constructor
     public Place() {
@@ -32,7 +32,7 @@ public class Place {
      * @param thumbnail
      */
     public Place(String name, String description, String timing, String address,
-                 String contactInfo, String placeType, double price, int[] photos, int thumbnail) {
+                 int contactInfo, String placeType, double price, int[] photos, int thumbnail) {
         this.name = name;
         this.description = description;
         this.timing = timing;
@@ -78,11 +78,11 @@ public class Place {
         this.address = address;
     }
 
-    public String getContactInfo() {
+    public int getContactInfo() {
         return contactInfo;
     }
 
-    public void setContactInfo(String contactInfo) {
+    public void setContactInfo(int contactInfo) {
         this.contactInfo = contactInfo;
     }
 

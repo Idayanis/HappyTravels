@@ -29,7 +29,7 @@ public class NightClub extends Place {
      * @param freeDrinks
      * @param tableReservation
      */
-    public NightClub(String name, String description, String timing, String address, String contactInfo,
+    public NightClub(String name, String description, String timing, String address, int contactInfo,
                      String placeType, double price, int[] photos, int thumbnail, Boolean paidDrinks,
                      Boolean freeDrinks, Boolean tableReservation) {
         super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);

@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity
         BeachFragment.OnFragmentInteractionListener,
         RestaurantFragment.OnFragmentInteractionListener,
         AirportFragment.OnFragmentInteractionListener,
-        TransportationFragment.OnFragmentInteractionListener{
+        TransportationFragment.OnFragmentInteractionListener,
+        PlaceFragment.OnFragmentInteractionListener{
 
     FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft;

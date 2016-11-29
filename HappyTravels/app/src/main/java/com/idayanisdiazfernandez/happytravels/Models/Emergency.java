@@ -7,7 +7,7 @@ package com.idayanisdiazfernandez.happytravels.Models;
 public class Emergency {
 
     String department;
-    String ContactNumber;
+    int ContactNumber;
 
     /**
      *  The Empty constructor.
@@ -21,7 +21,7 @@ public class Emergency {
      * @param department
      * @param contactNumber
      */
-    public Emergency(String department, String contactNumber) {
+    public Emergency(String department, int contactNumber) {
         this.department = department;
         ContactNumber = contactNumber;
     }
@@ -39,11 +39,11 @@ public class Emergency {
         this.department = department;
     }
 
-    public String getContactNumber() {
+    public int getContactNumber() {
         return ContactNumber;
     }
 
-    public void setContactNumber(String contactNumber) {
+    public void setContactNumber(int contactNumber) {
         ContactNumber = contactNumber;
     }
 }

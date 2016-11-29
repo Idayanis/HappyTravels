@@ -32,7 +32,7 @@ public class Restaurant extends Place {
      * @param cuisine
      * @param reservations
      */
-    public Restaurant(String name, String description, String timing, String address, String contactInfo,
+    public Restaurant(String name, String description, String timing, String address, int contactInfo,
                       String placeType, double price, int[] photos, int thumbnail, String[] typeOfFood,
                       String[] menuList, Boolean drink, String cuisine, String reservations) {
         super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);

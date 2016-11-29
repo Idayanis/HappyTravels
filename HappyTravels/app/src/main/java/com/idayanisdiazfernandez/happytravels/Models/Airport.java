@@ -8,7 +8,7 @@ public class Airport extends Place {
 
     String flightsAvailability;
 
-    public Airport(String name, String description, String timing, String address, String contactInfo,
+    public Airport(String name, String description, String timing, String address, int contactInfo,
                    String placeType, double price, int[] photos, int thumbnail, String flightsAvailability) {
         super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);
         this.flightsAvailability = flightsAvailability;
