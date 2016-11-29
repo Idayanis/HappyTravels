@@ -1,14 +1,15 @@
 package com.idayanisdiazfernandez.happytravels;
 
 import android.app.AlertDialog;
-import android.app.DialogFragment;
-import android.app.FragmentTransaction;
+import android.content.res.Configuration;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.FragmentManager;
+import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -20,17 +21,32 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        MainFragment.OnFragmentInteractionListener {
+        MainFragment.OnFragmentInteractionListener,
+        hotelFragment.OnFragmentInteractionListener,
+        GalleryFragment.OnFragmentInteractionListener,
+        GalleryFragmentPager.OnFragmentInteractionListener,
+        beachFragment.OnFragmentInteractionListener,
+        restaurantsFragment.OnFragmentInteractionListener,
+        airportFragment.OnFragmentInteractionListener,
+        trasportationFragment.OnFragmentInteractionListener{
 
-    FragmentManager fm = getFragmentManager();
+    FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft;
+
+    String languageToLoad;
+    // Create array to store languages.
+    String[] languagesArray = {"English", "Spanish"};
+    // Language Dialog
+    AlertDialog langDialog;
 
     public static SharedPreferences mSharedPreferences;
     public static SharedPreferences.Editor mEditor;
     public static String STYLE_KEY = "STYLE_KEY";
+    public static String LANG_KEY = "LANG_KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +58,19 @@ public class MainActivity extends AppCompatActivity
 
         if (mSharedPreferences == null) {
             getTheme().applyStyle(R.style.AppTheme, true);
-        } else getTheme().applyStyle(mSharedPreferences.getInt(STYLE_KEY, -1), true);
+            languageToLoad = "en_US";
+        } else {
+            getTheme().applyStyle(mSharedPreferences.getInt(STYLE_KEY, -1), true);
+            languageToLoad = mSharedPreferences.getString(LANG_KEY, "en_US");
+        }
+
+        // Apply language according to user preferences.
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        Context mContext = getApplicationContext();
+        mContext.getResources().updateConfiguration(config, mContext.getResources().getDisplayMetrics());
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -95,6 +123,8 @@ public class MainActivity extends AppCompatActivity
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Are you sure to reset data?").setPositiveButton("Yes", dialogClickListener)
                     .setNegativeButton("No", dialogClickListener).show();
+        } else {
+            languageDialog();
         }
 
         return super.onOptionsItemSelected(item);
@@ -115,7 +145,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_restaurants) {
             ft = fm.beginTransaction();
-            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.replace(R.id.mainFragmenLayout, new GalleryFragmentPager());
             ft.addToBackStack("tag");
             ft.commit();
 
@@ -174,12 +204,56 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
+     * Creating and Building the AlertDialog for Language
+     */
+    public void languageDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Select Language");
+
+        // check which language is already set.
+        int langSelected;
+        if (mSharedPreferences.getString(LANG_KEY, "en_US") == "en_US") {
+            langSelected = 0;
+        } else {
+            langSelected = 1;
+        }
+
+        builder.setSingleChoiceItems(languagesArray, langSelected, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int item) {
+                switch (item) {
+                    case 0:
+                        mEditor.putString(LANG_KEY, "en_US").apply();
+                        break;
+                    case 1:
+                        mEditor.putString(LANG_KEY, "es_ES").apply();
+                        break;
+                }
+            }
+        }).setPositiveButton("Set", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK, so change the language.
+
+                recreate(); // recreate activity to apply changes.
+            }
+        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                langDialog.dismiss();
+            }
+        });
+
+        langDialog = builder.create();
+        langDialog.show();
+    }
+
+    /**
      * The showDialog method which instantiates object from ThemeDialogFragment.
      */
     void showDialog() {
         // Create the fragment and show it as a dialog.
         DialogFragment themeDialogFragment = ThemeDialogFragment.newInstance();
-        themeDialogFragment.show(getFragmentManager(), "dialog");
+        themeDialogFragment.show(getSupportFragmentManager(), "dialog");
     }
 
     /**
