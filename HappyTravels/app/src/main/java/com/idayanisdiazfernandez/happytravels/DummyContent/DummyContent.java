@@ -3,6 +3,7 @@ package com.idayanisdiazfernandez.happytravels.DummyContent;
 import com.idayanisdiazfernandez.happytravels.Models.Airport;
 import com.idayanisdiazfernandez.happytravels.Models.Emergency;
 import com.idayanisdiazfernandez.happytravels.Models.Hotel;
+import com.idayanisdiazfernandez.happytravels.Models.NightClub;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.R;
 
@@ -97,6 +98,32 @@ public class DummyContent {
             8989098, "Hotel", 80, gallery[2], gallery[2][1],roomType[1], true, true, true, true, true);
 
 
+    // NightClubs
+    NightClub nightClub1 = new NightClub("Nightclub 1", "Nightclub 1 description", "Open 24/7", "Address for Nightclub 1",
+            8989098, "Nightclub", 80, gallery[0], gallery[0][0], true, true, true);
+
+    NightClub nightClub2 = new NightClub("Nightclub 2", "Nightclub 2 description", "Open 24/7", "Address for Nightclub 2",
+            8989098, "Nightclub", 80, gallery[1], gallery[0][2], true, true, true);
+
+    NightClub nightClub3 = new NightClub("Nightclub 3", "Nightclub 3 description", "Open 24/7", "Address for Nightclub 3",
+            8989098, "Nightclub", 80, gallery[2], gallery[4][2], true, true, true);
+
+    NightClub nightClub4 = new NightClub("Nightclub 4", "Nightclub 4 description", "Open 24/7", "Address for Nightclub 4",
+            8989098, "Nightclub", 80, gallery[3], gallery[3][1], true, true, true);
+
+    NightClub nightClub5 = new NightClub("Nightclub 5", "Nightclub 5 description", "Open 24/7", "Address for Nightclub 5",
+            8989098, "Nightclub", 80, gallery[4], gallery[4][5], true, true, true);
+
+    NightClub nightClub6 = new NightClub("Nightclub 6", "Nightclub 6 description", "Open 24/7", "Address for Nightclub 6",
+            8989098, "Nightclub", 80, gallery[5], gallery[5][1], true, true, true);
+
+    NightClub nightClub7 = new NightClub("Nightclub 7", "Nightclub 7 description", "Open 24/7", "Address for Nightclub 7",
+            8989098, "Nightclub", 80, gallery[1], gallery[3][0], true, true, true);
+
+    NightClub nightClub8 = new NightClub("Nightclub 8", "Nightclub 8 description", "Open 24/7", "Address for Nightclub 8",
+            8989098, "Nightclub", 80, gallery[2], gallery[0][1], true, true, true);
+
+
 
     // Add objects to array and return array from the method.
     public List<Place> getObjectsList() {
@@ -116,6 +143,25 @@ public class DummyContent {
         objectsList.add(emergency4);
         objectsList.add(emergency5);
         objectsList.add(emergency6);
+
+        objectsList.add(hotel1);
+        objectsList.add(hotel2);
+        objectsList.add(hotel3);
+        objectsList.add(hotel4);
+        objectsList.add(hotel5);
+        objectsList.add(hotel6);
+        objectsList.add(hotel7);
+        objectsList.add(hotel8);
+
+        objectsList.add(nightClub1);
+        objectsList.add(nightClub2);
+        objectsList.add(nightClub3);
+        objectsList.add(nightClub4);
+        objectsList.add(nightClub5);
+        objectsList.add(nightClub6);
+        objectsList.add(nightClub7);
+        objectsList.add(nightClub8);
+
 
         return objectsList;
     }
