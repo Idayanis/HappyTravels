@@ -10,6 +10,8 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.idayanisdiazfernandez.happytravels.GalleryFragment;
 
@@ -76,6 +78,24 @@ public class GalleryFragmentPager extends Fragment {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getActivity().getSupportFragmentManager());
         mViewPager = (ViewPager) view.findViewById(R.id.viewPager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        ImageButton nextButton = (ImageButton) view.findViewById(R.id.nextButton);
+        ImageButton prevButton = (ImageButton) view.findViewById(R.id.prevButton);
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mViewPager.setCurrentItem((mViewPager.getCurrentItem()+1), true);
+            }
+        });
+
+        prevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mViewPager.setCurrentItem((mViewPager.getCurrentItem()-1), true);
+            }
+        });
+
         return view;
     }
 
