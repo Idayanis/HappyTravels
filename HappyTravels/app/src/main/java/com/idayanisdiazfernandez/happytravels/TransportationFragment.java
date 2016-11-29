@@ -3,7 +3,7 @@ package com.idayanisdiazfernandez.happytravels;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link trasportationFragment.OnFragmentInteractionListener} interface
+ * {@link TransportationFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link trasportationFragment#newInstance} factory method to
+ * Use the {@link TransportationFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class trasportationFragment extends Fragment {
+public class TransportationFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class trasportationFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public trasportationFragment() {
+    public TransportationFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class trasportationFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment trasportationFragment.
+     * @return A new instance of fragment TransportationFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static trasportationFragment newInstance(String param1, String param2) {
-        trasportationFragment fragment = new trasportationFragment();
+    public static TransportationFragment newInstance(String param1, String param2) {
+        TransportationFragment fragment = new TransportationFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

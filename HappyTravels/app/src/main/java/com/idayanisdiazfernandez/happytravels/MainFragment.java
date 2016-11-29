@@ -1,7 +1,7 @@
 package com.idayanisdiazfernandez.happytravels;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.idayanisdiazfernandez.happytravels.Models.Place;
+import com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -118,7 +121,7 @@ public class MainFragment extends Fragment {
                 R.drawable.place10,
                 R.drawable.place11};
 
-        Place a = new Place("Hotels", 13, covers[0], "hotel");
+        Place a = new Place("Hotel", 13, covers[0], "hotel");
         placeList.add(a);
 
         a = new Place("Beach", 8, covers[1], "beach");
@@ -133,7 +136,7 @@ public class MainFragment extends Fragment {
         a = new Place("Transportation", 1, covers[5], "transportation");
         placeList.add(a);
 
-        a = new Place("Airports", 11, covers[6], "airport");
+        a = new Place("Airport", 11, covers[6], "airport");
         placeList.add(a);
 
         a = new Place("Emergency", 14, covers[7], "emergency");

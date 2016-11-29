@@ -3,7 +3,7 @@ package com.idayanisdiazfernandez.happytravels;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link emergencyFragment.OnFragmentInteractionListener} interface
+ * {@link EmergencyFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link emergencyFragment#newInstance} factory method to
+ * Use the {@link EmergencyFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class emergencyFragment extends Fragment {
+public class EmergencyFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class emergencyFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public emergencyFragment() {
+    public EmergencyFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class emergencyFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment emergencyFragment.
+     * @return A new instance of fragment EmergencyFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static emergencyFragment newInstance(String param1, String param2) {
-        emergencyFragment fragment = new emergencyFragment();
+    public static EmergencyFragment newInstance(String param1, String param2) {
+        EmergencyFragment fragment = new EmergencyFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

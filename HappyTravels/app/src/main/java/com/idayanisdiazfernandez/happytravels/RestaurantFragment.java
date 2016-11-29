@@ -1,6 +1,6 @@
 package com.idayanisdiazfernandez.happytravels;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link restaurantsFragment.OnFragmentInteractionListener} interface
+ * {@link RestaurantFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link restaurantsFragment#newInstance} factory method to
+ * Use the {@link RestaurantFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class restaurantsFragment extends Fragment {
+public class RestaurantFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class restaurantsFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public restaurantsFragment() {
+    public RestaurantFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class restaurantsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment restaurantsFragment.
+     * @return A new instance of fragment RestaurantFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static restaurantsFragment newInstance(String param1, String param2) {
-        restaurantsFragment fragment = new restaurantsFragment();
+    public static RestaurantFragment newInstance(String param1, String param2) {
+        RestaurantFragment fragment = new RestaurantFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

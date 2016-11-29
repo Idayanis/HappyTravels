@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/layout/fragment_gallery_pager.xml",
+        "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/layout/fragment_gallery_pager.xml"
+    },
+    {
         "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
         "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/notification_template_lines_media.xml"
     },
@@ -192,6 +196,10 @@
         "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/layout/app_bar_main.xml"
     },
     {
+        "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/layout/fragment_gallery.xml",
+        "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/layout/fragment_gallery.xml"
+    },
+    {
         "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/layout/fragment_main.xml",
         "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/layout/fragment_main.xml"
     },
@@ -274,6 +282,10 @@
     {
         "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
         "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/layout/fragment_theme_dialog.xml",
+        "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/layout/fragment_theme_dialog.xml"
     },
     {
         "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
