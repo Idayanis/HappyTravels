@@ -74,28 +74,27 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
         holder.thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //FragmentManager fm = (((Activity)mContext).getFragmentManager());
                 FragmentTransaction ft = fragmentManager.beginTransaction();
 
-                if (place.getPlaceType() == "hotel") {
+                if (place.getPlaceType() == "Hotel") {
                     ft.replace(R.id.mainFragmenLayout, new HotelFragment());
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "beach") {
+                } else if (place.getPlaceType() == "Beach") {
                     ft.replace(R.id.mainFragmenLayout, new BeachFragment());
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "restaurant") {
+                } else if (place.getPlaceType() == "Restaurant") {
                     ft.replace(R.id.mainFragmenLayout, new RestaurantFragment());
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "nightClub") {
+                } else if (place.getPlaceType() == "Nightclub") {
                     ft.replace(R.id.mainFragmenLayout, new NightClubFragment());
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Airport") {
                     ft.replace(R.id.mainFragmenLayout, new AirportFragment());
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "transportation") {
+                } else if (place.getPlaceType() == "Transportation") {
                     ft.replace(R.id.mainFragmenLayout, new TransportationFragment());
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "emergency") {
+                } else if (place.getPlaceType() == "Emergency") {
                     ft.replace(R.id.mainFragmenLayout, new EmergencyFragment());
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "place") {

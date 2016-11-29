@@ -4,7 +4,7 @@ package com.idayanisdiazfernandez.happytravels.Models;
  * Created by idasarav on 2016-11-16.
  */
 
-public class Emergency {
+public class Emergency extends Place {
 
     String department;
     int ContactNumber;
@@ -21,9 +21,10 @@ public class Emergency {
      * @param department
      * @param contactNumber
      */
-    public Emergency(String department, int contactNumber) {
+    public Emergency(String department, int contactNumber, String placeType) {
         this.department = department;
         ContactNumber = contactNumber;
+        this.placeType = placeType;
     }
 
     /**
