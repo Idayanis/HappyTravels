@@ -128,12 +128,12 @@
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_focused_holo.9.png",
-        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png"
-    },
-    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_16dp.png",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_focused_holo.9.png",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png"
     },
     {
         "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
