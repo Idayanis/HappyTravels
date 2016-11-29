@@ -6,6 +6,7 @@ import com.idayanisdiazfernandez.happytravels.Models.Hotel;
 import com.idayanisdiazfernandez.happytravels.Models.NightClub;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.Models.Restaurant;
+import com.idayanisdiazfernandez.happytravels.Models.Transportation;
 import com.idayanisdiazfernandez.happytravels.R;
 
 import java.util.ArrayList;
@@ -72,31 +73,31 @@ public class DummyContent {
     Emergency emergency6 = new Emergency("Ambulance B", 787878789, "Emergency");
 
     // Hotel
-    String[] roomType = {"Single", "Double", "Single, Double" , "Single, Double, Studio"};
+    String[] roomType = {"Single", "Double", "Single, Double", "Single, Double, Studio"};
 
     Hotel hotel1 = new Hotel("Hotel 1", "Hotel 1 description", "Open 24/7", "Address for Hotel 1",
-            8989398, "Hotel", 80, gallery[0], gallery[0][0],roomType[1], true, true, true, true, true);
+            8989398, "Hotel", 80, gallery[0], gallery[0][0], roomType[1], true, true, true, true, true);
 
     Hotel hotel2 = new Hotel("Hotel 2", "Hotel 2 description", "Open 24/7", "Address for Hotel 2",
-            8989498, "Hotel", 80, gallery[1], gallery[0][1],roomType[1], true, true, true, true, true);
+            8989498, "Hotel", 80, gallery[1], gallery[0][1], roomType[1], true, true, true, true, true);
 
     Hotel hotel3 = new Hotel("Hotel 3", "Hotel 3 description", "Open 24/7", "Address for Hotel 3",
-            8989598, "Hotel", 80, gallery[2], gallery[0][2],roomType[1], true, true, true, true, true);
+            8989598, "Hotel", 80, gallery[2], gallery[0][2], roomType[1], true, true, true, true, true);
 
     Hotel hotel4 = new Hotel("Hotel 4", "Hotel 4 description", "Open 24/7", "Address for Hotel 4",
-            8989698, "Hotel", 80, gallery[3], gallery[1][0],roomType[1], true, true, true, true, true);
+            8989698, "Hotel", 80, gallery[3], gallery[1][0], roomType[1], true, true, true, true, true);
 
     Hotel hotel5 = new Hotel("Hotel 5", "Hotel 5 description", "Open 24/7", "Address for Hotel 5",
-            8989798, "Hotel", 80, gallery[4], gallery[1][1],roomType[1], true, true, true, true, true);
+            8989798, "Hotel", 80, gallery[4], gallery[1][1], roomType[1], true, true, true, true, true);
 
     Hotel hotel6 = new Hotel("Hotel 6", "Hotel 6 description", "Open 24/7", "Address for Hotel 6",
-            8989898, "Hotel", 80, gallery[5], gallery[1][2],roomType[1], true, true, true, true, true);
+            8989898, "Hotel", 80, gallery[5], gallery[1][2], roomType[1], true, true, true, true, true);
 
     Hotel hotel7 = new Hotel("Hotel 7", "Hotel 7 description", "Open 24/7", "Address for Hotel 7",
-            8989998, "Hotel", 80, gallery[1], gallery[2][0],roomType[1], true, true, true, true, true);
+            8989998, "Hotel", 80, gallery[1], gallery[2][0], roomType[1], true, true, true, true, true);
 
     Hotel hotel8 = new Hotel("Hotel 8", "Hotel 8 description", "Open 24/7", "Address for Hotel 8",
-            8989098, "Hotel", 80, gallery[2], gallery[2][1],roomType[1], true, true, true, true, true);
+            8989098, "Hotel", 80, gallery[2], gallery[2][1], roomType[1], true, true, true, true, true);
 
 
     // NightClubs
@@ -184,6 +185,30 @@ public class DummyContent {
             "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
 
 
+    // Transportation
+    Transportation transportation1 = new Transportation("Taxi", "The taxi is available - details",
+            "The price are 20 per km.");
+
+    Transportation transportation2 = new Transportation("Public Bus", "The Bus is available - details",
+            "The price are 20 per km.");
+
+    Transportation transportation3 = new Transportation("Train", "The Train is available - details",
+            "The price are 20 per km.");
+
+    Transportation transportation4 = new Transportation("Train", "The Train is available - details",
+            "The price are 20 per km.");
+
+    Transportation transportation5 = new Transportation("Public Bus", "The Public Bus is available - details",
+            "The price are 20 per km.");
+
+    Transportation transportation6 = new Transportation("Bus", "The Bus is available - details",
+            "The price are 20 per km.");
+
+    Transportation transportation7 = new Transportation("Bikes", "The Bikes is available - details",
+            "The price are 20 per km.");
+
+    Transportation transportation8 = new Transportation("Bus", "The Bus is available - details",
+            "The price are 20 per km.");
 
     // Add objects to array and return array from the method.
     public List<Place> getObjectsList() {
@@ -240,6 +265,14 @@ public class DummyContent {
         objectsList.add(restaurant7);
         objectsList.add(restaurant8);
 
+        objectsList.add(transportation1);
+        objectsList.add(transportation2);
+        objectsList.add(transportation3);
+        objectsList.add(transportation4);
+        objectsList.add(transportation5);
+        objectsList.add(transportation6);
+        objectsList.add(transportation7);
+        objectsList.add(transportation8);
 
         return objectsList;
     }

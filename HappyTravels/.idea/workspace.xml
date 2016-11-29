@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a674a5bc-4576-4fbe-8d6f-ce6cb39ddf9b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/DummyContent/DummyContent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/DummyContent/DummyContent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Restaurant.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Restaurant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Transportation.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Transportation.java" />
     </list>
     <ignored path="HappyTravels.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +61,8 @@
       <file leaf-file-name="DummyContent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/DummyContent/DummyContent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="240" column="35" selection-start-line="240" selection-start-column="35" selection-end-line="240" selection-end-column="35" />
+            <state relative-caret-position="3195">
+              <caret line="213" column="41" selection-start-line="213" selection-start-column="41" selection-end-line="213" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,15 +70,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Restaurant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Restaurant.java">
+      <file leaf-file-name="Transportation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Transportation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
-              <folding>
-                <element signature="e#1385#1386#0" expanded="true" />
-                <element signature="e#1418#1419#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="59">
+              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1827,6 +1824,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Hotel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Tools/PlacesAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Restaurant.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Transportation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/DummyContent/DummyContent.java" />
       </list>
     </option>
@@ -2417,14 +2415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Transportation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Airport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -2495,10 +2485,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/Models/Transportation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/DummyContent/DummyContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="240" column="35" selection-start-line="240" selection-start-column="35" selection-end-line="240" selection-end-column="35" />
+        <state relative-caret-position="3195">
+          <caret line="213" column="41" selection-start-line="213" selection-start-column="41" selection-end-line="213" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

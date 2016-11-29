@@ -4,7 +4,7 @@ package com.idayanisdiazfernandez.happytravels.Models;
  * Created by idasarav on 2016-11-16.
  */
 
-public class Transportation {
+public class Transportation extends Place {
 
     // The properties for the Transportation class.
     String type;
