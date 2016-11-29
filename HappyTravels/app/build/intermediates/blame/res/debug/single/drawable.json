@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_chevron_right_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_chevron_right_black_24dp.xml"
+    },
+    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_list_selector_holo_dark.xml"
     },
@@ -24,12 +28,20 @@
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_ic_go_search_api_material.xml"
     },
     {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_chevron_left_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_chevron_left_black_24dp.xml"
+    },
+    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/place6.jpg",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/place6.jpg"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_local_hospital_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_local_hospital_black_24dp.xml"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
@@ -60,8 +72,16 @@
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_restaurant_menu_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_restaurant_menu_black_24dp.xml"
+    },
+    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_local_hotel_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_local_hotel_black_24dp.xml"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
@@ -70,6 +90,10 @@
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_directions_boat_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_directions_boat_black_24dp.xml"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
@@ -92,12 +116,20 @@
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_local_bar_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_local_bar_black_24dp.xml"
+    },
+    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/res/drawable/navigation_empty_icon.xml"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_directions_transit_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_directions_transit_black_24dp.xml"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/place8.jpg",
@@ -176,6 +208,10 @@
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/place4.jpg"
     },
     {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_local_airport_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_local_airport_black_24dp.xml"
+    },
+    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/place1.jpg",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/place1.jpg"
     },
@@ -222,5 +258,9 @@
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_map_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_map_black_24dp.xml"
     }
 ]
