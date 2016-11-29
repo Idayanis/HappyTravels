@@ -2,6 +2,7 @@ package com.idayanisdiazfernandez.happytravels.DummyContent;
 
 import com.idayanisdiazfernandez.happytravels.Models.Airport;
 import com.idayanisdiazfernandez.happytravels.Models.Emergency;
+import com.idayanisdiazfernandez.happytravels.Models.Hotel;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.R;
 
@@ -22,65 +23,6 @@ public class DummyContent {
     // Array to store objects
     private List<Place> objectsList = new ArrayList<>();
 
-    String[] placeNames = {
-            "Airport 1",
-            "Airport 2",
-            "Airport 3",
-            "Airport 4",
-            "Airport 5",
-            "Airport 6",
-            "Airport 7",
-            "Airport 8",
-            "Hotel 1",
-            "Hotel 2",
-            "Hotel 3",
-            "Hotel 4",
-            "Hotel 5",
-            "Hotel 6",
-            "Hotel 7",
-            "Hotel 8",
-            "Restaurant 1",
-            "Restaurant 2",
-            "Restaurant 3",
-            "Restaurant 4",
-            "Restaurant 5",
-            "Restaurant 6",
-            "Restaurant 7",
-            "Restaurant 8",
-            "Nightclub 1",
-            "Nightclub 2",
-            "Nightclub 3",
-            "Nightclub 4",
-            "Nightclub 5",
-            "Nightclub 6",
-            "Nightclub 7",
-            "Nightclub 8",
-            "Emergency 1",
-            "Emergency 2",
-            "Emergency 3",
-            "Emergency 4",
-            "Emergency 5",
-            "Emergency 6",
-            "Emergency 7",
-            "Emergency 8",
-            "Transportation 1",
-            "Transportation 2",
-            "Transportation 3",
-            "Transportation 4",
-            "Transportation 5",
-            "Transportation 6",
-            "Transportation 7",
-            "Transportation 8",
-            "Place 1",
-            "Place 2",
-            "Place 3",
-            "Place 4",
-            "Place 5",
-            "Place 6",
-            "Place 7",
-            "Place 8",
-    };
-
     // Create array for gallery.
     int[][] gallery = {
             {R.drawable.place1, R.drawable.place2, R.drawable.place3},
@@ -94,28 +36,28 @@ public class DummyContent {
     // Instantiate objects for each type of place.
 
     // Airports
-    Airport airport1 = new Airport(placeNames[0], "Airport 1 description", "Open 24/7", "Address for Airport 1",
+    Airport airport1 = new Airport("Airport 1", "Airport 1 description", "Open 24/7", "Address for Airport 1",
             789878787, "Airport", 0, gallery[0], gallery[0][0], "International and domestic flights.");
 
-    Airport airport2 = new Airport(placeNames[1], "Airport 2 description", "Open 24/7", "Address for Airport 2",
+    Airport airport2 = new Airport("Airport 2", "Airport 2 description", "Open 24/7", "Address for Airport 2",
             789844787, "Airport", 0, gallery[1], gallery[0][1], "International and domestic flights.");
 
-    Airport airport3 = new Airport(placeNames[2], "Airport 3 description", "Open 24/7", "Address for Airport 3",
+    Airport airport3 = new Airport("Airport 3", "Airport 3 description", "Open 24/7", "Address for Airport 3",
             789844787, "Airport", 0, gallery[2], gallery[0][2], "International and domestic flights.");
 
-    Airport airport4 = new Airport(placeNames[3], "Airport 4 description", "Open 24/7", "Address for Airport 4",
+    Airport airport4 = new Airport("Airport 4", "Airport 4 description", "Open 24/7", "Address for Airport 4",
             789844787, "Airport", 0, gallery[3], gallery[1][0], "International and domestic flights.");
 
-    Airport airport5 = new Airport(placeNames[4], "Airport 5 description", "Open 24/7", "Address for Airport 5",
+    Airport airport5 = new Airport("Airport 5", "Airport 5 description", "Open 24/7", "Address for Airport 5",
             789844787, "Airport", 0, gallery[4], gallery[1][1], "International and domestic flights.");
 
-    Airport airport6 = new Airport(placeNames[5], "Airport 6 description", "Open 24/7", "Address for Airport 6",
+    Airport airport6 = new Airport("Airport 6", "Airport 6 description", "Open 24/7", "Address for Airport 6",
             789844787, "Airport", 0, gallery[5], gallery[1][2], "International and domestic flights.");
 
-    Airport airport7 = new Airport(placeNames[6], "Airport 7 description", "Open 24/7", "Address for Airport 7",
+    Airport airport7 = new Airport("Airport 7", "Airport 7 description", "Open 24/7", "Address for Airport 7",
             789844787, "Airport", 0, gallery[1], gallery[2][0], "International and domestic flights.");
 
-    Airport airport8 = new Airport(placeNames[7], "Airport 8 description", "Open 24/7", "Address for Airport 8",
+    Airport airport8 = new Airport("Airport 8", "Airport 8 description", "Open 24/7", "Address for Airport 8",
             789844787, "Airport", 0, gallery[2], gallery[2][1], "International and domestic flights.");
 
 
@@ -126,6 +68,33 @@ public class DummyContent {
     Emergency emergency4 = new Emergency("Hospital B", 787878789, "Emergency");
     Emergency emergency5 = new Emergency("Ambulance A", 787878789, "Emergency");
     Emergency emergency6 = new Emergency("Ambulance B", 787878789, "Emergency");
+
+    // Hotel
+    String[] roomType = {"Single", "Double", "Single, Double" , "Single, Double, Studio"};
+
+    Hotel hotel1 = new Hotel("Hotel 1", "Hotel 1 description", "Open 24/7", "Address for Hotel 1",
+            8989398, "Hotel", 80, gallery[0], gallery[0][0],roomType[1], true, true, true, true, true);
+
+    Hotel hotel2 = new Hotel("Hotel 2", "Hotel 2 description", "Open 24/7", "Address for Hotel 2",
+            8989498, "Hotel", 80, gallery[1], gallery[0][1],roomType[1], true, true, true, true, true);
+
+    Hotel hotel3 = new Hotel("Hotel 3", "Hotel 3 description", "Open 24/7", "Address for Hotel 3",
+            8989598, "Hotel", 80, gallery[2], gallery[0][2],roomType[1], true, true, true, true, true);
+
+    Hotel hotel4 = new Hotel("Hotel 4", "Hotel 4 description", "Open 24/7", "Address for Hotel 4",
+            8989698, "Hotel", 80, gallery[3], gallery[1][0],roomType[1], true, true, true, true, true);
+
+    Hotel hotel5 = new Hotel("Hotel 5", "Hotel 5 description", "Open 24/7", "Address for Hotel 5",
+            8989798, "Hotel", 80, gallery[4], gallery[1][1],roomType[1], true, true, true, true, true);
+
+    Hotel hotel6 = new Hotel("Hotel 6", "Hotel 6 description", "Open 24/7", "Address for Hotel 6",
+            8989898, "Hotel", 80, gallery[5], gallery[1][2],roomType[1], true, true, true, true, true);
+
+    Hotel hotel7 = new Hotel("Hotel 7", "Hotel 7 description", "Open 24/7", "Address for Hotel 7",
+            8989998, "Hotel", 80, gallery[1], gallery[2][0],roomType[1], true, true, true, true, true);
+
+    Hotel hotel8 = new Hotel("Hotel 8", "Hotel 8 description", "Open 24/7", "Address for Hotel 8",
+            8989098, "Hotel", 80, gallery[2], gallery[2][1],roomType[1], true, true, true, true, true);
 
 
 

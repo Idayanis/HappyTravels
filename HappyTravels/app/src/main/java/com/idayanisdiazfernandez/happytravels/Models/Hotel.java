@@ -7,7 +7,7 @@ package com.idayanisdiazfernandez.happytravels.Models;
 public class Hotel extends Place {
 
     // Properties for the Hotel
-    String[] roomType;
+    String roomType;
     Boolean swimmingPool;
     Boolean longTable;
     Boolean disco;
@@ -35,7 +35,7 @@ public class Hotel extends Place {
      */
 
     public Hotel(String name, String description, String timing, String address, int contactInfo, String placeType,
-                 double price, int[] photos, int thumbnail, String[] roomType, Boolean swimmingPool,
+                 double price, int[] photos, int thumbnail, String roomType, Boolean swimmingPool,
                  Boolean longTable, Boolean disco, Boolean roomService, Boolean restaurant) {
         super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);
         this.roomType = roomType;
@@ -48,11 +48,11 @@ public class Hotel extends Place {
 
     // Getters and Setters for Hotel properties.
 
-    public String[] getRoomType() {
+    public String getRoomType() {
         return roomType;
     }
 
-    public void setRoomType(String[] roomType) {
+    public void setRoomType(String roomType) {
         this.roomType = roomType;
     }
 
