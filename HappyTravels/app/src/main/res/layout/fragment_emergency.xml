@@ -49,7 +49,7 @@
         android:textStyle="normal|bold" />
 
     <TextView
-        android:text="Firefighters"
+        android:text="Firefighters: 105"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/firefighters"
@@ -60,7 +60,7 @@
         android:fontFamily="serif"/>
 
     <TextView
-        android:text="Police: "
+        android:text="Police: 106"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/police"
@@ -71,7 +71,7 @@
         android:fontFamily="serif"/>
 
     <TextView
-        android:text="Emergency:"
+        android:text="Emergency: 113"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/emergency"
