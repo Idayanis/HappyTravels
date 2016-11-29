@@ -7,22 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c4ed13a-9b07-4f27-be00-860d308d6e3b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/LanguageFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_language.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/idayanisdiazfernandez/happytravels/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/idayanisdiazfernandez/happytravels/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/MainActivity.java" />
     </list>
     <ignored path="HappyTravels.iws" />
@@ -60,15 +50,15 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="212" column="45" selection-start-line="212" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="214" column="12" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="12" />
               <folding>
-                <element signature="e#7049#7448#0" expanded="true" />
-                <element signature="e#7447#7448#0" expanded="true" />
-                <element signature="e#7475#8130#0" expanded="true" />
-                <element signature="e#8129#8130#0" expanded="true" />
-                <element signature="e#8160#8349#0" expanded="true" />
-                <element signature="e#8348#8349#0" expanded="true" />
+                <element signature="e#7867#8306#0" expanded="true" />
+                <element signature="e#8305#8306#0" expanded="true" />
+                <element signature="e#8333#8612#0" expanded="true" />
+                <element signature="e#8611#8612#0" expanded="true" />
+                <element signature="e#8642#8831#0" expanded="true" />
+                <element signature="e#8830#8831#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2732,14 +2722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/ThemeDialogFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/trasportationFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -2855,17 +2837,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/ThemeDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/idayanisdiazfernandez/happytravels/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="212" column="45" selection-start-line="212" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="214" column="12" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="12" />
           <folding>
-            <element signature="e#7049#7448#0" expanded="true" />
-            <element signature="e#7447#7448#0" expanded="true" />
-            <element signature="e#7475#8130#0" expanded="true" />
-            <element signature="e#8129#8130#0" expanded="true" />
-            <element signature="e#8160#8349#0" expanded="true" />
-            <element signature="e#8348#8349#0" expanded="true" />
+            <element signature="e#7867#8306#0" expanded="true" />
+            <element signature="e#8305#8306#0" expanded="true" />
+            <element signature="e#8333#8612#0" expanded="true" />
+            <element signature="e#8611#8612#0" expanded="true" />
+            <element signature="e#8642#8831#0" expanded="true" />
+            <element signature="e#8830#8831#0" expanded="true" />
           </folding>
         </state>
       </provider>

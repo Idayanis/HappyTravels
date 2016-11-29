@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity
     String languageToLoad;
     // Create array to store languages.
     String[] languagesArray = {"English", "Spanish"};
-
     // Language Dialog
     AlertDialog langDialog;
 
     public static SharedPreferences mSharedPreferences;
     public static SharedPreferences.Editor mEditor;
     public static String STYLE_KEY = "STYLE_KEY";
+    public static String LANG_KEY = "LANG_KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,19 @@ public class MainActivity extends AppCompatActivity
 
         if (mSharedPreferences == null) {
             getTheme().applyStyle(R.style.AppTheme, true);
-        } else getTheme().applyStyle(mSharedPreferences.getInt(STYLE_KEY, -1), true);
+            languageToLoad = "en_US";
+        } else {
+            getTheme().applyStyle(mSharedPreferences.getInt(STYLE_KEY, -1), true);
+            languageToLoad = mSharedPreferences.getString(LANG_KEY, "en_US");
+        }
+
+        // Apply language according to user preferences.
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        Context mContext = getApplicationContext();
+        mContext.getResources().updateConfiguration(config, mContext.getResources().getDisplayMetrics());
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -195,14 +207,22 @@ public class MainActivity extends AppCompatActivity
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Select Language");
 
-        builder.setSingleChoiceItems(languagesArray, -1, new DialogInterface.OnClickListener() {
+        // check which language is already set.
+        int langSelected;
+        if(mSharedPreferences.getString(LANG_KEY, "en_US") == "en_US"){
+            langSelected = 0;
+        } else {
+            langSelected = 1;
+        }
+
+        builder.setSingleChoiceItems(languagesArray, langSelected, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
                 switch (item) {
                     case 0:
-                        languageToLoad = "en_US";
+                        mEditor.putString(LANG_KEY, "en_US").apply();
                         break;
                     case 1:
-                        languageToLoad = "es_ES";
+                        mEditor.putString(LANG_KEY, "es_ES").apply();
                         break;
                 }
             }
@@ -210,12 +230,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked OK, so change the language.
-                Locale locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                Configuration config = new Configuration();
-                config.locale = locale;
-                Context mContext = getApplicationContext();
-                mContext.getResources().updateConfiguration(config, mContext.getResources().getDisplayMetrics());
+
                 recreate(); // recreate activity to apply changes.
             }
         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
