@@ -1,7 +1,6 @@
 package com.idayanisdiazfernandez.happytravels;
 
 import android.content.Context;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -22,10 +23,11 @@ import android.widget.ImageView;
 public class GalleryFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "image";
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
-    private int mParam;
+    private int mParam1;
 
     private OnFragmentInteractionListener mListener;
 
@@ -37,23 +39,24 @@ public class GalleryFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param image Parameter 1.
-     * @return A new instance of fragment GalleryFragment.
+     * @param param1 Parameter 1.
+     * @return A new instance of fragment FactFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static GalleryFragment newInstance(int image) {
+    public static GalleryFragment newInstance(int param1) {
         GalleryFragment fragment = new GalleryFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_PARAM1, image);
+        args.putInt(ARG_PARAM1, param1);
         fragment.setArguments(args);
         return fragment;
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam = getArguments().getInt(ARG_PARAM1);
+            mParam1 = getArguments().getInt(ARG_PARAM1);
         }
     }
 
@@ -61,13 +64,12 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view  = inflater.inflate(R.layout.fragment_gallery, container, false);
+        View view = inflater.inflate(R.layout.fragment_gallery, container, false);
 
-        ImageView image = (ImageView) view.findViewById(R.id.imageView);
-        image.setImageResource(R.drawable.place1);
-
-        return view;
-    }
+        if(String.valueOf(mParam1) != null){
+            ((ImageView) view.findViewById(R.id.imageView)).setImageResource(mParam1);
+        }
+        return view;    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

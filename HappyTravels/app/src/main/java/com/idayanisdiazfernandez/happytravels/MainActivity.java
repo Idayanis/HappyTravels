@@ -24,9 +24,9 @@ import java.io.File;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         MainFragment.OnFragmentInteractionListener,
-        GalleryFragmentPager.OnFragmentInteractionListener,
         hotelFragment.OnFragmentInteractionListener,
-        GalleryFragment.OnFragmentInteractionListener{
+        GalleryFragment.OnFragmentInteractionListener,
+        GalleryFragmentPager.OnFragmentInteractionListener{
 
     FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft;
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_restaurants) {
             ft = fm.beginTransaction();
-            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.replace(R.id.mainFragmenLayout, new GalleryFragmentPager());
             ft.addToBackStack("tag");
             ft.commit();
 

@@ -76,7 +76,7 @@ public class hotelFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.card_view, new GalleryFragment()).addToBackStack("tag").commit();
+                fragmentTransaction.replace(R.id.mainFragmenLayout, new GalleryFragmentPager()).addToBackStack("tag").commit();
             }
         });
 
