@@ -5,6 +5,7 @@ import com.idayanisdiazfernandez.happytravels.Models.Emergency;
 import com.idayanisdiazfernandez.happytravels.Models.Hotel;
 import com.idayanisdiazfernandez.happytravels.Models.NightClub;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
+import com.idayanisdiazfernandez.happytravels.Models.Restaurant;
 import com.idayanisdiazfernandez.happytravels.R;
 
 import java.util.ArrayList;
@@ -149,6 +150,40 @@ public class DummyContent {
             8989091, "Place", 3, gallery[2], gallery[0][1]);
 
 
+    // Restaurants
+    Restaurant restaurant1 = new Restaurant("Restaurant 1", "Restaurant 1 description", "Open 24/7",
+            "Address for Restaurant 1", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
+            "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+
+    Restaurant restaurant2 = new Restaurant("Restaurant 2", "Restaurant 1 description", "Open 24/7",
+            "Address for Restaurant 2", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
+            "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+
+    Restaurant restaurant3 = new Restaurant("Restaurant 3", "Restaurant 1 description", "Open 24/7",
+            "Address for Restaurant 3", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
+            "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+
+    Restaurant restaurant4 = new Restaurant("Restaurant 4", "Restaurant 1 description", "Open 24/7",
+            "Address for Restaurant 4", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
+            "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+
+    Restaurant restaurant5 = new Restaurant("Restaurant 5", "Restaurant 1 description", "Open 24/7",
+            "Address for Restaurant 5", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
+            "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+
+    Restaurant restaurant6 = new Restaurant("Restaurant 6", "Restaurant 1 description", "Open 24/7",
+            "Address for Restaurant 6", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
+            "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+
+    Restaurant restaurant7 = new Restaurant("Restaurant 7", "Restaurant 1 description", "Open 24/7",
+            "Address for Restaurant 7", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
+            "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+
+    Restaurant restaurant8 = new Restaurant("Restaurant 8", "Restaurant 1 description", "Open 24/7",
+            "Address for Restaurant 8", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
+            "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+
+
 
     // Add objects to array and return array from the method.
     public List<Place> getObjectsList() {
@@ -195,6 +230,15 @@ public class DummyContent {
         objectsList.add(otherPlace6);
         objectsList.add(otherPlace7);
         objectsList.add(otherPlace8);
+
+        objectsList.add(restaurant1);
+        objectsList.add(restaurant2);
+        objectsList.add(restaurant3);
+        objectsList.add(restaurant4);
+        objectsList.add(restaurant5);
+        objectsList.add(restaurant6);
+        objectsList.add(restaurant7);
+        objectsList.add(restaurant8);
 
 
         return objectsList;

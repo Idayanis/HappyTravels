@@ -9,8 +9,8 @@ import com.idayanisdiazfernandez.happytravels.Models.Place;
 public class Restaurant extends Place {
 
     // The properties for Restaurant class.
-    String[] TypeOfFood;
-    String[] menuList;
+    String TypeOfFood;
+    String menuList;
     Boolean drink;
     String cuisine;
     String reservations;
@@ -33,8 +33,8 @@ public class Restaurant extends Place {
      * @param reservations
      */
     public Restaurant(String name, String description, String timing, String address, int contactInfo,
-                      String placeType, double price, int[] photos, int thumbnail, String[] typeOfFood,
-                      String[] menuList, Boolean drink, String cuisine, String reservations) {
+                      String placeType, double price, int[] photos, int thumbnail, String typeOfFood,
+                      String menuList, Boolean drink, String cuisine, String reservations) {
         super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);
         TypeOfFood = typeOfFood;
         this.menuList = menuList;
@@ -45,19 +45,19 @@ public class Restaurant extends Place {
 
     // Getters and Setters
 
-    public String[] getTypeOfFood() {
+    public String getTypeOfFood() {
         return TypeOfFood;
     }
 
-    public void setTypeOfFood(String[] typeOfFood) {
+    public void setTypeOfFood(String typeOfFood) {
         TypeOfFood = typeOfFood;
     }
 
-    public String[] getMenuList() {
+    public String getMenuList() {
         return menuList;
     }
 
-    public void setMenuList(String[] menuList) {
+    public void setMenuList(String menuList) {
         this.menuList = menuList;
     }
 
