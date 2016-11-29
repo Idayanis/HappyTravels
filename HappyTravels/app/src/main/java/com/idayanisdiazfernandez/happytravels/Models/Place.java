@@ -1,4 +1,4 @@
-package com.idayanisdiazfernandez.happytravels;
+package com.idayanisdiazfernandez.happytravels.Models;
 
 import java.lang.reflect.Array;
 

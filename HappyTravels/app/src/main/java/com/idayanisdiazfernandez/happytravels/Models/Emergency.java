@@ -1,4 +1,4 @@
-package com.idayanisdiazfernandez.happytravels;
+package com.idayanisdiazfernandez.happytravels.Models;
 
 /**
  * Created by idasarav on 2016-11-16.
