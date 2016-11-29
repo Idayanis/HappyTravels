@@ -100,28 +100,53 @@ public class DummyContent {
 
     // NightClubs
     NightClub nightClub1 = new NightClub("Nightclub 1", "Nightclub 1 description", "Open 24/7", "Address for Nightclub 1",
-            8989098, "Nightclub", 80, gallery[0], gallery[0][0], true, true, true);
+            8989098, "Nightclub", 10, gallery[0], gallery[0][0], true, true, true);
 
     NightClub nightClub2 = new NightClub("Nightclub 2", "Nightclub 2 description", "Open 24/7", "Address for Nightclub 2",
-            8989098, "Nightclub", 80, gallery[1], gallery[0][2], true, true, true);
+            8989098, "Nightclub", 10, gallery[1], gallery[0][2], true, true, true);
 
     NightClub nightClub3 = new NightClub("Nightclub 3", "Nightclub 3 description", "Open 24/7", "Address for Nightclub 3",
-            8989098, "Nightclub", 80, gallery[2], gallery[4][2], true, true, true);
+            8989098, "Nightclub", 10, gallery[2], gallery[4][2], true, true, true);
 
     NightClub nightClub4 = new NightClub("Nightclub 4", "Nightclub 4 description", "Open 24/7", "Address for Nightclub 4",
-            8989098, "Nightclub", 80, gallery[3], gallery[3][1], true, true, true);
+            8989098, "Nightclub", 10, gallery[3], gallery[3][1], true, true, true);
 
     NightClub nightClub5 = new NightClub("Nightclub 5", "Nightclub 5 description", "Open 24/7", "Address for Nightclub 5",
-            8989098, "Nightclub", 80, gallery[4], gallery[4][5], true, true, true);
+            8989098, "Nightclub", 10, gallery[4], gallery[4][5], true, true, true);
 
     NightClub nightClub6 = new NightClub("Nightclub 6", "Nightclub 6 description", "Open 24/7", "Address for Nightclub 6",
-            8989098, "Nightclub", 80, gallery[5], gallery[5][1], true, true, true);
+            8989098, "Nightclub", 10, gallery[5], gallery[5][1], true, true, true);
 
     NightClub nightClub7 = new NightClub("Nightclub 7", "Nightclub 7 description", "Open 24/7", "Address for Nightclub 7",
-            8989098, "Nightclub", 80, gallery[1], gallery[3][0], true, true, true);
+            8989098, "Nightclub", 10, gallery[1], gallery[3][0], true, true, true);
 
     NightClub nightClub8 = new NightClub("Nightclub 8", "Nightclub 8 description", "Open 24/7", "Address for Nightclub 8",
-            8989098, "Nightclub", 80, gallery[2], gallery[0][1], true, true, true);
+            8989098, "Nightclub", 10, gallery[2], gallery[0][1], true, true, true);
+
+    // Other places
+    Place otherPlace1 = new Place("Other Place 1", "Other Place 1 description", "Open 24/7", "Address for Other Place 1",
+            1989098, "Place", 5, gallery[2], gallery[0][1]);
+
+    Place otherPlace2 = new Place("Other Place 2", "Other Place 2 description", "Open 24/7", "Address for Other Place 2",
+            2989098, "Place", 6, gallery[2], gallery[0][1]);
+
+    Place otherPlace3 = new Place("Other Place 3", "Other Place 3 description", "Open 24/7", "Address for Other Place 3",
+            3989098, "Place", 7, gallery[2], gallery[0][1]);
+
+    Place otherPlace4 = new Place("Other Place 4", "Other Place 4 description", "Open 24/7", "Address for Other Place 4",
+            4989098, "Place", 8, gallery[2], gallery[0][1]);
+
+    Place otherPlace5 = new Place("Other Place 5", "Other Place 5 description", "Open 24/7", "Address for Other Place 5",
+            5989098, "Place", 9, gallery[2], gallery[0][1]);
+
+    Place otherPlace6 = new Place("Other Place 6", "Other Place 6 description", "Open 24/7", "Address for Other Place 6",
+            6989098, "Place", 0, gallery[2], gallery[0][1]);
+
+    Place otherPlace7 = new Place("Other Place 7", "Other Place 7 description", "Open 24/7", "Address for Other Place 7",
+            7989098, "Place", 1, gallery[2], gallery[0][1]);
+
+    Place otherPlace8 = new Place("Other Place 8", "Other Place 8 description", "Open 24/7", "Address for Other Place 8",
+            8989091, "Place", 3, gallery[2], gallery[0][1]);
 
 
 
@@ -161,6 +186,15 @@ public class DummyContent {
         objectsList.add(nightClub6);
         objectsList.add(nightClub7);
         objectsList.add(nightClub8);
+
+        objectsList.add(otherPlace1);
+        objectsList.add(otherPlace2);
+        objectsList.add(otherPlace3);
+        objectsList.add(otherPlace4);
+        objectsList.add(otherPlace5);
+        objectsList.add(otherPlace6);
+        objectsList.add(otherPlace7);
+        objectsList.add(otherPlace8);
 
 
         return objectsList;

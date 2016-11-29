@@ -97,7 +97,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                 } else if (place.getPlaceType() == "Emergency") {
                     ft.replace(R.id.mainFragmenLayout, new EmergencyFragment());
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "place") {
+                } else if (place.getPlaceType() == "Place") {
                     ft.replace(R.id.mainFragmenLayout, new PlaceFragment());
                     ft.addToBackStack("tag").commit();
                 }
