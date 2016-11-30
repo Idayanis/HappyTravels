@@ -89,6 +89,8 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
+        fragmentManager = getFragmentManager();
+
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         List<Place> placesList = dummyContent.getObjectsList(mSharedPreferences.getString(TYPE_KEY, "All"));
         adapter = new PlacesAdapter(getActivity().getApplicationContext(), placesList, fragmentManager);
