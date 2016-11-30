@@ -46,6 +46,11 @@ public class Hotel extends Place {
         this.restaurant = restaurant;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
     // Getters and Setters for Hotel properties.
 
     public String getRoomType() {

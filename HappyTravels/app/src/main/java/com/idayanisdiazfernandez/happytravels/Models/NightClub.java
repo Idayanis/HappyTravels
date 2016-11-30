@@ -1,12 +1,13 @@
 package com.idayanisdiazfernandez.happytravels.Models;
 
-import com.idayanisdiazfernandez.happytravels.Models.Place;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 /**
  * Created by idasarav on 2016-11-16.
  */
 
-public class NightClub extends Place {
+public class Nightclub extends Place {
 
     // Properties for NighClub class.
     Boolean paidDrinks;
@@ -14,7 +15,7 @@ public class NightClub extends Place {
     Boolean tableReservation;
 
     /**
-     *  The default constructor for NightClub class.
+     *  The default constructor for Nightclub class.
      *
      * @param name
      * @param description
@@ -29,7 +30,7 @@ public class NightClub extends Place {
      * @param freeDrinks
      * @param tableReservation
      */
-    public NightClub(String name, String description, String timing, String address, int contactInfo,
+    public Nightclub(String name, String description, String timing, String address, int contactInfo,
                      String placeType, double price, int[] photos, int thumbnail, Boolean paidDrinks,
                      Boolean freeDrinks, Boolean tableReservation) {
         super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);
@@ -37,6 +38,42 @@ public class NightClub extends Place {
         this.freeDrinks = freeDrinks;
         this.tableReservation = tableReservation;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        super.writeToParcel(parcel, i);
+        parcel.writeByte((byte) (paidDrinks ? 1 : 0));
+        parcel.writeByte((byte) (freeDrinks ? 1 : 0));
+        parcel.writeByte((byte) (tableReservation ? 1 : 0));
+    }
+
+    /**
+     * Retrieving Place data from Parcel object
+     * This constructor is invoked by the method createFromParcel(Parcel source) of
+     * the object CREATOR
+     **/
+    private Nightclub(Parcel in){
+        super(in);
+        this.paidDrinks = in.readByte() != 0;
+        this.freeDrinks = in.readByte() != 0;
+        this.tableReservation = in.readByte() != 0;
+    }
+
+    public static final Parcelable.Creator<Nightclub> CREATOR
+            = new Parcelable.Creator<Nightclub>() {
+        public Nightclub createFromParcel(Parcel in) {
+            return new Nightclub(in);
+        }
+
+        public Nightclub[] newArray(int size) {
+            return new Nightclub[size];
+        }
+    };
 
     // Getters and Setters
 

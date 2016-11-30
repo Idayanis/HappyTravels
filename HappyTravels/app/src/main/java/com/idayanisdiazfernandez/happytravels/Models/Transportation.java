@@ -25,6 +25,11 @@ public class Transportation extends Place {
         this.thumbnail = thumbnail;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
     // Getters and Setters
     public String getType() {
         return type;

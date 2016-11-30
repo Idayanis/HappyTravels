@@ -13,10 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.idayanisdiazfernandez.happytravels.Models.Hotel;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.Tools.GalleryFragmentPager;
 
 import java.io.Serializable;
+
+import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLACE;
 
 
 /**
@@ -32,12 +35,11 @@ public class HotelFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private static final String ARG_PARAM3 = "param3";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private Place mParam3;
+    private Hotel mPlace;
 
     private OnFragmentInteractionListener mListener;
 
@@ -51,11 +53,10 @@ public class HotelFragment extends Fragment {
      *
      * @return A new instance of fragment HotelFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static HotelFragment newInstance(Place mParam3) {
+    public static HotelFragment newInstance(Parcelable mParam) {
         HotelFragment fragment = new HotelFragment();
         Bundle args = new Bundle();
-        args.putSerializable("place", (Serializable) mParam3);
+        args.putParcelable(ARG_PLACE, mParam);
         fragment.setArguments(args);
         return fragment;
     }
@@ -66,7 +67,7 @@ public class HotelFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-            mParam3 = getArguments().getParcelable("place");
+            mPlace = getArguments().getParcelable(ARG_PLACE);
         }
     }
 
@@ -76,10 +77,7 @@ public class HotelFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hotel, container, false);
         Button galleryButton = (Button) view.findViewById(R.id.galleryButton);
-
-        // Set content.
-        Log.d("Address", mParam3.getAddress());
-
+        
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

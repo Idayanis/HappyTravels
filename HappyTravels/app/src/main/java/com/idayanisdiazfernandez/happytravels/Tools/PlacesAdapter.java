@@ -85,7 +85,11 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                 bundle.putParcelable(ARG_PLACE, place);
 
                 if (place.getPlaceType() == "Hotel") {
-                    ft.replace(R.id.mainFragmenLayout, HotelFragment.newInstance(place));
+                    // Instantiate HotelFragment and set bundle as argument.
+                    Fragment hotelFragment = new HotelFragment();
+                    hotelFragment.setArguments(bundle);
+
+                    ft.replace(R.id.mainFragmenLayout, hotelFragment);
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Beach") {
                     // Instantiate BeachFragment and set bundle as argument.
@@ -98,9 +102,18 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                     ft.replace(R.id.mainFragmenLayout, new RestaurantFragment());
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Nightclub") {
+
+                    // Instantiate BeachFragment and set bundle as argument.
+                    Fragment nightClubFragment = new BeachFragment();
+                    nightClubFragment.setArguments(bundle);
+
                     ft.replace(R.id.mainFragmenLayout, new NightClubFragment());
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Airport") {
+                    // Instantiate AirportFragment and set bundle as argument.
+                    Fragment airFragment = new AirportFragment();
+                    airFragment.setArguments(bundle);
+
                     ft.replace(R.id.mainFragmenLayout, new AirportFragment());
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Transportation") {

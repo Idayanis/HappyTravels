@@ -1,13 +1,9 @@
 package com.idayanisdiazfernandez.happytravels.DummyContent;
 
-import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
-
 import com.idayanisdiazfernandez.happytravels.Models.Airport;
 import com.idayanisdiazfernandez.happytravels.Models.Emergency;
 import com.idayanisdiazfernandez.happytravels.Models.Hotel;
-import com.idayanisdiazfernandez.happytravels.Models.NightClub;
+import com.idayanisdiazfernandez.happytravels.Models.Nightclub;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.Models.Restaurant;
 import com.idayanisdiazfernandez.happytravels.Models.Transportation;
@@ -101,56 +97,56 @@ public class DummyContent {
 
 
     // NightClubs
-    NightClub nightClub1 = new NightClub("Nightclub 1", "Nightclub 1 description", "Open 24/7", "Address for Nightclub 1",
+    Nightclub nightClub1 = new Nightclub("Nightclub 1", "Nightclub 1 description", "Open 24/7", "Address for Nightclub 1",
             8989098, "Nightclub", 10, gallery[0], gallery[0][0], true, true, true);
 
-    NightClub nightClub2 = new NightClub("Nightclub 2", "Nightclub 2 description", "Open 24/7", "Address for Nightclub 2",
+    Nightclub nightClub2 = new Nightclub("Nightclub 2", "Nightclub 2 description", "Open 24/7", "Address for Nightclub 2",
             8989098, "Nightclub", 10, gallery[1], gallery[0][2], true, true, true);
 
-    NightClub nightClub3 = new NightClub("Nightclub 3", "Nightclub 3 description", "Open 24/7", "Address for Nightclub 3",
+    Nightclub nightClub3 = new Nightclub("Nightclub 3", "Nightclub 3 description", "Open 24/7", "Address for Nightclub 3",
             8989098, "Nightclub", 10, gallery[2], gallery[4][2], true, true, true);
 
-    NightClub nightClub4 = new NightClub("Nightclub 4", "Nightclub 4 description", "Open 24/7", "Address for Nightclub 4",
+    Nightclub nightClub4 = new Nightclub("Nightclub 4", "Nightclub 4 description", "Open 24/7", "Address for Nightclub 4",
             8989098, "Nightclub", 10, gallery[3], gallery[3][1], true, true, true);
 
-    NightClub nightClub5 = new NightClub("Nightclub 5", "Nightclub 5 description", "Open 24/7", "Address for Nightclub 5",
+    Nightclub nightClub5 = new Nightclub("Nightclub 5", "Nightclub 5 description", "Open 24/7", "Address for Nightclub 5",
             8989098, "Nightclub", 10, gallery[4], gallery[5][2], true, true, true);
 
-    NightClub nightClub6 = new NightClub("Nightclub 6", "Nightclub 6 description", "Open 24/7", "Address for Nightclub 6",
+    Nightclub nightClub6 = new Nightclub("Nightclub 6", "Nightclub 6 description", "Open 24/7", "Address for Nightclub 6",
             8989098, "Nightclub", 10, gallery[5], gallery[5][1], true, true, true);
 
-    NightClub nightClub7 = new NightClub("Nightclub 7", "Nightclub 7 description", "Open 24/7", "Address for Nightclub 7",
+    Nightclub nightClub7 = new Nightclub("Nightclub 7", "Nightclub 7 description", "Open 24/7", "Address for Nightclub 7",
             8989098, "Nightclub", 10, gallery[1], gallery[3][0], true, true, true);
 
-    NightClub nightClub8 = new NightClub("Nightclub 8", "Nightclub 8 description", "Open 24/7", "Address for Nightclub 8",
+    Nightclub nightClub8 = new Nightclub("Nightclub 8", "Nightclub 8 description", "Open 24/7", "Address for Nightclub 8",
             8989098, "Nightclub", 10, gallery[2], gallery[0][1], true, true, true);
 
     // Other places
-    Place otherPlace1 = new Place("Other Place 1", "Other Place 1 description", "Open 24/7", "Address for Other Place 1",
-            1989098, "Place", 5, gallery[2], gallery[0][1]);
-
-    Place otherPlace2 = new Place("Other Place 2", "Other Place 2 description", "Open 24/7", "Address for Other Place 2",
-            2989098, "Place", 6, gallery[2], gallery[0][1]);
-
-    Place otherPlace3 = new Place("Other Place 3", "Other Place 3 description", "Open 24/7", "Address for Other Place 3",
-            3989098, "Place", 7, gallery[2], gallery[0][1]);
-
-    Place otherPlace4 = new Place("Other Place 4", "Other Place 4 description", "Open 24/7", "Address for Other Place 4",
-            4989098, "Place", 8, gallery[2], gallery[0][1]);
-
-
-    // Beaches
-    Place otherPlace5 = new Place("Beach 1", "Beach 5 description", "Open 24/7", "Address for Beach 1",
-            5989098, "Beach", 9, gallery[2], gallery[0][1]);
-
-    Place otherPlace6 = new Place("Beach 2", "Beach 6 description", "Open 24/7", "Address for Beach 2",
-            6989098, "Beach", 0, gallery[2], gallery[0][1]);
-
-    Place otherPlace7 = new Place("Beach 3", "Beach 7 description", "Open 24/7", "Address for Beach 3",
-            7989098, "Beach", 1, gallery[2], gallery[0][1]);
-
-    Place otherPlace8 = new Place("Beach 4", "Beach 8 description", "Open 24/7", "Address for Beach 4",
-            8989091, "Beach", 3, gallery[2], gallery[0][1]);
+//    Place otherPlace1 = new Place("Other Place 1", "Other Place 1 description", "Open 24/7", "Address for Other Place 1",
+//            1989098, "Place", 5, gallery[2], gallery[0][1]);
+//
+//    Place otherPlace2 = new Place("Other Place 2", "Other Place 2 description", "Open 24/7", "Address for Other Place 2",
+//            2989098, "Place", 6, gallery[2], gallery[0][1]);
+//
+//    Place otherPlace3 = new Place("Other Place 3", "Other Place 3 description", "Open 24/7", "Address for Other Place 3",
+//            3989098, "Place", 7, gallery[2], gallery[0][1]);
+//
+//    Place otherPlace4 = new Place("Other Place 4", "Other Place 4 description", "Open 24/7", "Address for Other Place 4",
+//            4989098, "Place", 8, gallery[2], gallery[0][1]);
+//
+//
+//    // Beaches
+//    Place otherPlace5 = new Place("Beach 1", "Beach 5 description", "Open 24/7", "Address for Beach 1",
+//            5989098, "Beach", 9, gallery[2], gallery[0][1]);
+//
+//    Place otherPlace6 = new Place("Beach 2", "Beach 6 description", "Open 24/7", "Address for Beach 2",
+//            6989098, "Beach", 0, gallery[2], gallery[0][1]);
+//
+//    Place otherPlace7 = new Place("Beach 3", "Beach 7 description", "Open 24/7", "Address for Beach 3",
+//            7989098, "Beach", 1, gallery[2], gallery[0][1]);
+//
+//    Place otherPlace8 = new Place("Beach 4", "Beach 8 description", "Open 24/7", "Address for Beach 4",
+//            8989091, "Beach", 3, gallery[2], gallery[0][1]);
 
 
     // Restaurants
@@ -218,11 +214,11 @@ public class DummyContent {
         switch (placeType) {
             case "All":
                 addAirports();
-                addBeaches();
+               // addBeaches();
                 addEmergencies();
                 addHotels();
                 addNightclubs();
-                addPlaces();
+               // addPlaces();
                 addRestaurants();
                 addTransportation();
                 break;
@@ -239,10 +235,10 @@ public class DummyContent {
                 addNightclubs();
                 break;
             case "Place":
-                addPlaces();
+               // addPlaces();
                 break;
             case "Beach":
-                addBeaches();
+                //addBeaches();
                 break;
             case "Restaurant":
                 addRestaurants();
@@ -303,21 +299,21 @@ public class DummyContent {
     }
 
     // Add Other places
-    void addPlaces() {
-        objectsList.add(otherPlace1);
-        objectsList.add(otherPlace2);
-        objectsList.add(otherPlace3);
-        objectsList.add(otherPlace4);
-
-    }
+//    void addPlaces() {
+//        objectsList.add(otherPlace1);
+//        objectsList.add(otherPlace2);
+//        objectsList.add(otherPlace3);
+//        objectsList.add(otherPlace4);
+//
+//    }
 
     // Add Beaches
-    void addBeaches() {
-        objectsList.add(otherPlace5);
-        objectsList.add(otherPlace6);
-        objectsList.add(otherPlace7);
-        objectsList.add(otherPlace8);
-    }
+//    void addBeaches() {
+//        objectsList.add(otherPlace5);
+//        objectsList.add(otherPlace6);
+//        objectsList.add(otherPlace7);
+//        objectsList.add(otherPlace8);
+//    }
 
     // Add Restaurants
     void addRestaurants() {

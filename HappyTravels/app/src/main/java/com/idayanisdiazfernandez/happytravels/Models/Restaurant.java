@@ -43,6 +43,11 @@ public class Restaurant extends Place {
         this.reservations = reservations;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
     // Getters and Setters
 
     public String getTypeOfFood() {

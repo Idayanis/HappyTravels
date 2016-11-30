@@ -29,6 +29,11 @@ public class Emergency extends Place {
         this.thumbnail = thumbnail;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
     /**
      *
      *  The Getters and Setters for the Emergency class.
