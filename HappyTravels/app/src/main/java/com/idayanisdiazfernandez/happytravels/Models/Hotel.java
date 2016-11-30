@@ -1,10 +1,5 @@
 package com.idayanisdiazfernandez.happytravels.Models;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
-import com.idayanisdiazfernandez.happytravels.Tools.MyParcelable;
-
 /**
  * Created by idasarav on 2016-11-16.
  */
