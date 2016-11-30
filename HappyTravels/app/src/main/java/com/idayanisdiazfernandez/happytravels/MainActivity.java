@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.locale = locale;
+        // Create application context
         Context mContext = getApplicationContext();
         mContext.getResources().updateConfiguration(config, mContext.getResources().getDisplayMetrics());
 

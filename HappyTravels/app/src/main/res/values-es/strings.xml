@@ -4,4 +4,6 @@
     <string name="blue">azul</string>
     <string name="brown">marrón</string>
     <string name="cyan">Ciánico</string>
+    <string name="airport">Aeropuerto</string>
+    <string name="airport_1">Aeropuerto 1</string>
 </resources>
