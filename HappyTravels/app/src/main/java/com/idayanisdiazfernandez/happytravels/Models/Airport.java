@@ -17,9 +17,6 @@ public class Airport extends Place {
         this.flightsAvailability = flightsAvailability;
     }
 
-    /**
-     *  Storing the Place data to Parcel object.
-     */
     @Override
     public int describeContents() {
         return 0;
@@ -51,4 +48,19 @@ public class Airport extends Place {
             return new Airport[size];
         }
     };
+
+    /**
+     *  Getter for flight availability
+     * @return flightsAvailability
+     */
+    public String getFlightsAvailability() {
+        return flightsAvailability;
+    }
+
+    /*
+    * The setter method which acceps string parameter.
+     */
+    public void setFlightsAvailability(String flightsAvailability) {
+        this.flightsAvailability = flightsAvailability;
+    }
 }

@@ -102,7 +102,6 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                     ft.replace(R.id.mainFragmenLayout, new RestaurantFragment());
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Nightclub") {
-
                     // Instantiate BeachFragment and set bundle as argument.
                     Fragment nightClubFragment = new BeachFragment();
                     nightClubFragment.setArguments(bundle);

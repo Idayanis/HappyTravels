@@ -77,7 +77,7 @@ public class HotelFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hotel, container, false);
         Button galleryButton = (Button) view.findViewById(R.id.galleryButton);
-        
+
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

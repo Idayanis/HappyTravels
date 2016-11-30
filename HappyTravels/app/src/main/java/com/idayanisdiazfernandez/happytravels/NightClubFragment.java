@@ -69,9 +69,7 @@ public class NightClubFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_night_club, container, false);
-
-        Log.d("Place Name:", String.valueOf(mPlace.getFreeDrinks()));
-
+        
         return view;
     }
 

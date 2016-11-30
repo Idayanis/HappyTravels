@@ -1,5 +1,8 @@
 package com.idayanisdiazfernandez.happytravels.Models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by idasarav on 2016-11-16.
  */
@@ -50,6 +53,43 @@ public class Hotel extends Place {
     public int describeContents() {
         return 0;
     }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        super.writeToParcel(parcel, i);
+        parcel.writeString(roomType);
+        parcel.writeByte((byte) (swimmingPool ? 1 : 0));
+        parcel.writeByte((byte) (longTable ? 1 : 0));
+        parcel.writeByte((byte) (disco ? 1 : 0));
+        parcel.writeByte((byte) (roomService ? 1 : 0));
+        parcel.writeByte((byte) (restaurant ? 1 : 0));
+    }
+
+    /**
+     * Retrieving Place data from Parcel object
+     * This constructor is invoked by the method createFromParcel(Parcel source) of
+     * the object CREATOR
+     **/
+    private Hotel(Parcel in){
+        super(in);
+        this.roomType = in.readString();
+        this.swimmingPool = in.readByte() != 0;
+        this.longTable = in.readByte() != 0;
+        this.disco = in.readByte() != 0;
+        this.roomService = in.readByte() != 0;
+        this.restaurant = in.readByte() != 0;
+    }
+
+    public static final Parcelable.Creator<Hotel> CREATOR
+            = new Parcelable.Creator<Hotel>() {
+        public Hotel createFromParcel(Parcel in) {
+            return new Hotel(in);
+        }
+
+        public Hotel[] newArray(int size) {
+            return new Hotel[size];
+        }
+    };
 
     // Getters and Setters for Hotel properties.
 
