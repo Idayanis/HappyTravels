@@ -1,13 +1,16 @@
 package com.idayanisdiazfernandez.happytravels.Models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by idasarav on 2016-11-16.
  */
 
-public class Emergency {
+public class Emergency extends Place {
 
     String department;
-    String ContactNumber;
+    int ContactNumber;
 
     /**
      *  The Empty constructor.
@@ -21,10 +24,47 @@ public class Emergency {
      * @param department
      * @param contactNumber
      */
-    public Emergency(String department, String contactNumber) {
+    public Emergency(String name, String department, int contactNumber, String placeType, int thumbnail) {
+        this.name = name;
         this.department = department;
         ContactNumber = contactNumber;
+        this.placeType = placeType;
+        this.thumbnail = thumbnail;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        super.writeToParcel(parcel, i);
+        parcel.writeString(department);
+        parcel.writeInt(ContactNumber);
+    }
+
+    /**
+     * Retrieving Place data from Parcel object
+     * This constructor is invoked by the method createFromParcel(Parcel source) of
+     * the object CREATOR
+     **/
+    private Emergency(Parcel in){
+        super(in);
+        this.ContactNumber = in.readInt();
+        this.department = in.readString();
+    }
+
+    public static final Parcelable.Creator<Emergency> CREATOR
+            = new Parcelable.Creator<Emergency>() {
+        public Emergency createFromParcel(Parcel in) {
+            return new Emergency(in);
+        }
+
+        public Emergency[] newArray(int size) {
+            return new Emergency[size];
+        }
+    };
 
     /**
      *
@@ -39,11 +79,11 @@ public class Emergency {
         this.department = department;
     }
 
-    public String getContactNumber() {
+    public int getContactNumber() {
         return ContactNumber;
     }
 
-    public void setContactNumber(String contactNumber) {
+    public void setContactNumber(int contactNumber) {
         ContactNumber = contactNumber;
     }
 }

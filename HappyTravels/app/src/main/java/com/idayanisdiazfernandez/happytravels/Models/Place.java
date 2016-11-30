@@ -1,17 +1,18 @@
 package com.idayanisdiazfernandez.happytravels.Models;
 
-import java.lang.reflect.Array;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 /**
  * Created by idasarav on 2016-11-16.
  */
 
-public class Place {
+public abstract class Place implements Parcelable {
 
-    String name, description, timing, address, contactInfo, placeType;
+    String name, description, timing, address, placeType;
     double price;
     int[] photos;
-    int thumbnail;
+    int contactInfo,thumbnail;
 
     // Empty constructor
     public Place() {
@@ -32,7 +33,7 @@ public class Place {
      * @param thumbnail
      */
     public Place(String name, String description, String timing, String address,
-                 String contactInfo, String placeType, double price, int[] photos, int thumbnail) {
+                 int contactInfo, String placeType, double price, int[] photos, int thumbnail) {
         this.name = name;
         this.description = description;
         this.timing = timing;
@@ -42,6 +43,40 @@ public class Place {
         this.price = price;
         this.photos = photos;
         this.thumbnail = thumbnail;
+    }
+
+    /**
+     *  Storing the Place data to Parcel object.
+     */
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeString(description);
+        parcel.writeString(timing);
+        parcel.writeString(address);
+        parcel.writeString(placeType);
+        parcel.writeDouble(price);
+        parcel.writeInt(contactInfo);
+        parcel.writeInt(thumbnail);
+        parcel.writeIntArray(photos);
+    }
+
+    /**
+     * Retrieving Place data from Parcel object
+     * This constructor is invoked by the method createFromParcel(Parcel source) of
+     * the object CREATOR
+     **/
+    protected Place(Parcel in){
+        this.name = in.readString();
+        this.address = in.readString();
+        this.description = in.readString();
+        this.timing = in.readString();
+        this.placeType = in.readString();
+        this.price = in.readDouble();
+        this.contactInfo = in.readInt();
+        this.thumbnail = in.readInt();
+        this.photos = in.createIntArray();
     }
 
     // Create getters and setters.
@@ -78,11 +113,11 @@ public class Place {
         this.address = address;
     }
 
-    public String getContactInfo() {
+    public int getContactInfo() {
         return contactInfo;
     }
 
-    public void setContactInfo(String contactInfo) {
+    public void setContactInfo(int contactInfo) {
         this.contactInfo = contactInfo;
     }
 

@@ -8,16 +8,20 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.idayanisdiazfernandez.happytravels.DummyContent.DummyContent;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.idayanisdiazfernandez.happytravels.MainActivity.TYPE_KEY;
+import static com.idayanisdiazfernandez.happytravels.MainActivity.mSharedPreferences;
 
 
 /**
@@ -29,13 +33,13 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class MainFragment extends Fragment {
+
     FragmentManager fragmentManager = null;
+    DummyContent dummyContent = new DummyContent();
 
     // Create RecycleView, PlaceAdapter and List variables
     private RecyclerView recyclerView;
     private PlacesAdapter adapter;
-    private List<Place> placeList;
-
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -85,12 +89,11 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-
         fragmentManager = getFragmentManager();
 
-        placeList = new ArrayList<>();
-        adapter = new PlacesAdapter(getActivity().getApplicationContext(), placeList, fragmentManager);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        List<Place> placesList = dummyContent.getObjectsList(mSharedPreferences.getString(TYPE_KEY, "All"));
+        adapter = new PlacesAdapter(getActivity().getApplicationContext(), placesList, fragmentManager);
 
         // The GridLayout is used for displaying content instead of default list.
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 2);
@@ -98,55 +101,7 @@ public class MainFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator()); // use default animation.
         recyclerView.setAdapter(adapter);
 
-        // Initialize places
-        initPlaces();
-
         return view;
-    }
-
-    /**
-     * Adding few places for testing
-     */
-    private void initPlaces() {
-        int[] covers = new int[]{
-                R.drawable.place1,
-                R.drawable.place2,
-                R.drawable.place3,
-                R.drawable.place4,
-                R.drawable.place5,
-                R.drawable.place6,
-                R.drawable.place7,
-                R.drawable.place8,
-                R.drawable.place9,
-                R.drawable.place10,
-                R.drawable.place11};
-
-        Place a = new Place("Hotel", 13, covers[0], "hotel");
-        placeList.add(a);
-
-        a = new Place("Beach", 8, covers[1], "beach");
-        placeList.add(a);
-
-        a = new Place("Restaurants", 11, covers[2], "restaurant");
-        placeList.add(a);
-
-        a = new Place("Night Clubs", 12, covers[3], "nightClub");
-        placeList.add(a);
-
-        a = new Place("Transportation", 1, covers[5], "transportation");
-        placeList.add(a);
-
-        a = new Place("Airport", 11, covers[6], "airport");
-        placeList.add(a);
-
-        a = new Place("Emergency", 14, covers[7], "emergency");
-        placeList.add(a);
-
-        a = new Place("Other Places", 17, covers[9], "place");
-        placeList.add(a);
-
-        adapter.notifyDataSetChanged();
-
     }
 
     // TODO: Rename method, update argument and hook method into UI event

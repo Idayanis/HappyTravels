@@ -1,17 +1,25 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.os.Parcelable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.idayanisdiazfernandez.happytravels.Models.Hotel;
+import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.Tools.GalleryFragmentPager;
+
+import java.io.Serializable;
+
+import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLACE;
 
 
 /**
@@ -31,6 +39,7 @@ public class HotelFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Hotel mPlace;
 
     private OnFragmentInteractionListener mListener;
 
@@ -42,16 +51,12 @@ public class HotelFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment HotelFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static HotelFragment newInstance(String param1, String param2) {
+    public static HotelFragment newInstance(Parcelable mParam) {
         HotelFragment fragment = new HotelFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putParcelable(ARG_PLACE, mParam);
         fragment.setArguments(args);
         return fragment;
     }
@@ -62,6 +67,7 @@ public class HotelFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            mPlace = getArguments().getParcelable(ARG_PLACE);
         }
     }
 
@@ -77,7 +83,8 @@ public class HotelFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.mainFragmenLayout, new GalleryFragmentPager()).addToBackStack("tag").commit();
+                fragmentTransaction.replace(R.id.mainFragmenLayout, new GalleryFragmentPager())
+                        .addToBackStack("tag").commit();
             }
         });
 
