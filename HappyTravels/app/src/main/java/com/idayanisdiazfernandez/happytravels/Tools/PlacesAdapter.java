@@ -1,5 +1,7 @@
 package com.idayanisdiazfernandez.happytravels.Tools;
 
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
@@ -76,11 +78,19 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
             public void onClick(View view) {
                 FragmentTransaction ft = fragmentManager.beginTransaction();
 
+                // Pass object to fragments.
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("place", place);
+
                 if (place.getPlaceType() == "Hotel") {
                     ft.replace(R.id.mainFragmenLayout, HotelFragment.newInstance(place));
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Beach") {
-                    ft.replace(R.id.mainFragmenLayout, new BeachFragment());
+                    // Instantiate BeachFragment and set bundle as argument.
+                    Fragment beachFragment = new BeachFragment();
+                    beachFragment.setArguments(bundle);
+
+                    ft.replace(R.id.mainFragmenLayout, beachFragment);
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Restaurant") {
                     ft.replace(R.id.mainFragmenLayout, new RestaurantFragment());
