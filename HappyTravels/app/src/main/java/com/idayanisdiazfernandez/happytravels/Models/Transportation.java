@@ -19,9 +19,10 @@ public class Transportation extends Place {
      * @param description
      * @param priceRange
      */
-    public Transportation(String type, String description, String priceRange, int thumbnail) {
+    public Transportation(String type, String description, String priceRange, int thumbnail, String placeType) {
         this.type = type;
         this.name = type;
+        this.placeType = placeType;
         this.description = description;
         this.priceRange = priceRange;
         this.thumbnail = thumbnail;

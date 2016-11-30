@@ -124,16 +124,16 @@ public class DummyContent {
 
     // Beaches
     Beach beach1 = new Beach("Other Place 1", "Other Place 1 description", "Open 24/7", "Address for Other Place 1",
-            1989098, "Place", 5, gallery[2], gallery[0][1]);
+            1989098, "Beach", 5, gallery[2], gallery[0][1]);
 
     Beach beach2 = new Beach("Other Place 2", "Other Place 2 description", "Open 24/7", "Address for Other Place 2",
-            2989098, "Place", 6, gallery[2], gallery[0][1]);
+            2989098, "Beach", 6, gallery[2], gallery[0][1]);
 
     Beach beach3 = new Beach("Other Place 3", "Other Place 3 description", "Open 24/7", "Address for Other Place 3",
-            3989098, "Place", 7, gallery[2], gallery[0][1]);
+            3989098, "Beach", 7, gallery[2], gallery[0][1]);
 
     Beach beach4 = new Beach("Other Place 4", "Other Place 4 description", "Open 24/7", "Address for Other Place 4",
-            4989098, "Place", 8, gallery[2], gallery[0][1]);
+            4989098, "Beach", 8, gallery[2], gallery[0][1]);
 
     Beach beach5 = new Beach("Beach 1", "Beach 5 description", "Open 24/7", "Address for Beach 1",
             5989098, "Beach", 9, gallery[2], gallery[0][1]);
@@ -184,28 +184,28 @@ public class DummyContent {
 
     // Transportation
     Transportation transportation1 = new Transportation("Taxi", "The taxi is available - details",
-            "The price are 20 per km.", R.drawable.place1);
+            "The price are 20 per km.", R.drawable.place1, "Transportation");
 
     Transportation transportation2 = new Transportation("Public Bus", "The Bus is available - details",
-            "The price are 20 per km.", R.drawable.place2);
+            "The price are 20 per km.", R.drawable.place2, "Transportation");
 
     Transportation transportation3 = new Transportation("Train", "The Train is available - details",
-            "The price are 20 per km.", R.drawable.place3);
+            "The price are 20 per km.", R.drawable.place3, "Transportation");
 
     Transportation transportation4 = new Transportation("Train", "The Train is available - details",
-            "The price are 20 per km.", R.drawable.place4);
+            "The price are 20 per km.", R.drawable.place4, "Transportation");
 
     Transportation transportation5 = new Transportation("Public Bus", "The Public Bus is available - details",
-            "The price are 20 per km.", R.drawable.place5);
+            "The price are 20 per km.", R.drawable.place5, "Transportation");
 
     Transportation transportation6 = new Transportation("Bus", "The Bus is available - details",
-            "The price are 20 per km.", R.drawable.place6);
+            "The price are 20 per km.", R.drawable.place6, "Transportation");
 
     Transportation transportation7 = new Transportation("Bikes", "The Bikes is available - details",
-            "The price are 20 per km.", R.drawable.place7);
+            "The price are 20 per km.", R.drawable.place7, "Transportation");
 
     Transportation transportation8 = new Transportation("Bus", "The Bus is available - details",
-            "The price are 20 per km.", R.drawable.place8);
+            "The price are 20 per km.", R.drawable.place8, "Transportation");
 
     // Add objects to array and return array from the method.
     public List<Place> getObjectsList(String placeType) {

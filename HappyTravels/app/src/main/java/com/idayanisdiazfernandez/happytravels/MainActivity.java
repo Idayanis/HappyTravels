@@ -81,11 +81,18 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Host main Fragment
-        ft = fm.beginTransaction();
-        ft.replace(R.id.mainFragmenLayout, new MainFragment());
-        ft.addToBackStack("tag");
-        ft.commit();
+
+        /**
+         * Check if there is no other fragment and host the MainFragment then.
+         * Else have the same fragment which is already lunched.
+         */
+        if (savedInstanceState == null) {
+            // Host main Fragment
+            ft = fm.beginTransaction();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment());
+            ft.addToBackStack("tag");
+            ft.commit();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
