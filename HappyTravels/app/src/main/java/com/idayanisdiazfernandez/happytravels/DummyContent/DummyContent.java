@@ -213,11 +213,10 @@ public class DummyContent {
         switch (placeType) {
             case "All":
                 addAirports();
-               // addBeaches();
+                addBeaches();
                 addEmergencies();
                 addHotels();
                 addNightclubs();
-               // addPlaces();
                 addRestaurants();
                 addTransportation();
                 break;
@@ -233,11 +232,8 @@ public class DummyContent {
             case "Nightclub":
                 addNightclubs();
                 break;
-            case "Place":
-               // addPlaces();
-                break;
             case "Beach":
-                //addBeaches();
+                addBeaches();
                 break;
             case "Restaurant":
                 addRestaurants();

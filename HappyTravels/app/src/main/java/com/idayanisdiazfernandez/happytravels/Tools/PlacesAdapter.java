@@ -17,7 +17,6 @@ import com.idayanisdiazfernandez.happytravels.BeachFragment;
 import com.idayanisdiazfernandez.happytravels.HotelFragment;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.NightClubFragment;
-import com.idayanisdiazfernandez.happytravels.PlaceFragment;
 import com.idayanisdiazfernandez.happytravels.R;
 import com.idayanisdiazfernandez.happytravels.EmergencyFragment;
 import com.idayanisdiazfernandez.happytravels.RestaurantFragment;

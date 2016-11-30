@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity
         RestaurantFragment.OnFragmentInteractionListener,
         AirportFragment.OnFragmentInteractionListener,
         TransportationFragment.OnFragmentInteractionListener,
-        PlaceFragment.OnFragmentInteractionListener,
         EmergencyFragment.OnFragmentInteractionListener,
         NightClubFragment.OnFragmentInteractionListener {
 
@@ -148,53 +147,34 @@ public class MainActivity extends AppCompatActivity
             // Handle the hotel action here
             // Type of places to load.
             mEditor.putString(TYPE_KEY, "Hotel").apply();
-
             ft = fm.beginTransaction();
             ft.replace(R.id.mainFragmenLayout, new MainFragment());
             ft.addToBackStack("tag");
             ft.commit();
-
         } else if (id == R.id.nav_restaurants) {
             // Type of places to load.
             mEditor.putString(TYPE_KEY, "Restaurant").apply();
-
             ft = fm.beginTransaction();
             ft.replace(R.id.mainFragmenLayout, new MainFragment());
             ft.addToBackStack("tag");
             ft.commit();
-
         } else if (id == R.id.nav_beach) {
             // Type of places to load.
             mEditor.putString(TYPE_KEY, "Beach").apply();
-
             ft = fm.beginTransaction();
             ft.replace(R.id.mainFragmenLayout, new MainFragment());
             ft.addToBackStack("tag");
             ft.commit();
-
-
         } else if (id == R.id.nav_clubs) {
             // Type of places to load.
             mEditor.putString(TYPE_KEY, "Nightclub").apply();
-
             ft = fm.beginTransaction();
             ft.replace(R.id.mainFragmenLayout, new MainFragment());
             ft.addToBackStack("tag");
             ft.commit();
-
         } else if (id == R.id.nav_airport) {
             // Type of places to load.
             mEditor.putString(TYPE_KEY, "Airport").apply();
-
-            ft = fm.beginTransaction();
-            ft.replace(R.id.mainFragmenLayout, new MainFragment());
-            ft.addToBackStack("tag");
-            ft.commit();
-
-        } else if (id == R.id.nav_other) {
-            // Type of places to load.
-            mEditor.putString(TYPE_KEY, "Place").apply();
-
             ft = fm.beginTransaction();
             ft.replace(R.id.mainFragmenLayout, new MainFragment());
             ft.addToBackStack("tag");
@@ -202,21 +182,17 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_transport) {
             // Type of places to load.
             mEditor.putString(TYPE_KEY, "Transportation").apply();
-
             ft = fm.beginTransaction();
             ft.replace(R.id.mainFragmenLayout, new MainFragment());
             ft.addToBackStack("tag");
             ft.commit();
-
         } else if (id == R.id.nav_emergency) {
             // Type of places to load.
             mEditor.putString(TYPE_KEY, "Emergency").apply();
-
             ft = fm.beginTransaction();
             ft.replace(R.id.mainFragmenLayout, new MainFragment());
             ft.addToBackStack("tag");
             ft.commit();
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
