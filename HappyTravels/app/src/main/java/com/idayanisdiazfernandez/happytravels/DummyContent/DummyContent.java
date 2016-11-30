@@ -1,6 +1,7 @@
 package com.idayanisdiazfernandez.happytravels.DummyContent;
 
 import com.idayanisdiazfernandez.happytravels.Models.Airport;
+import com.idayanisdiazfernandez.happytravels.Models.Beach;
 import com.idayanisdiazfernandez.happytravels.Models.Emergency;
 import com.idayanisdiazfernandez.happytravels.Models.Hotel;
 import com.idayanisdiazfernandez.happytravels.Models.Nightclub;
@@ -121,32 +122,30 @@ public class DummyContent {
     Nightclub nightClub8 = new Nightclub("Nightclub 8", "Nightclub 8 description", "Open 24/7", "Address for Nightclub 8",
             8989098, "Nightclub", 10, gallery[2], gallery[0][1], true, true, true);
 
-    // Other places
-//    Place otherPlace1 = new Place("Other Place 1", "Other Place 1 description", "Open 24/7", "Address for Other Place 1",
-//            1989098, "Place", 5, gallery[2], gallery[0][1]);
-//
-//    Place otherPlace2 = new Place("Other Place 2", "Other Place 2 description", "Open 24/7", "Address for Other Place 2",
-//            2989098, "Place", 6, gallery[2], gallery[0][1]);
-//
-//    Place otherPlace3 = new Place("Other Place 3", "Other Place 3 description", "Open 24/7", "Address for Other Place 3",
-//            3989098, "Place", 7, gallery[2], gallery[0][1]);
-//
-//    Place otherPlace4 = new Place("Other Place 4", "Other Place 4 description", "Open 24/7", "Address for Other Place 4",
-//            4989098, "Place", 8, gallery[2], gallery[0][1]);
-//
-//
-//    // Beaches
-//    Place otherPlace5 = new Place("Beach 1", "Beach 5 description", "Open 24/7", "Address for Beach 1",
-//            5989098, "Beach", 9, gallery[2], gallery[0][1]);
-//
-//    Place otherPlace6 = new Place("Beach 2", "Beach 6 description", "Open 24/7", "Address for Beach 2",
-//            6989098, "Beach", 0, gallery[2], gallery[0][1]);
-//
-//    Place otherPlace7 = new Place("Beach 3", "Beach 7 description", "Open 24/7", "Address for Beach 3",
-//            7989098, "Beach", 1, gallery[2], gallery[0][1]);
-//
-//    Place otherPlace8 = new Place("Beach 4", "Beach 8 description", "Open 24/7", "Address for Beach 4",
-//            8989091, "Beach", 3, gallery[2], gallery[0][1]);
+    // Beaches
+    Beach beach1 = new Beach("Other Place 1", "Other Place 1 description", "Open 24/7", "Address for Other Place 1",
+            1989098, "Place", 5, gallery[2], gallery[0][1]);
+
+    Beach beach2 = new Beach("Other Place 2", "Other Place 2 description", "Open 24/7", "Address for Other Place 2",
+            2989098, "Place", 6, gallery[2], gallery[0][1]);
+
+    Beach beach3 = new Beach("Other Place 3", "Other Place 3 description", "Open 24/7", "Address for Other Place 3",
+            3989098, "Place", 7, gallery[2], gallery[0][1]);
+
+    Beach beach4 = new Beach("Other Place 4", "Other Place 4 description", "Open 24/7", "Address for Other Place 4",
+            4989098, "Place", 8, gallery[2], gallery[0][1]);
+
+    Beach beach5 = new Beach("Beach 1", "Beach 5 description", "Open 24/7", "Address for Beach 1",
+            5989098, "Beach", 9, gallery[2], gallery[0][1]);
+
+    Beach beach6 = new Beach("Beach 2", "Beach 6 description", "Open 24/7", "Address for Beach 2",
+            6989098, "Beach", 0, gallery[2], gallery[0][1]);
+
+    Beach beach7 = new Beach("Beach 3", "Beach 7 description", "Open 24/7", "Address for Beach 3",
+            7989098, "Beach", 1, gallery[2], gallery[0][1]);
+
+    Beach beach8 = new Beach("Beach 4", "Beach 8 description", "Open 24/7", "Address for Beach 4",
+            8989091, "Beach", 3, gallery[2], gallery[0][1]);
 
 
     // Restaurants
@@ -298,22 +297,17 @@ public class DummyContent {
         objectsList.add(nightClub8);
     }
 
-    // Add Other places
-//    void addPlaces() {
-//        objectsList.add(otherPlace1);
-//        objectsList.add(otherPlace2);
-//        objectsList.add(otherPlace3);
-//        objectsList.add(otherPlace4);
-//
-//    }
-
     // Add Beaches
-//    void addBeaches() {
-//        objectsList.add(otherPlace5);
-//        objectsList.add(otherPlace6);
-//        objectsList.add(otherPlace7);
-//        objectsList.add(otherPlace8);
-//    }
+    void addBeaches() {
+        objectsList.add(beach1);
+        objectsList.add(beach2);
+        objectsList.add(beach3);
+        objectsList.add(beach4);
+        objectsList.add(beach5);
+        objectsList.add(beach6);
+        objectsList.add(beach7);
+        objectsList.add(beach8);
+    }
 
     // Add Restaurants
     void addRestaurants() {
