@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 
+import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLACE;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,7 +34,7 @@ public class BeachFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private Place mParam3;
+    private Place mPlace;
 
     private OnFragmentInteractionListener mListener;
 
@@ -61,7 +63,7 @@ public class BeachFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-            mParam3 = getArguments().getParcelable("place");
+            mPlace = getArguments().getParcelable(ARG_PLACE);
         }
     }
 
@@ -71,7 +73,7 @@ public class BeachFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_beach, container, false);
 
-        Toast.makeText(getActivity().getApplicationContext(), mParam3.getName(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity().getApplicationContext(), mPlace.getName(), Toast.LENGTH_SHORT).show();
 
         return view;
     }

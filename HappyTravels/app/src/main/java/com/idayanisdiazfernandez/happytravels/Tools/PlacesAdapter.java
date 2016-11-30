@@ -32,6 +32,8 @@ import java.util.List;
 public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHolder> {
     FragmentManager fragmentManager = null;
 
+    public static final String ARG_PLACE = "place";
+
 
     // Create variables
     private Context mContext;
@@ -80,7 +82,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
 
                 // Pass object to fragments.
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("place", place);
+                bundle.putParcelable(ARG_PLACE, place);
 
                 if (place.getPlaceType() == "Hotel") {
                     ft.replace(R.id.mainFragmenLayout, HotelFragment.newInstance(place));
