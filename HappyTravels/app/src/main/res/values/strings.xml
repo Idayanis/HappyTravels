@@ -22,4 +22,8 @@
     <string name="orange">Orange</string>
     <string name="deep_orange">Deep Orange</string>
     <string name="brown">Brown</string>
+
+    <string name="airport">Airport</string>
+    <string name="airport_1">Airport 1</string>
+    <string name="airport_1_description">Airport 1 description</string>
 </resources>

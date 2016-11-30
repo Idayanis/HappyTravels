@@ -19,6 +19,8 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartir con"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartir con %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Contraer"</string>
+    <string name="airport">Aeropuerto</string>
+    <string name="airport_1">Aeropuerto 1</string>
     <string name="app_name">HappyTravels</string>
     <string name="blue">azul</string>
     <string name="brown">marrón</string>

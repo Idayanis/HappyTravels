@@ -25,10 +25,6 @@
             android:id="@+id/nav_airport"
             android:icon="@drawable/ic_local_airport_black_24dp"
             android:title="Airports" />
-        <item
-            android:id="@+id/nav_other"
-            android:icon="@drawable/ic_map_black_24dp"
-            android:title="Other Places" />
 
         <item
             android:id="@+id/nav_transport"
