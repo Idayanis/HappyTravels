@@ -17,10 +17,12 @@ public class Transportation extends Place {
      * @param description
      * @param priceRange
      */
-    public Transportation(String type, String description, String priceRange) {
+    public Transportation(String type, String description, String priceRange, int thumbnail) {
         this.type = type;
+        this.name = type;
         this.description = description;
         this.priceRange = priceRange;
+        this.thumbnail = thumbnail;
     }
 
     // Getters and Setters

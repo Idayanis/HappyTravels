@@ -18,10 +18,6 @@ import java.util.List;
  */
 
 public class DummyContent {
-    String name, description, timing, address, contactInfo, placeType;
-    double price;
-    int[] photos;
-    int thumbnail;
 
     // Array to store objects
     private List<Place> objectsList = new ArrayList<>();
@@ -65,12 +61,12 @@ public class DummyContent {
 
 
     // Emergency
-    Emergency emergency1 = new Emergency("Police", 787878789, "Emergency");
-    Emergency emergency2 = new Emergency("Fire Department", 787878789, "Emergency");
-    Emergency emergency3 = new Emergency("Hospital A", 787878789, "Emergency");
-    Emergency emergency4 = new Emergency("Hospital B", 787878789, "Emergency");
-    Emergency emergency5 = new Emergency("Ambulance A", 787878789, "Emergency");
-    Emergency emergency6 = new Emergency("Ambulance B", 787878789, "Emergency");
+    Emergency emergency1 = new Emergency("Emergency 1", "Police", 787878789, "Emergency", R.drawable.place1);
+    Emergency emergency2 = new Emergency("Emergency 2", "Fire Department", 787878789, "Emergency", R.drawable.place2);
+    Emergency emergency3 = new Emergency("Emergency 3", "Hospital A", 787878789, "Emergency", R.drawable.place3);
+    Emergency emergency4 = new Emergency("Emergency 4", "Hospital B", 787878789, "Emergency", R.drawable.place4);
+    Emergency emergency5 = new Emergency("Emergency 5", "Ambulance A", 787878789, "Emergency", R.drawable.place5);
+    Emergency emergency6 = new Emergency("Emergency 6", "Ambulance B", 787878789, "Emergency", R.drawable.place6);
 
     // Hotel
     String[] roomType = {"Single", "Double", "Single, Double", "Single, Double, Studio"};
@@ -114,7 +110,7 @@ public class DummyContent {
             8989098, "Nightclub", 10, gallery[3], gallery[3][1], true, true, true);
 
     NightClub nightClub5 = new NightClub("Nightclub 5", "Nightclub 5 description", "Open 24/7", "Address for Nightclub 5",
-            8989098, "Nightclub", 10, gallery[4], gallery[4][5], true, true, true);
+            8989098, "Nightclub", 10, gallery[4], gallery[5][2], true, true, true);
 
     NightClub nightClub6 = new NightClub("Nightclub 6", "Nightclub 6 description", "Open 24/7", "Address for Nightclub 6",
             8989098, "Nightclub", 10, gallery[5], gallery[5][1], true, true, true);
@@ -138,17 +134,19 @@ public class DummyContent {
     Place otherPlace4 = new Place("Other Place 4", "Other Place 4 description", "Open 24/7", "Address for Other Place 4",
             4989098, "Place", 8, gallery[2], gallery[0][1]);
 
-    Place otherPlace5 = new Place("Other Place 5", "Other Place 5 description", "Open 24/7", "Address for Other Place 5",
-            5989098, "Place", 9, gallery[2], gallery[0][1]);
 
-    Place otherPlace6 = new Place("Other Place 6", "Other Place 6 description", "Open 24/7", "Address for Other Place 6",
-            6989098, "Place", 0, gallery[2], gallery[0][1]);
+    // Beaches
+    Place otherPlace5 = new Place("Beach 1", "Beach 5 description", "Open 24/7", "Address for Beach 1",
+            5989098, "Beach", 9, gallery[2], gallery[0][1]);
 
-    Place otherPlace7 = new Place("Other Place 7", "Other Place 7 description", "Open 24/7", "Address for Other Place 7",
-            7989098, "Place", 1, gallery[2], gallery[0][1]);
+    Place otherPlace6 = new Place("Beach 2", "Beach 6 description", "Open 24/7", "Address for Beach 2",
+            6989098, "Beach", 0, gallery[2], gallery[0][1]);
 
-    Place otherPlace8 = new Place("Other Place 8", "Other Place 8 description", "Open 24/7", "Address for Other Place 8",
-            8989091, "Place", 3, gallery[2], gallery[0][1]);
+    Place otherPlace7 = new Place("Beach 3", "Beach 7 description", "Open 24/7", "Address for Beach 3",
+            7989098, "Beach", 1, gallery[2], gallery[0][1]);
+
+    Place otherPlace8 = new Place("Beach 4", "Beach 8 description", "Open 24/7", "Address for Beach 4",
+            8989091, "Beach", 3, gallery[2], gallery[0][1]);
 
 
     // Restaurants
@@ -187,32 +185,65 @@ public class DummyContent {
 
     // Transportation
     Transportation transportation1 = new Transportation("Taxi", "The taxi is available - details",
-            "The price are 20 per km.");
+            "The price are 20 per km.", R.drawable.place1);
 
     Transportation transportation2 = new Transportation("Public Bus", "The Bus is available - details",
-            "The price are 20 per km.");
+            "The price are 20 per km.", R.drawable.place2);
 
     Transportation transportation3 = new Transportation("Train", "The Train is available - details",
-            "The price are 20 per km.");
+            "The price are 20 per km.", R.drawable.place3);
 
     Transportation transportation4 = new Transportation("Train", "The Train is available - details",
-            "The price are 20 per km.");
+            "The price are 20 per km.", R.drawable.place4);
 
     Transportation transportation5 = new Transportation("Public Bus", "The Public Bus is available - details",
-            "The price are 20 per km.");
+            "The price are 20 per km.", R.drawable.place5);
 
     Transportation transportation6 = new Transportation("Bus", "The Bus is available - details",
-            "The price are 20 per km.");
+            "The price are 20 per km.", R.drawable.place6);
 
     Transportation transportation7 = new Transportation("Bikes", "The Bikes is available - details",
-            "The price are 20 per km.");
+            "The price are 20 per km.", R.drawable.place7);
 
     Transportation transportation8 = new Transportation("Bus", "The Bus is available - details",
-            "The price are 20 per km.");
+            "The price are 20 per km.", R.drawable.place8);
 
     // Add objects to array and return array from the method.
-    public List<Place> getObjectsList() {
+    public List<Place> getObjectsList(String placeType) {
 
+        if (placeType == "All") {
+            addAirports();
+            addEmergencies();
+            addHotels();
+            addNightclubs();
+            addPlaces();
+            addRestaurants();
+            addTransportation();
+        } else if (placeType == "Airport") {
+            addAirports();
+
+        } else if (placeType == "Emergency") {
+            addEmergencies();
+
+        } else if (placeType == "Hotel") {
+            addHotels();
+        } else if (placeType == "Nightclub") {
+            addNightclubs();
+        } else if (placeType == "Place") {
+            addPlaces();
+        } else if (placeType == "Restaurant") {
+            addRestaurants();
+        } else if (placeType == "Transportation") {
+            addTransportation();
+        } else if (placeType == "Beach"){
+            addBeaches();
+        }
+
+        return objectsList;
+    }
+
+    // Add Airports
+    void addAirports() {
         objectsList.add(airport1);
         objectsList.add(airport2);
         objectsList.add(airport3);
@@ -221,14 +252,20 @@ public class DummyContent {
         objectsList.add(airport6);
         objectsList.add(airport7);
         objectsList.add(airport8);
+    }
 
+    // Add Emergencies
+    void addEmergencies() {
         objectsList.add(emergency1);
         objectsList.add(emergency2);
         objectsList.add(emergency3);
         objectsList.add(emergency4);
         objectsList.add(emergency5);
         objectsList.add(emergency6);
+    }
 
+    // Add Hotels
+    void addHotels() {
         objectsList.add(hotel1);
         objectsList.add(hotel2);
         objectsList.add(hotel3);
@@ -237,7 +274,10 @@ public class DummyContent {
         objectsList.add(hotel6);
         objectsList.add(hotel7);
         objectsList.add(hotel8);
+    }
 
+    // Add NightClubs
+    void addNightclubs() {
         objectsList.add(nightClub1);
         objectsList.add(nightClub2);
         objectsList.add(nightClub3);
@@ -246,16 +286,27 @@ public class DummyContent {
         objectsList.add(nightClub6);
         objectsList.add(nightClub7);
         objectsList.add(nightClub8);
+    }
 
+    // Add Other places
+    void addPlaces() {
         objectsList.add(otherPlace1);
         objectsList.add(otherPlace2);
         objectsList.add(otherPlace3);
         objectsList.add(otherPlace4);
+
+    }
+
+    // Add Beaches
+    void addBeaches(){
         objectsList.add(otherPlace5);
         objectsList.add(otherPlace6);
         objectsList.add(otherPlace7);
         objectsList.add(otherPlace8);
+    }
 
+    // Add Restaurants
+    void addRestaurants() {
         objectsList.add(restaurant1);
         objectsList.add(restaurant2);
         objectsList.add(restaurant3);
@@ -264,7 +315,10 @@ public class DummyContent {
         objectsList.add(restaurant6);
         objectsList.add(restaurant7);
         objectsList.add(restaurant8);
+    }
 
+    // Add Transportation
+    void addTransportation() {
         objectsList.add(transportation1);
         objectsList.add(transportation2);
         objectsList.add(transportation3);
@@ -273,8 +327,5 @@ public class DummyContent {
         objectsList.add(transportation6);
         objectsList.add(transportation7);
         objectsList.add(transportation8);
-
-        return objectsList;
     }
-
 }

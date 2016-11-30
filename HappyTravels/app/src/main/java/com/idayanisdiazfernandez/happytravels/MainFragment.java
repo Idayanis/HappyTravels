@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.idayanisdiazfernandez.happytravels.DummyContent.DummyContent;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
@@ -19,6 +20,8 @@ import com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.idayanisdiazfernandez.happytravels.MainActivity.TYPE_KEY;
+import static com.idayanisdiazfernandez.happytravels.MainActivity.mSharedPreferences;
 
 
 /**
@@ -112,7 +115,7 @@ public class MainFragment extends Fragment {
 
         DummyContent dummyContent = new DummyContent();
 
-        for(Place place:dummyContent.getObjectsList()){
+        for(Place place:dummyContent.getObjectsList(mSharedPreferences.getString(TYPE_KEY, "All"))){
             placeList.add(place);
         }
 
