@@ -1,12 +1,17 @@
 package com.idayanisdiazfernandez.happytravels.Models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import com.idayanisdiazfernandez.happytravels.Tools.MyParcelable;
+
 import java.lang.reflect.Array;
 
 /**
  * Created by idasarav on 2016-11-16.
  */
 
-public class Place {
+public class Place implements Parcelable {
 
     String name, description, timing, address, placeType;
     double price;
@@ -43,6 +48,55 @@ public class Place {
         this.photos = photos;
         this.thumbnail = thumbnail;
     }
+
+    /**
+     *  Storing the Place data to Parcel object.
+     */
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeString(description);
+        parcel.writeString(timing);
+        parcel.writeString(address);
+        parcel.writeString(placeType);
+        parcel.writeDouble(price);
+        parcel.writeInt(contactInfo);
+        parcel.writeInt(thumbnail);
+        parcel.writeIntArray(photos);
+    }
+
+    /**
+     * Retrieving Place data from Parcel object
+     * This constructor is invoked by the method createFromParcel(Parcel source) of
+     * the object CREATOR
+     **/
+    private Place(Parcel in){
+        this.name = in.readString();
+        this.address = in.readString();
+        this.description = in.readString();
+        this.timing = in.readString();
+        this.placeType = in.readString();
+        this.price = in.readDouble();
+        this.contactInfo = in.readInt();
+        this.thumbnail = in.readInt();
+        this.photos = in.createIntArray();
+    }
+
+    public static final Parcelable.Creator<Place> CREATOR
+            = new Parcelable.Creator<Place>() {
+        public Place createFromParcel(Parcel in) {
+            return new Place(in);
+        }
+
+        public Place[] newArray(int size) {
+            return new Place[size];
+        }
+    };
 
     // Create getters and setters.
 
