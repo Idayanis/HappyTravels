@@ -77,7 +77,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                 FragmentTransaction ft = fragmentManager.beginTransaction();
 
                 if (place.getPlaceType() == "Hotel") {
-                    ft.replace(R.id.mainFragmenLayout, new HotelFragment());
+                    ft.replace(R.id.mainFragmenLayout, HotelFragment.newInstance("a", "b"));
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Beach") {
                     ft.replace(R.id.mainFragmenLayout, new BeachFragment());

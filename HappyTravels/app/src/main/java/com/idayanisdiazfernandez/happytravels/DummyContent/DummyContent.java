@@ -1,5 +1,9 @@
 package com.idayanisdiazfernandez.happytravels.DummyContent;
 
+import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
+
 import com.idayanisdiazfernandez.happytravels.Models.Airport;
 import com.idayanisdiazfernandez.happytravels.Models.Emergency;
 import com.idayanisdiazfernandez.happytravels.Models.Hotel;
@@ -211,34 +215,44 @@ public class DummyContent {
     // Add objects to array and return array from the method.
     public List<Place> getObjectsList(String placeType) {
 
-        if (placeType == "All") {
-            addAirports();
-            addEmergencies();
-            addHotels();
-            addNightclubs();
-            addPlaces();
-            addRestaurants();
-            addTransportation();
-        } else if (placeType == "Airport") {
-            addAirports();
+        switch (placeType) {
+            case "All":
+                addAirports();
+                addBeaches();
+                addEmergencies();
+                addHotels();
+                addNightclubs();
+                addPlaces();
+                addRestaurants();
+                addTransportation();
+                break;
+            case "Airport":
+                addAirports();
+                break;
+            case "Emergency":
+                addEmergencies();
+                break;
+            case "Hotel":
+                addHotels();
+                break;
+            case "Nightclub":
+                addNightclubs();
+                break;
+            case "Place":
+                addPlaces();
+                break;
+            case "Beach":
+                addBeaches();
+                break;
+            case "Restaurant":
+                addRestaurants();
+                break;
+            case "Transportation":
+                addTransportation();
+                break;
 
-        } else if (placeType == "Emergency") {
-            addEmergencies();
-
-        } else if (placeType == "Hotel") {
-            addHotels();
-        } else if (placeType == "Nightclub") {
-            addNightclubs();
-        } else if (placeType == "Place") {
-            addPlaces();
-        } else if (placeType == "Restaurant") {
-            addRestaurants();
-        } else if (placeType == "Transportation") {
-            addTransportation();
-        } else if (placeType == "Beach"){
-            addBeaches();
+            default:
         }
-
         return objectsList;
     }
 
@@ -298,7 +312,7 @@ public class DummyContent {
     }
 
     // Add Beaches
-    void addBeaches(){
+    void addBeaches() {
         objectsList.add(otherPlace5);
         objectsList.add(otherPlace6);
         objectsList.add(otherPlace7);

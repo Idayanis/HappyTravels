@@ -8,10 +8,10 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.idayanisdiazfernandez.happytravels.DummyContent.DummyContent;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
@@ -33,13 +33,13 @@ import static com.idayanisdiazfernandez.happytravels.MainActivity.mSharedPrefere
  * create an instance of this fragment.
  */
 public class MainFragment extends Fragment {
+
     FragmentManager fragmentManager = null;
+    DummyContent dummyContent = new DummyContent();
 
     // Create RecycleView, PlaceAdapter and List variables
     private RecyclerView recyclerView;
     private PlacesAdapter adapter;
-    private List<Place> placeList;
-
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -90,11 +90,8 @@ public class MainFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-
-        fragmentManager = getFragmentManager();
-
-        placeList = new ArrayList<>();
-        adapter = new PlacesAdapter(getActivity().getApplicationContext(), placeList, fragmentManager);
+        List<Place> placesList = dummyContent.getObjectsList(mSharedPreferences.getString(TYPE_KEY, "All"));
+        adapter = new PlacesAdapter(getActivity().getApplicationContext(), placesList, fragmentManager);
 
         // The GridLayout is used for displaying content instead of default list.
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 2);
@@ -102,25 +99,7 @@ public class MainFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator()); // use default animation.
         recyclerView.setAdapter(adapter);
 
-        // Initialize places
-        initPlaces();
-
         return view;
-    }
-
-    /**
-     * Adding few places for testing
-     */
-    private void initPlaces() {
-
-        DummyContent dummyContent = new DummyContent();
-
-        for(Place place:dummyContent.getObjectsList(mSharedPreferences.getString(TYPE_KEY, "All"))){
-            placeList.add(place);
-        }
-
-        adapter.notifyDataSetChanged();
-
     }
 
     // TODO: Rename method, update argument and hook method into UI event
