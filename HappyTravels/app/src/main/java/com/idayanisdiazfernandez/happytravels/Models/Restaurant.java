@@ -1,5 +1,9 @@
 package com.idayanisdiazfernandez.happytravels.Models;
 
+import android.icu.text.DisplayContext;
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 
 /**
@@ -9,8 +13,8 @@ import com.idayanisdiazfernandez.happytravels.Models.Place;
 public class Restaurant extends Place {
 
     // The properties for Restaurant class.
-    String[] TypeOfFood;
-    String[] menuList;
+    String TypeOfFood;
+    String menuList;
     Boolean drink;
     String cuisine;
     String reservations;
@@ -32,9 +36,9 @@ public class Restaurant extends Place {
      * @param cuisine
      * @param reservations
      */
-    public Restaurant(String name, String description, String timing, String address, String contactInfo,
-                      String placeType, double price, int[] photos, int thumbnail, String[] typeOfFood,
-                      String[] menuList, Boolean drink, String cuisine, String reservations) {
+    public Restaurant(String name, String description, String timing, String address, int contactInfo,
+                      String placeType, double price, int[] photos, int thumbnail, String typeOfFood,
+                      String menuList, Boolean drink, String cuisine, String reservations) {
         super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);
         TypeOfFood = typeOfFood;
         this.menuList = menuList;
@@ -43,21 +47,61 @@ public class Restaurant extends Place {
         this.reservations = reservations;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        super.writeToParcel(parcel, i);
+        parcel.writeString(TypeOfFood);
+        parcel.writeString(menuList);
+        parcel.writeByte((byte) (drink ? 1 : 0));
+        parcel.writeString(cuisine);
+        parcel.writeString(reservations);
+    }
+
+    /**
+     * Retrieving Place data from Parcel object
+     * This constructor is invoked by the method createFromParcel(Parcel source) of
+     * the object CREATOR
+     **/
+    private Restaurant(Parcel in){
+        super(in);
+        this.TypeOfFood = in.readString();
+        this.menuList = in.readString();
+        this.drink = in.readByte() != 0;
+        this.cuisine = in.readString();
+        this.reservations = in.readString();
+    }
+
+    public static final Parcelable.Creator<Restaurant> CREATOR
+            = new Parcelable.Creator<Restaurant>() {
+        public Restaurant createFromParcel(Parcel in) {
+            return new Restaurant(in);
+        }
+
+        public Restaurant[] newArray(int size) {
+            return new Restaurant[size];
+        }
+    };
+
     // Getters and Setters
 
-    public String[] getTypeOfFood() {
+    public String getTypeOfFood() {
         return TypeOfFood;
     }
 
-    public void setTypeOfFood(String[] typeOfFood) {
+    public void setTypeOfFood(String typeOfFood) {
         TypeOfFood = typeOfFood;
     }
 
-    public String[] getMenuList() {
+    public String getMenuList() {
         return menuList;
     }
 
-    public void setMenuList(String[] menuList) {
+    public void setMenuList(String menuList) {
         this.menuList = menuList;
     }
 
