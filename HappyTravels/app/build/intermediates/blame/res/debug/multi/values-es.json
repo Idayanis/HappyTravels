@@ -406,8 +406,27 @@
                     "startLine": 23,
                     "startColumn": 4,
                     "startOffset": 2120,
+                    "endColumn": 50,
+                    "endOffset": 2166
+                },
+                "from": {
+                    "file": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/values-es/strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 323,
+                        "endColumn": 50,
+                        "endOffset": 369
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2171,
                     "endColumn": 49,
-                    "endOffset": 2165
+                    "endOffset": 2216
                 },
                 "from": {
                     "file": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/values-es/strings.xml",
@@ -422,11 +441,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 2170,
+                    "startOffset": 2221,
                     "endColumn": 37,
-                    "endOffset": 2203
+                    "endOffset": 2254
                 },
                 "from": {
                     "file": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/values-es/strings.xml",
@@ -441,11 +460,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 2208,
+                    "startOffset": 2259,
                     "endColumn": 40,
-                    "endOffset": 2244
+                    "endOffset": 2295
                 },
                 "from": {
                     "file": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/values-es/strings.xml",
@@ -460,11 +479,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 2249,
+                    "startOffset": 2300,
                     "endColumn": 40,
-                    "endOffset": 2285
+                    "endOffset": 2336
                 },
                 "from": {
                     "file": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/values-es/strings.xml",
@@ -479,11 +498,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 2290,
+                    "startOffset": 2341,
                     "endColumn": 81,
-                    "endOffset": 2367
+                    "endOffset": 2418
                 },
                 "from": {
                     "file": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/values-es/values-es.xml",
@@ -498,11 +517,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 2372,
+                    "startOffset": 2423,
                     "endColumn": 100,
-                    "endOffset": 2468
+                    "endOffset": 2519
                 },
                 "from": {
                     "file": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/values-es/values-es.xml",

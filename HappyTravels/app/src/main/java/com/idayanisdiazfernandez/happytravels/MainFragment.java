@@ -112,29 +112,29 @@ public class MainFragment extends Fragment {
         //============================Dummy Content=====================================//
         //============================Dummy Content=====================================//
         // Airports
-        airport1 = new Airport(getString(R.string.airport_1), getString(R.string.airport_1_description), "Open 24/7", "Address for Airport 1",
-                789878787, getContext().getString(R.string.airport), 0, gallery[0], gallery[0][0], "International and domestic flights.");
+        airport1 = new Airport(getString(R.string.airport_1), getString(R.string.airport_1_description), getString(R.string.open), getString(R.string.address),
+                789878787, getContext().getString(R.string.airport), 0, gallery[0], gallery[0][0], getString(R.string.flights_1));
 
-        airport2 = new Airport("Airport 2", "Airport 2 description", "Open 24/7", "Address for Airport 2",
-                789844787, "Airport", 0, gallery[1], gallery[0][1], "International and domestic flights.");
+        airport2 = new Airport(getString(R.string.airport_2), getString(R.string.airport_2_description), getString(R.string.open_2), getString(R.string.address_2),
+                789844787, "Airport", 0, gallery[1], gallery[0][1], getString(R.string.flights_2));
 
-        airport3 = new Airport("Airport 3", "Airport 3 description", "Open 24/7", "Address for Airport 3",
-                789844787, "Airport", 0, gallery[2], gallery[0][2], "International and domestic flights.");
+        airport3 = new Airport(getString(R.string.airport_3), getString(R.string.airport_3_description), getString(R.string.open_3), getString(R.string.address_3),
+                789844787, "Airport", 0, gallery[2], gallery[0][2], getString(R.string.flights_3));
 
-        airport4 = new Airport("Airport 4", "Airport 4 description", "Open 24/7", "Address for Airport 4",
-                789844787, "Airport", 0, gallery[3], gallery[1][0], "International and domestic flights.");
+        airport4 = new Airport(getString(R.string.airport_4), getString(R.string.airport_4_description), getString(R.string.open_4), getString(R.string.address_4),
+                789844787, "Airport", 0, gallery[3], gallery[1][0], getString(R.string.flights));
 
-        airport5 = new Airport("Airport 5", "Airport 5 description", "Open 24/7", "Address for Airport 5",
-                789844787, "Airport", 0, gallery[4], gallery[1][1], "International and domestic flights.");
+        airport5 = new Airport(getString(R.string.airport_5), getString(R.string.airport_5_description), getString(R.string.open_5), getString(R.string.address_5),
+                789844787, "Airport", 0, gallery[4], gallery[1][1], getString(R.string.flights_5));
 
-        airport6 = new Airport("Airport 6", "Airport 6 description", "Open 24/7", "Address for Airport 6",
-                789844787, "Airport", 0, gallery[5], gallery[1][2], "International and domestic flights.");
+        airport6 = new Airport(getString(R.string.airport_6), getString(R.string.airport_6_description), getString(R.string.open_6), getString(R.string.address_6),
+                789844787, "Airport", 0, gallery[5], gallery[1][2], getString(R.string.flights_6));
 
-        airport7 = new Airport("Airport 7", "Airport 7 description", "Open 24/7", "Address for Airport 7",
-                789844787, "Airport", 0, gallery[1], gallery[2][0], "International and domestic flights.");
+        airport7 = new Airport(getString(R.string.airport_7), getString(R.string.airport_7_description), getString(R.string.open_7), getString(R.string.address_7),
+                789844787, "Airport", 0, gallery[1], gallery[2][0], getString(R.string.flights_7));
 
-        airport8 = new Airport("Airport 8", "Airport 8 description", "Open 24/7", "Address for Airport 8",
-                789844787, "Airport", 0, gallery[2], gallery[2][1], "International and domestic flights.");
+        airport8 = new Airport(getString(R.string.airport_8), getString(R.string.airport_8_description), getString(R.string.open_8), getString(R.string.address_8),
+                789844787, "Airport", 0, gallery[2], gallery[2][1], getString(R.string.flights_8));
 
 
         // Emergency
@@ -148,28 +148,28 @@ public class MainFragment extends Fragment {
         // Hotel
         String[] roomType = {"Single", "Double", "Single, Double", "Single, Double, Studio"};
 
-        hotel1 = new Hotel("Hotel 1", "Hotel 1 description", "Open 24/7", "Address for Hotel 1",
+        hotel1 = new Hotel(getString(R.string.hotel_1), getString(R.string.hotel_1_description), getString(R.string.hotel_1_open), getString(R.string.hotel_1_address),
                 8989398, "Hotel", 80, gallery[0], gallery[0][0], roomType[1], true, true, true, true, true);
 
-        hotel2 = new Hotel("Hotel 2", "Hotel 2 description", "Open 24/7", "Address for Hotel 2",
+        hotel2 = new Hotel(getString(R.string.hotel_2), getString(R.string.hotel_2_description), getString(R.string.hotel_2_open), getString(R.string.hotel_2_address),
                 8989498, "Hotel", 80, gallery[1], gallery[0][1], roomType[1], true, true, true, true, true);
 
-        hotel3 = new Hotel("Hotel 3", "Hotel 3 description", "Open 24/7", "Address for Hotel 3",
+        hotel3 = new Hotel(getString(R.string.hotel_3), getString(R.string.hotel_3_description), getString(R.string.hotel_3_open), getString(R.string.hotel_3_address),
                 8989598, "Hotel", 80, gallery[2], gallery[0][2], roomType[1], true, true, true, true, true);
 
-        hotel4 = new Hotel("Hotel 4", "Hotel 4 description", "Open 24/7", "Address for Hotel 4",
+        hotel4 = new Hotel(getString(R.string.hotel_4), getString(R.string.hotel_4_description), getString(R.string.hotel_4_open), getString(R.string.hotel_4_address),
                 8989698, "Hotel", 80, gallery[3], gallery[1][0], roomType[1], true, true, true, true, true);
 
-        hotel5 = new Hotel("Hotel 5", "Hotel 5 description", "Open 24/7", "Address for Hotel 5",
+        hotel5 = new Hotel(getString(R.string.hotel_5), getString(R.string.hotel_5_description), getString(R.string.hotel_5_open), getString(R.string.hotel_5_address),
                 8989798, "Hotel", 80, gallery[4], gallery[1][1], roomType[1], true, true, true, true, true);
 
-        hotel6 = new Hotel("Hotel 6", "Hotel 6 description", "Open 24/7", "Address for Hotel 6",
+        hotel6 = new Hotel(getString(R.string.hotel_6), getString(R.string.hotel_6_description), getString(R.string.hotel_6_open), getString(R.string.hotel_6_address),
                 8989898, "Hotel", 80, gallery[5], gallery[1][2], roomType[1], true, true, true, true, true);
 
-        hotel7 = new Hotel("Hotel 7", "Hotel 7 description", "Open 24/7", "Address for Hotel 7",
+        hotel7 = new Hotel(getString(R.string.hotel_7), getString(R.string.hotel_7_description), getString(R.string.hotel_7_open), getString(R.string.hotel_7_address),
                 8989998, "Hotel", 80, gallery[1], gallery[2][0], roomType[1], true, true, true, true, true);
 
-        hotel8 = new Hotel("Hotel 8", "Hotel 8 description", "Open 24/7", "Address for Hotel 8",
+        hotel8 = new Hotel(getString(R.string.hotel_8), getString(R.string.hotel_8_description), getString(R.string.hotel_8_open), getString(R.string.hotel_8_address),
                 8989098, "Hotel", 80, gallery[2], gallery[2][1], roomType[1], true, true, true, true, true);
 
 

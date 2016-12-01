@@ -638,6 +638,7 @@
     <string name="airport">Airport</string>
     <string name="airport_1">Airport 1</string>
     <string name="airport_1_description">Airport 1 description</string>
+    <string name="airport_2">Airport 2</string>
     <string name="app_name">HappyTravels</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="blue">Blue</string>
