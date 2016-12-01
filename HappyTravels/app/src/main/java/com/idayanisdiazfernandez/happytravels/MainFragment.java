@@ -174,28 +174,28 @@ public class MainFragment extends Fragment {
 
 
         // NightClubs
-        nightClub1 = new Nightclub("Nightclub 1", "Nightclub 1 description", "Open 24/7", "Address for Nightclub 1",
+        nightClub1 = new Nightclub(getString(R.string.nightclub_1), getString(R.string.nightclub_1_description), getString(R.string.nightclub_1_open), getString(R.string.nightclub_1_address),
                 8989098, "Nightclub", 10, gallery[0], gallery[0][0], true, true, true);
 
-        nightClub2 = new Nightclub("Nightclub 2", "Nightclub 2 description", "Open 24/7", "Address for Nightclub 2",
+        nightClub2 = new Nightclub(getString(R.string.nightclub_2), getString(R.string.nightclub_2_description), getString(R.string.nightclub_2_open), getString(R.string.nightclub_2_address),
                 8989098, "Nightclub", 10, gallery[1], gallery[0][2], true, true, true);
 
-        nightClub3 = new Nightclub("Nightclub 3", "Nightclub 3 description", "Open 24/7", "Address for Nightclub 3",
+        nightClub3 = new Nightclub(getString(R.string.nightclub_3), getString(R.string.nightclub_3_description), getString(R.string.nightclub_3_open), getString(R.string.nightclub_3_address),
                 8989098, "Nightclub", 10, gallery[2], gallery[4][2], true, true, true);
 
-        nightClub4 = new Nightclub("Nightclub 4", "Nightclub 4 description", "Open 24/7", "Address for Nightclub 4",
+        nightClub4 = new Nightclub(getString(R.string.nightclub_4), getString(R.string.nightclub_4_description), getString(R.string.nightclub_4_open), getString(R.string.nightclub_4_address),
                 8989098, "Nightclub", 10, gallery[3], gallery[3][1], true, true, true);
 
-        nightClub5 = new Nightclub("Nightclub 5", "Nightclub 5 description", "Open 24/7", "Address for Nightclub 5",
+        nightClub5 = new Nightclub(getString(R.string.nightclub_5), getString(R.string.nightclub_5_description), getString(R.string.nightclub_5_open), getString(R.string.nightclub_5_address),
                 8989098, "Nightclub", 10, gallery[4], gallery[5][2], true, true, true);
 
-        nightClub6 = new Nightclub("Nightclub 6", "Nightclub 6 description", "Open 24/7", "Address for Nightclub 6",
+        nightClub6 = new Nightclub(getString(R.string.nightclub_6), getString(R.string.nightclub_6_description), getString(R.string.nightclub_6_open), getString(R.string.nightclub_6_address),
                 8989098, "Nightclub", 10, gallery[5], gallery[5][1], true, true, true);
 
-        nightClub7 = new Nightclub("Nightclub 7", "Nightclub 7 description", "Open 24/7", "Address for Nightclub 7",
+        nightClub7 = new Nightclub(getString(R.string.nightclub_7), getString(R.string.nightclub_7_description), getString(R.string.nightclub_7_open), getString(R.string.nightclub_7_address),
                 8989098, "Nightclub", 10, gallery[1], gallery[3][0], true, true, true);
 
-        nightClub8 = new Nightclub("Nightclub 8", "Nightclub 8 description", "Open 24/7", "Address for Nightclub 8",
+        nightClub8 = new Nightclub(getString(R.string.nightclub_8), getString(R.string.nightclub_8_description), getString(R.string.nightclub_8_open), getString(R.string.nightclub_8_address),
                 8989098, "Nightclub", 10, gallery[2], gallery[0][1], true, true, true);
 
         // Beaches
