@@ -83,43 +83,43 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                 Bundle bundle = new Bundle();
                 bundle.putParcelable(ARG_PLACE, place);
 
-                if (place.getPlaceType() == "Hotel") {
+                if (place.getPlaceType() == mContext.getString(R.string.hotel)) {
                     // Instantiate HotelFragment and set bundle as argument.
                     Fragment hotelFragment = new HotelFragment();
                     hotelFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, hotelFragment);
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "Beach") {
+                } else if (place.getPlaceType() == mContext.getString(R.string.beach)) {
                     // Instantiate BeachFragment and set bundle as argument.
                     Fragment beachFragment = new BeachFragment();
                     beachFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, beachFragment);
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "Restaurant") {
+                } else if (place.getPlaceType() == mContext.getString(R.string.restaurant)) {
                     // Instantiate BeachFragment and set bundle as argument.
                     Fragment restaurantFragment = new RestaurantFragment();
                     restaurantFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, restaurantFragment);
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "Nightclub") {
+                } else if (place.getPlaceType() == mContext.getString(R.string.nightclub)) {
                     // Instantiate BeachFragment and set bundle as argument.
                     Fragment nightClubFragment = new NightclubFragment();
                     nightClubFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, nightClubFragment);
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "Airport") {
+                } else if (place.getPlaceType() == mContext.getString(R.string.airport)) {
                     // Instantiate AirportFragment and set bundle as argument.
                     Fragment airFragment = new AirportFragment();
                     airFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout,  airFragment);
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "Transportation") {
+                } else if (place.getPlaceType() == mContext.getString(R.string.transport)) {
                     // Instantiate BeachFragment and set bundle as argument.
                     Fragment transportationFragment = new TransportationFragment();
                     transportationFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, transportationFragment);
                     ft.addToBackStack("tag").commit();
-                } else if (place.getPlaceType() == "Emergency") {
+                } else if (place.getPlaceType() == mContext.getString(R.string.emergency)) {
                     // Instantiate BeachFragment and set bundle as argument.
                     Fragment emergencyFragment = new EmergencyFragment();
                     emergencyFragment.setArguments(bundle);
