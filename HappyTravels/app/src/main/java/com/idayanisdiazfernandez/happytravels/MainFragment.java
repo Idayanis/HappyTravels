@@ -112,176 +112,176 @@ public class MainFragment extends Fragment {
         //============================Dummy Content=====================================//
         //============================Dummy Content=====================================//
         // Airports
-        airport1 = new Airport(getString(R.string.airport_1), getString(R.string.airport_1_description), "Open 24/7", "Address for Airport 1",
-                789878787, getContext().getString(R.string.airport), 0, gallery[0], gallery[0][0], "International and domestic flights.");
+        airport1 = new Airport(getString(R.string.airport_1), getString(R.string.airport_1_description), getString(R.string.open), getString(R.string.address),
+                789878787, getContext().getString(R.string.airport), 0, gallery[0], gallery[0][0], getString(R.string.flights_1));
 
-        airport2 = new Airport("Airport 2", "Airport 2 description", "Open 24/7", "Address for Airport 2",
-                789844787, "Airport", 0, gallery[1], gallery[0][1], "International and domestic flights.");
+        airport2 = new Airport(getString(R.string.airport_2), getString(R.string.airport_2_description), getString(R.string.open_2), getString(R.string.address_2),
+                789844787, getString(R.string.Airport2), 0, gallery[1], gallery[0][1], getString(R.string.flights_2));
 
-        airport3 = new Airport("Airport 3", "Airport 3 description", "Open 24/7", "Address for Airport 3",
-                789844787, "Airport", 0, gallery[2], gallery[0][2], "International and domestic flights.");
+        airport3 = new Airport(getString(R.string.airport_3), getString(R.string.airport_3_description), getString(R.string.open_3), getString(R.string.address_3),
+                789844787, getString(R.string.Airport3), 0, gallery[2], gallery[0][2], getString(R.string.flights_3));
 
-        airport4 = new Airport("Airport 4", "Airport 4 description", "Open 24/7", "Address for Airport 4",
-                789844787, "Airport", 0, gallery[3], gallery[1][0], "International and domestic flights.");
+        airport4 = new Airport(getString(R.string.airport_4), getString(R.string.airport_4_description), getString(R.string.open_4), getString(R.string.address_4),
+                789844787, getString(R.string.Airport4), 0, gallery[3], gallery[1][0], getString(R.string.flights));
 
-        airport5 = new Airport("Airport 5", "Airport 5 description", "Open 24/7", "Address for Airport 5",
-                789844787, "Airport", 0, gallery[4], gallery[1][1], "International and domestic flights.");
+        airport5 = new Airport(getString(R.string.airport_5), getString(R.string.airport_5_description), getString(R.string.open_5), getString(R.string.address_5),
+                789844787, getString(R.string.Airport5), 0, gallery[4], gallery[1][1], getString(R.string.flights_5));
 
-        airport6 = new Airport("Airport 6", "Airport 6 description", "Open 24/7", "Address for Airport 6",
-                789844787, "Airport", 0, gallery[5], gallery[1][2], "International and domestic flights.");
+        airport6 = new Airport(getString(R.string.airport_6), getString(R.string.airport_6_description), getString(R.string.open_6), getString(R.string.address_6),
+                789844787, getString(R.string.Airport6), 0, gallery[5], gallery[1][2], getString(R.string.flights_6));
 
-        airport7 = new Airport("Airport 7", "Airport 7 description", "Open 24/7", "Address for Airport 7",
-                789844787, "Airport", 0, gallery[1], gallery[2][0], "International and domestic flights.");
+        airport7 = new Airport(getString(R.string.airport_7), getString(R.string.airport_7_description), getString(R.string.open_7), getString(R.string.address_7),
+                789844787, getString(R.string.Airport7), 0, gallery[1], gallery[2][0], getString(R.string.flights_7));
 
-        airport8 = new Airport("Airport 8", "Airport 8 description", "Open 24/7", "Address for Airport 8",
-                789844787, "Airport", 0, gallery[2], gallery[2][1], "International and domestic flights.");
+        airport8 = new Airport(getString(R.string.airport_8), getString(R.string.airport_8_description), getString(R.string.open_8), getString(R.string.address_8),
+                789844787, getString(R.string.Airport8), 0, gallery[2], gallery[2][1], getString(R.string.flights_8));
 
 
         // Emergency
-        emergency1 = new Emergency("Emergency 1", "Police", 787878789, "Emergency", R.drawable.place1);
-        emergency2 = new Emergency("Emergency 2", "Fire Department", 787878789, "Emergency", R.drawable.place2);
-        emergency3 = new Emergency("Emergency 3", "Hospital A", 787878789, "Emergency", R.drawable.place3);
-        emergency4 = new Emergency("Emergency 4", "Hospital B", 787878789, "Emergency", R.drawable.place4);
-        emergency5 = new Emergency("Emergency 5", "Ambulance A", 787878789, "Emergency", R.drawable.place5);
-        emergency6 = new Emergency("Emergency 6", "Ambulance B", 787878789, "Emergency", R.drawable.place6);
+        emergency1 = new Emergency(getString(R.string.emergency_1), getString(R.string.police_1), 787878789, getString(R.string.emergency1), R.drawable.place1);
+        emergency2 = new Emergency(getString(R.string.emergency_2), getString(R.string.fire_department_1), 787878789, getString(R.string.emergency2), R.drawable.place2);
+        emergency3 = new Emergency(getString(R.string.emergency_3), getString(R.string.hospital_A), 787878789, getString(R.string.emergency3), R.drawable.place3);
+        emergency4 = new Emergency(getString(R.string.emergency_4), getString(R.string.hospital_B), 787878789, getString(R.string.emergency4), R.drawable.place4);
+        emergency5 = new Emergency(getString(R.string.emergency_6), getString(R.string.ambulance_A), 787878789, getString(R.string.emergency5), R.drawable.place5);
+        emergency6 = new Emergency(getString(R.string.emergency_7), getString(R.string.ambulance_B), 787878789, getString(R.string.emergency6), R.drawable.place6);
 
         // Hotel
         String[] roomType = {"Single", "Double", "Single, Double", "Single, Double, Studio"};
 
-        hotel1 = new Hotel("Hotel 1", "Hotel 1 description", "Open 24/7", "Address for Hotel 1",
-                8989398, "Hotel", 80, gallery[0], gallery[0][0], roomType[1], true, true, true, true, true);
+        hotel1 = new Hotel(getString(R.string.hotel_1), getString(R.string.hotel_1_description), getString(R.string.hotel_1_open), getString(R.string.hotel_1_address),
+                8989398, getString(R.string.hotel1), 80, gallery[0], gallery[0][0], roomType[1], true, true, true, true, true);
 
-        hotel2 = new Hotel("Hotel 2", "Hotel 2 description", "Open 24/7", "Address for Hotel 2",
-                8989498, "Hotel", 80, gallery[1], gallery[0][1], roomType[1], true, true, true, true, true);
+        hotel2 = new Hotel(getString(R.string.hotel_2), getString(R.string.hotel_2_description), getString(R.string.hotel_2_open), getString(R.string.hotel_2_address),
+                8989498, getString(R.string.hotel2), 80, gallery[1], gallery[0][1], roomType[1], true, true, true, true, true);
 
-        hotel3 = new Hotel("Hotel 3", "Hotel 3 description", "Open 24/7", "Address for Hotel 3",
-                8989598, "Hotel", 80, gallery[2], gallery[0][2], roomType[1], true, true, true, true, true);
+        hotel3 = new Hotel(getString(R.string.hotel_3), getString(R.string.hotel_3_description), getString(R.string.hotel_3_open), getString(R.string.hotel_3_address),
+                8989598, getString(R.string.hotel3), 80, gallery[2], gallery[0][2], roomType[1], true, true, true, true, true);
 
-        hotel4 = new Hotel("Hotel 4", "Hotel 4 description", "Open 24/7", "Address for Hotel 4",
-                8989698, "Hotel", 80, gallery[3], gallery[1][0], roomType[1], true, true, true, true, true);
+        hotel4 = new Hotel(getString(R.string.hotel_4), getString(R.string.hotel_4_description), getString(R.string.hotel_4_open), getString(R.string.hotel_4_address),
+                8989698, getString(R.string.hotel4), 80, gallery[3], gallery[1][0], roomType[1], true, true, true, true, true);
 
-        hotel5 = new Hotel("Hotel 5", "Hotel 5 description", "Open 24/7", "Address for Hotel 5",
-                8989798, "Hotel", 80, gallery[4], gallery[1][1], roomType[1], true, true, true, true, true);
+        hotel5 = new Hotel(getString(R.string.hotel_5), getString(R.string.hotel_5_description), getString(R.string.hotel_5_open), getString(R.string.hotel_5_address),
+                8989798, getString(R.string.hotel5), 80, gallery[4], gallery[1][1], roomType[1], true, true, true, true, true);
 
-        hotel6 = new Hotel("Hotel 6", "Hotel 6 description", "Open 24/7", "Address for Hotel 6",
-                8989898, "Hotel", 80, gallery[5], gallery[1][2], roomType[1], true, true, true, true, true);
+        hotel6 = new Hotel(getString(R.string.hotel_6), getString(R.string.hotel_6_description), getString(R.string.hotel_6_open), getString(R.string.hotel_6_address),
+                8989898, getString(R.string.hotel6), 80, gallery[5], gallery[1][2], roomType[1], true, true, true, true, true);
 
-        hotel7 = new Hotel("Hotel 7", "Hotel 7 description", "Open 24/7", "Address for Hotel 7",
-                8989998, "Hotel", 80, gallery[1], gallery[2][0], roomType[1], true, true, true, true, true);
+        hotel7 = new Hotel(getString(R.string.hotel_7), getString(R.string.hotel_7_description), getString(R.string.hotel_7_open), getString(R.string.hotel_7_address),
+                8989998, getString(R.string.hotel7), 80, gallery[1], gallery[2][0], roomType[1], true, true, true, true, true);
 
-        hotel8 = new Hotel("Hotel 8", "Hotel 8 description", "Open 24/7", "Address for Hotel 8",
-                8989098, "Hotel", 80, gallery[2], gallery[2][1], roomType[1], true, true, true, true, true);
+        hotel8 = new Hotel(getString(R.string.hotel_8), getString(R.string.hotel_8_description), getString(R.string.hotel_8_open), getString(R.string.hotel_8_address),
+                8989098, getString(R.string.hotel8), 80, gallery[2], gallery[2][1], roomType[1], true, true, true, true, true);
 
 
         // NightClubs
-        nightClub1 = new Nightclub("Nightclub 1", "Nightclub 1 description", "Open 24/7", "Address for Nightclub 1",
-                8989098, "Nightclub", 10, gallery[0], gallery[0][0], true, true, true);
+        nightClub1 = new Nightclub(getString(R.string.nightclub_1), getString(R.string.nightclub_1_description), getString(R.string.nightclub_1_open), getString(R.string.nightclub_1_address),
+                8989098, getString(R.string.Nightclub1), 10, gallery[0], gallery[0][0], true, true, true);
 
-        nightClub2 = new Nightclub("Nightclub 2", "Nightclub 2 description", "Open 24/7", "Address for Nightclub 2",
-                8989098, "Nightclub", 10, gallery[1], gallery[0][2], true, true, true);
+        nightClub2 = new Nightclub(getString(R.string.nightclub_2), getString(R.string.nightclub_2_description), getString(R.string.nightclub_2_open), getString(R.string.nightclub_2_address),
+                8989098, getString(R.string.Nightclub2), 10, gallery[1], gallery[0][2], true, true, true);
 
-        nightClub3 = new Nightclub("Nightclub 3", "Nightclub 3 description", "Open 24/7", "Address for Nightclub 3",
-                8989098, "Nightclub", 10, gallery[2], gallery[4][2], true, true, true);
+        nightClub3 = new Nightclub(getString(R.string.nightclub_3), getString(R.string.nightclub_3_description), getString(R.string.nightclub_3_open), getString(R.string.nightclub_3_address),
+                8989098, getString(R.string.Nightclub3), 10, gallery[2], gallery[4][2], true, true, true);
 
-        nightClub4 = new Nightclub("Nightclub 4", "Nightclub 4 description", "Open 24/7", "Address for Nightclub 4",
-                8989098, "Nightclub", 10, gallery[3], gallery[3][1], true, true, true);
+        nightClub4 = new Nightclub(getString(R.string.nightclub_4), getString(R.string.nightclub_4_description), getString(R.string.nightclub_4_open), getString(R.string.nightclub_4_address),
+                8989098, getString(R.string.Nightclub4), 10, gallery[3], gallery[3][1], true, true, true);
 
-        nightClub5 = new Nightclub("Nightclub 5", "Nightclub 5 description", "Open 24/7", "Address for Nightclub 5",
-                8989098, "Nightclub", 10, gallery[4], gallery[5][2], true, true, true);
+        nightClub5 = new Nightclub(getString(R.string.nightclub_5), getString(R.string.nightclub_5_description), getString(R.string.nightclub_5_open), getString(R.string.nightclub_5_address),
+                8989098, getString(R.string.Nightclub5), 10, gallery[4], gallery[5][2], true, true, true);
 
-        nightClub6 = new Nightclub("Nightclub 6", "Nightclub 6 description", "Open 24/7", "Address for Nightclub 6",
-                8989098, "Nightclub", 10, gallery[5], gallery[5][1], true, true, true);
+        nightClub6 = new Nightclub(getString(R.string.nightclub_6), getString(R.string.nightclub_6_description), getString(R.string.nightclub_6_open), getString(R.string.nightclub_6_address),
+                8989098, getString(R.string.Nightclub6), 10, gallery[5], gallery[5][1], true, true, true);
 
-        nightClub7 = new Nightclub("Nightclub 7", "Nightclub 7 description", "Open 24/7", "Address for Nightclub 7",
-                8989098, "Nightclub", 10, gallery[1], gallery[3][0], true, true, true);
+        nightClub7 = new Nightclub(getString(R.string.nightclub_7), getString(R.string.nightclub_7_description), getString(R.string.nightclub_7_open), getString(R.string.nightclub_7_address),
+                8989098, getString(R.string.Nightclub7), 10, gallery[1], gallery[3][0], true, true, true);
 
-        nightClub8 = new Nightclub("Nightclub 8", "Nightclub 8 description", "Open 24/7", "Address for Nightclub 8",
-                8989098, "Nightclub", 10, gallery[2], gallery[0][1], true, true, true);
+        nightClub8 = new Nightclub(getString(R.string.nightclub_8), getString(R.string.nightclub_8_description), getString(R.string.nightclub_8_open), getString(R.string.nightclub_8_address),
+                8989098, getString(R.string.Nightclub8), 10, gallery[2], gallery[0][1], true, true, true);
 
         // Beaches
-        beach1 = new Beach("Other Place 1", "Other Place 1 description", "Open 24/7", "Address for Other Place 1",
-                1989098, "Beach", 5, gallery[2], gallery[0][1]);
+        beach1 = new Beach(getString(R.string.other_1), getString(R.string.other_1_description), getString(R.string.other_1_open), getString(R.string.other_1_address),
+                1989098, getString(R.string.Beach1), 5, gallery[2], gallery[0][1]);
 
-        beach2 = new Beach("Other Place 2", "Other Place 2 description", "Open 24/7", "Address for Other Place 2",
-                2989098, "Beach", 6, gallery[2], gallery[0][1]);
+        beach2 = new Beach(getString(R.string.other_2), getString(R.string.other_2_description), getString(R.string.other_2_open), getString(R.string.other_2_address),
+                2989098, getString(R.string.Beach2), 6, gallery[2], gallery[0][1]);
 
-        beach3 = new Beach("Other Place 3", "Other Place 3 description", "Open 24/7", "Address for Other Place 3",
-                3989098, "Beach", 7, gallery[2], gallery[0][1]);
+        beach3 = new Beach(getString(R.string.other_3), getString(R.string.other_3_description), getString(R.string.other_3_open), getString(R.string.other_3_address),
+                3989098, getString(R.string.Beach3), 7, gallery[2], gallery[0][1]);
 
-        beach4 = new Beach("Other Place 4", "Other Place 4 description", "Open 24/7", "Address for Other Place 4",
-                4989098, "Beach", 8, gallery[2], gallery[0][1]);
+        beach4 = new Beach(getString(R.string.other_4), getString(R.string.other_4_open), getString(R.string.open_4_description), getString(R.string.other_4_address),
+                4989098, getString(R.string.Beach4), 8, gallery[2], gallery[0][1]);
 
-        beach5 = new Beach("Beach 1", "Beach 5 description", "Open 24/7", "Address for Beach 1",
-                5989098, "Beach", 9, gallery[2], gallery[0][1]);
+        beach5 = new Beach(getString(R.string.other_5), getString(R.string.other_5_description), getString(R.string.other_5_open), getString(R.string.other_5_address),
+                5989098, getString(R.string.Beach5), 9, gallery[2], gallery[0][1]);
 
-        beach6 = new Beach("Beach 2", "Beach 6 description", "Open 24/7", "Address for Beach 2",
-                6989098, "Beach", 0, gallery[2], gallery[0][1]);
+        beach6 = new Beach(getString(R.string.other_6), getString(R.string.other_6_description), getString(R.string.other_6_open), getString(R.string.other_6_address),
+                6989098, getString(R.string.Beach6), 0, gallery[2], gallery[0][1]);
 
-        beach7 = new Beach("Beach 3", "Beach 7 description", "Open 24/7", "Address for Beach 3",
-                7989098, "Beach", 1, gallery[2], gallery[0][1]);
+        beach7 = new Beach(getString(R.string.other_7), getString(R.string.other_7_description), getString(R.string.other_7_open), getString(R.string.other_7_address),
+                7989098, getString(R.string.Beach7), 1, gallery[2], gallery[0][1]);
 
-        beach8 = new Beach("Beach 4", "Beach 8 description", "Open 24/7", "Address for Beach 4",
-                8989091, "Beach", 3, gallery[2], gallery[0][1]);
+        beach8 = new Beach(getString(R.string.other_8), getString(R.string.other_8_description), getString(R.string.other_8_open), getString(R.string.other_8_address),
+                8989091, getString(R.string.Beach8), 3, gallery[2], gallery[0][1]);
 
 
         // Restaurants
-        restaurant1 = new Restaurant("Restaurant 1", "Restaurant 1 description", "Open 24/7",
-                "Address for Restaurant 1", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
-                "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+        restaurant1 = new Restaurant(getString(R.string.restaurant_1), getString(R.string.restaurant_1_description), getString(R.string.restaurant_1_open),
+                getString(R.string.restaurant_1_address), 2349091, getString(R.string.restaurant1), 25, gallery[2], gallery[0][1], getString(R.string.mexican_1),
+                getString(R.string.fish_1), true, getString(R.string.cuisine_1_details), getString(R.string.reservation_1));
 
-        restaurant2 = new Restaurant("Restaurant 2", "Restaurant 1 description", "Open 24/7",
-                "Address for Restaurant 2", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
-                "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+        restaurant2 = new Restaurant(getString(R.string.restaurant_2), getString(R.string.restaurant_2_description), getString(R.string.restaurant_2_open),
+                getString(R.string.restaurant_2_address), 2349091, getString(R.string.restaurant2), 25, gallery[2], gallery[0][1], getString(R.string.restaurant_2_mexican),
+                getString(R.string.fish_2), true, getString(R.string.cuisine_2_details), getString(R.string.reservation_2));
 
-        restaurant3 = new Restaurant("Restaurant 3", "Restaurant 1 description", "Open 24/7",
-                "Address for Restaurant 3", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
-                "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+        restaurant3 = new Restaurant(getString(R.string.restaurant_3), getString(R.string.restaurant_3_description), getString(R.string.restaurant_3_open),
+                getString(R.string.restaurant_3_address), 2349091, getString(R.string.restaurant3), 25, gallery[2], gallery[0][1], getString(R.string.mexican_3),
+                getString(R.string.fish_3), true, getString(R.string.cuisine_3_details), getString(R.string.reservation_3));
 
-        restaurant4 = new Restaurant("Restaurant 4", "Restaurant 1 description", "Open 24/7",
-                "Address for Restaurant 4", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
-                "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+        restaurant4 = new Restaurant(getString(R.string.restaurant_4), getString(R.string.restaurant_4_description), getString(R.string.restaurant_4_open),
+                getString(R.string.restaurant_4_address), 2349091, getString(R.string.restaurant4), 25, gallery[2], gallery[0][1], getString(R.string.mexican_4),
+                getString(R.string.fish_4), true, getString(R.string.cuisine_4_details), getString(R.string.reservation_4));
 
-        restaurant5 = new Restaurant("Restaurant 5", "Restaurant 1 description", "Open 24/7",
-                "Address for Restaurant 5", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
-                "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+        restaurant5 = new Restaurant(getString(R.string.restaurant_5), getString(R.string.restaurant), getString(R.string.restaurant_5_open),
+                getString(R.string.restaurant_5_address), 2349091, getString(R.string.restaurant5), 25, gallery[2], gallery[0][1], getString(R.string.mexican_5),
+                getString(R.string.fish_5), true, getString(R.string.cuisine_5_details), getString(R.string.reservation_5));
 
-        restaurant6 = new Restaurant("Restaurant 6", "Restaurant 1 description", "Open 24/7",
-                "Address for Restaurant 6", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
-                "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+        restaurant6 = new Restaurant(getString(R.string.restaurant_6), getString(R.string.restaurant_6_description), getString(R.string.restaurant_6_open),
+                getString(R.string.restaurant_6_address), 2349091, getString(R.string.restaurant6), 25, gallery[2], gallery[0][1], getString(R.string.mexican_6),
+                getString(R.string.fish_6), true, getString(R.string.cuisne_6_details), getString(R.string.reservation_6));
 
-        restaurant7 = new Restaurant("Restaurant 7", "Restaurant 1 description", "Open 24/7",
-                "Address for Restaurant 7", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
-                "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+        restaurant7 = new Restaurant(getString(R.string.restaurant_7), getString(R.string.restaurant_7_description), getString(R.string.restaurant_7_open),
+                getString(R.string.restaurant_7_address), 2349091, getString(R.string.restaurant7), 25, gallery[2], gallery[0][1], getString(R.string.mexican7),
+                getString(R.string.fish_7), true, getString(R.string.cuisine_7_details), getString(R.string.reservation_7));
 
-        restaurant8 = new Restaurant("Restaurant 8", "Restaurant 1 description", "Open 24/7",
-                "Address for Restaurant 8", 2349091, "Restaurant", 25, gallery[2], gallery[0][1], "Mexican, Asian, Seafood",
-                "Fish, Sushi, BBQ, Rice", true, "Cuisine details", "Call or email for reservations.");
+        restaurant8 = new Restaurant(getString(R.string.restaurant_8), getString(R.string.restaurant_8_description), getString(R.string.restaurant_8_open),
+                getString(R.string.restaurant_8_address), 2349091, getString(R.string.restaurant8), 25, gallery[2], gallery[0][1], getString(R.string.mexican_8),
+                getString(R.string.fish_8), true, getString(R.string.cuisine_8_details), getString(R.string.reservation_8));
 
 
         // Transportation
-        transportation1 = new Transportation("Taxi", "The taxi is available - details",
-                "The price are 20 per km.", R.drawable.place1, "Transportation");
+        transportation1 = new Transportation(getString(R.string.taxi_1), getString(R.string.taxi_1_availability),
+                getString(R.string.taxi_1_price), R.drawable.place1, getString(R.string.transport_1));
 
-        transportation2 = new Transportation("Public Bus", "The Bus is available - details",
-                "The price are 20 per km.", R.drawable.place2, "Transportation");
+        transportation2 = new Transportation(getString(R.string.bus_1), getString(R.string.bus_1_availability),
+                getString(R.string.bus_1_price), R.drawable.place2, getString(R.string.transport_2));
 
-        transportation3 = new Transportation("Train", "The Train is available - details",
-                "The price are 20 per km.", R.drawable.place3, "Transportation");
+        transportation3 = new Transportation(getString(R.string.train_1), getString(R.string.train_1_availability),
+                getString(R.string.train_1_price), R.drawable.place3, getString(R.string.transport_3));
 
-        transportation4 = new Transportation("Train", "The Train is available - details",
-                "The price are 20 per km.", R.drawable.place4, "Transportation");
+        transportation4 = new Transportation(getString(R.string.train_2), getString(R.string.train_2_availability),
+                getString(R.string.train_2_price), R.drawable.place4, getString(R.string.transport_4));
 
-        transportation5 = new Transportation("Public Bus", "The Public Bus is available - details",
-                "The price are 20 per km.", R.drawable.place5, "Transportation");
+        transportation5 = new Transportation(getString(R.string.bus_2), getString(R.string.bus_2_availability),
+                getString(R.string.bus_2_price), R.drawable.place5, getString(R.string.transport_5));
 
-        transportation6 = new Transportation("Bus", "The Bus is available - details",
-                "The price are 20 per km.", R.drawable.place6, "Transportation");
+        transportation6 = new Transportation(getString(R.string.bus_3), getString(R.string.bus_3_availability),
+                getString(R.string.bus_3_price), R.drawable.place6, getString(R.string.transport_6));
 
-        transportation7 = new Transportation("Bikes", "The Bikes is available - details",
-                "The price are 20 per km.", R.drawable.place7, "Transportation");
+        transportation7 = new Transportation(getString(R.string.bikes_1), getString(R.string.bike_1_availability),
+                getString(R.string.bike_1_price), R.drawable.place7, getString(R.string.transport_7));
 
-        transportation8 = new Transportation("Bus", "The Bus is available - details",
-                "The price are 20 per km.", R.drawable.place8, "Transportation");
+        transportation8 = new Transportation(getString(R.string.bus_4), getString(R.string.bus_4_availability),
+                getString(R.string.bus_4_price), R.drawable.place8, getString(R.string.transport_8));
         //============================Dummy Content=====================================//
         //============================Dummy Content=====================================//
         //============================Dummy Content=====================================//
