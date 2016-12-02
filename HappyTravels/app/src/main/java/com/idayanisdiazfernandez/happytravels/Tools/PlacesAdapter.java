@@ -16,7 +16,7 @@ import com.idayanisdiazfernandez.happytravels.AirportFragment;
 import com.idayanisdiazfernandez.happytravels.BeachFragment;
 import com.idayanisdiazfernandez.happytravels.HotelFragment;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
-import com.idayanisdiazfernandez.happytravels.NightClubFragment;
+import com.idayanisdiazfernandez.happytravels.NightclubFragment;
 import com.idayanisdiazfernandez.happytravels.R;
 import com.idayanisdiazfernandez.happytravels.EmergencyFragment;
 import com.idayanisdiazfernandez.happytravels.RestaurantFragment;
@@ -103,7 +103,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                     ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == "Nightclub") {
                     // Instantiate BeachFragment and set bundle as argument.
-                    Fragment nightClubFragment = new NightClubFragment();
+                    Fragment nightClubFragment = new NightclubFragment();
                     nightClubFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, nightClubFragment);
                     ft.addToBackStack("tag").commit();

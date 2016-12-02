@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity
         AirportFragment.OnFragmentInteractionListener,
         TransportationFragment.OnFragmentInteractionListener,
         EmergencyFragment.OnFragmentInteractionListener,
-        NightClubFragment.OnFragmentInteractionListener {
+        NightclubFragment.OnFragmentInteractionListener {
 
     FragmentManager fm = getSupportFragmentManager();
     FragmentTransaction ft;
@@ -241,7 +241,7 @@ public class MainActivity extends AppCompatActivity
                         mEditor.putString(LANG_KEY, "en_US").apply();
                         break;
                     case 1:
-                        mEditor.putString(LANG_KEY, "es_ES").apply();
+                        mEditor.putString(LANG_KEY, "es_ES ").apply();
                         break;
                 }
             }

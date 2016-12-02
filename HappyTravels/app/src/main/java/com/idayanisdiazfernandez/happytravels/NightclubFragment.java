@@ -18,12 +18,12 @@ import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLA
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link NightClubFragment.OnFragmentInteractionListener} interface
+ * {@link NightclubFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link NightClubFragment#newInstance} factory method to
+ * Use the {@link NightclubFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class NightClubFragment extends Fragment {
+public class NightclubFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -36,7 +36,7 @@ public class NightClubFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public NightClubFragment() {
+    public NightclubFragment() {
         // Required empty public constructor
     }
 
@@ -47,8 +47,8 @@ public class NightClubFragment extends Fragment {
      * @return A new instance of fragment NightClubFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static NightClubFragment newInstance(Parcelable mParam) {
-        NightClubFragment fragment = new NightClubFragment();
+    public static NightclubFragment newInstance(Parcelable mParam) {
+        NightclubFragment fragment = new NightclubFragment();
         Bundle args = new Bundle();
         args.putParcelable(ARG_PLACE, mParam);
         fragment.setArguments(args);
