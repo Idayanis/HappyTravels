@@ -1,15 +1,21 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.content.Intent;
 import android.os.Parcelable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.idayanisdiazfernandez.happytravels.Models.Restaurant;
+import com.idayanisdiazfernandez.happytravels.Tools.GalleryFragmentPager;
 
 import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLACE;
 
@@ -69,6 +75,106 @@ public class RestaurantFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_restaurant, container, false);
+
+        ImageButton emailButton = (ImageButton) view.findViewById(R.id.emailImageButton);
+        ImageButton webButton = (ImageButton) view.findViewById(R.id.webImageButton);
+        ImageButton mapButton = (ImageButton) view.findViewById(R.id.locationImageButton);
+        ImageButton shareButton = (ImageButton) view.findViewById(R.id.shareImageButton);
+        ImageButton callButton = (ImageButton) view.findViewById(R.id.callImageButton);
+        ImageButton galleryButton = (ImageButton) view.findViewById(R.id.photoImageButton);
+
+
+
+        emailButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String[]emailAddresses = {"idayanis.diazfernandez53@stclairconnect.ca"};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL,emailAddresses);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
+
+        webButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Uri webpage = Uri.parse("http://www.holguincuba.net");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(webpage);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
+
+        mapButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Uri geolocation = Uri.parse("geo:0,0?q=@20.8877759,-76.2613043,17z(Restaurant Location)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geolocation);
+
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+
+                }
+                else{
+                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No instaled software to complete the task", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
+                }
+
+            }
+        });
+        shareButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("smsto:"));
+                intent.putExtra("sms_body", " " );
+
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent );
+                }
+                else{
+                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No instaled software to complete the task", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
+                }
+
+            }
+        });
+
+        galleryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.mainFragmenLayout, new GalleryFragmentPager())
+                        .addToBackStack("tag").commit();
+            }
+        });
+
+
+        callButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "Your Phone_number"));
+                startActivity(intent);
+
+            }
+        });
+
+
 
         return view;
     }
