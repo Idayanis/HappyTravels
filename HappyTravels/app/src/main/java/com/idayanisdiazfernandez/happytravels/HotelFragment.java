@@ -1,6 +1,8 @@
 package com.idayanisdiazfernandez.happytravels;
 
+import android.content.Intent;
 import android.os.Parcelable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
@@ -77,9 +79,84 @@ public class HotelFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hotel, container, false);
-        ImageButton photoButton = (ImageButton) view.findViewById(R.id.photoImageButton);
+        ImageButton emailButton = (ImageButton) view.findViewById(R.id.emailImageButton);
+        ImageButton webButton = (ImageButton) view.findViewById(R.id.webImageButton);
+        ImageButton mapButton = (ImageButton) view.findViewById(R.id.locationImageButton);
+        ImageButton shareButton = (ImageButton) view.findViewById(R.id.shareImageButton);
+        ImageButton callButton = (ImageButton) view.findViewById(R.id.callImageButton);
+        ImageButton galleryButton = (ImageButton) view.findViewById(R.id.photoImageButton);
 
-        photoButton.setOnClickListener(new View.OnClickListener() {
+
+
+        emailButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String[]emailAddresses = {"idayanis.diazfernandez53@stclairconnect.ca"};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL,emailAddresses);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
+
+        webButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Uri webpage = Uri.parse("http://www.holguincuba.net/hotels.html");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(webpage);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
+
+        mapButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Uri geolocation = Uri.parse("geo:0,0?q=@21.1138117,-75.913768,13z(Hotel Location)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geolocation);
+
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+
+                }
+                else{
+                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No instaled software to complete the task", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
+                }
+
+            }
+        });
+        shareButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("smsto:"));
+                intent.putExtra("sms_body", " " );
+
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent );
+                }
+                else{
+                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No instaled software to complete the task", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
+                }
+
+            }
+        });
+
+        galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentManager fragmentManager = getFragmentManager();
@@ -88,6 +165,18 @@ public class HotelFragment extends Fragment {
                         .addToBackStack("tag").commit();
             }
         });
+
+
+        callButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "Your Phone_number"));
+                startActivity(intent);
+
+            }
+        });
+
 
         return view;
     }
