@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import android.widget.Toast;
 
 import com.idayanisdiazfernandez.happytravels.Models.Airport;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
+import com.idayanisdiazfernandez.happytravels.Tools.GalleryFragmentPager;
 
 import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLACE;
 
@@ -153,6 +156,28 @@ public class AirportFragment extends Fragment {
 
             }
         });
+
+        galleryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.mainFragmenLayout, new GalleryFragmentPager())
+                        .addToBackStack("tag").commit();
+            }
+        });
+
+
+        callButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "Your Phone_number"));
+                startActivity(intent);
+
+            }
+        });
+
 
         return view;
     }
