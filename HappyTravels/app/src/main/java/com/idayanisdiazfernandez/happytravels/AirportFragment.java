@@ -1,6 +1,7 @@
 package com.idayanisdiazfernandez.happytravels;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -8,6 +9,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.idayanisdiazfernandez.happytravels.Models.Airport;
@@ -29,6 +32,7 @@ public class AirportFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -72,8 +76,47 @@ public class AirportFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_airport, container, false);
 
+        ImageButton emailButton = (ImageButton) view.findViewById(R.id.emailImageButton);
+        ImageButton webButton = (ImageButton) view.findViewById(R.id.webImageButton);
+        ImageButton mapButton = (ImageButton) view.findViewById(R.id.locationImageButton);
+        ImageButton shareButton = (ImageButton) view.findViewById(R.id.shareImageButton);
+        ImageButton callButton = (ImageButton) view.findViewById(R.id.callImageButton);
+        ImageButton galleryButton = (ImageButton) view.findViewById(R.id.photoImageButton);
+
+
+
+        emailButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String[]emailAddresses = {"idayanis.diazfernandez53@stclairconnect.ca"};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL,emailAddresses);
+//                intent.putExtra(Intent.EXTRA_SUBJECT,"Need Help");
+//                intent.putExtra(Intent.EXTRA_TEXT,"Hi");
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
+
+        webButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Uri webpage = Uri.parse("http://www.holguincuba.net");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(webpage);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
         return view;
     }
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
