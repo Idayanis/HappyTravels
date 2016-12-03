@@ -107,7 +107,7 @@ public class AirportFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Uri webpage = Uri.parse("http://www.holguincuba.net");
+                Uri webpage = Uri.parse("http://holguin.airportcuba.net");
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(webpage);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
