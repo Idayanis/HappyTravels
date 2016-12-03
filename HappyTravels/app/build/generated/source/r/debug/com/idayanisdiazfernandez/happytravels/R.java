@@ -2822,7 +2822,7 @@ containing a value of this type.
         public static final int action_context_bar=0x7f0c0061;
         public static final int action_divider=0x7f0c00aa;
         public static final int action_image=0x7f0c00a4;
-        public static final int action_language=0x7f0c00c4;
+        public static final int action_language=0x7f0c00c3;
         public static final int action_menu_divider=0x7f0c0002;
         public static final int action_menu_presenter=0x7f0c0003;
         public static final int action_mode_bar=0x7f0c005d;
@@ -2830,7 +2830,7 @@ containing a value of this type.
         public static final int action_mode_close_button=0x7f0c0041;
         public static final int action_reset=0x7f0c00c5;
         public static final int action_text=0x7f0c00a5;
-        public static final int action_themes=0x7f0c00c3;
+        public static final int action_themes=0x7f0c00c4;
         public static final int actions=0x7f0c00b3;
         public static final int activity_chooser_view_content=0x7f0c0042;
         public static final int add=0x7f0c001c;
