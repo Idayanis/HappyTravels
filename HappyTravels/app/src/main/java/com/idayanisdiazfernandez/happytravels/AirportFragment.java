@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -93,8 +94,6 @@ public class AirportFragment extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL,emailAddresses);
-//                intent.putExtra(Intent.EXTRA_SUBJECT,"Need Help");
-//                intent.putExtra(Intent.EXTRA_TEXT,"Hi");
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }
@@ -113,6 +112,48 @@ public class AirportFragment extends Fragment {
                 }
             }
         });
+
+        mapButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Uri geolocation = Uri.parse("geo:0,0?q=@20.785278,-76.317194,17z(Airport Location)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geolocation);
+
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+
+                }
+                else{
+                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No instaled software to complete the task", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
+                }
+
+            }
+        });
+        shareButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("smsto:"));
+                intent.putExtra("sms_body", " " );
+
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent );
+                }
+                else{
+                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No instaled software to complete the task", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
+                }
+
+            }
+        });
+
         return view;
     }
 
