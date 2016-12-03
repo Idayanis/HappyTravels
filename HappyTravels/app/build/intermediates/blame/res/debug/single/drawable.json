@@ -8,16 +8,20 @@
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_share_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_share_black_24dp.xml"
+    },
+    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/side_nav_bar.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/side_nav_bar.xml"
     },
     {
-        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_btn_colored_material.xml"
-    },
-    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
@@ -34,6 +38,10 @@
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/place6.jpg",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/place6.jpg"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_web_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_web_black_24dp.xml"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
@@ -98,6 +106,10 @@
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_email_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_email_black_24dp.xml"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
@@ -240,6 +252,10 @@
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_switch_thumb_material.xml"
     },
     {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_location_on_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_location_on_black_24dp.xml"
+    },
+    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/res/drawable/design_bottom_navigation_item_background.xml"
     },
@@ -252,8 +268,16 @@
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
     {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_phone_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_phone_black_24dp.xml"
+    },
+    {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
         "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_collections_black_24dp.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/drawable/ic_collections_black_24dp.xml"
     },
     {
         "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/drawable/ic_map_black_24dp.xml",
