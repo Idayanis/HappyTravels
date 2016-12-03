@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
-        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/mipmap-mdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
         "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     }

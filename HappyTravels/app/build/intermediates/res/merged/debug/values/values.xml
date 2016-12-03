@@ -499,6 +499,7 @@
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
+    <dimen name="cover_height">170dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
@@ -570,7 +571,8 @@
     <dimen name="place_title">15dp</dimen>
     <dimen name="place_title_padding">10dp</dimen>
     <dimen name="text_horizontal_padding">5dp</dimen>
-    <dimen name="text_size">17sp</dimen>
+    <dimen name="text_padding">10dp</dimen>
+    <dimen name="text_size">14sp</dimen>
     <dimen name="text_vertical_padding">10dp</dimen>
     <dimen name="theme_button_margin">5dp</dimen>
     <dimen name="title_margin">10dp</dimen>
