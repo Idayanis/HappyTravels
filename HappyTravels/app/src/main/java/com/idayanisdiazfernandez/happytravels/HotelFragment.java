@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.idayanisdiazfernandez.happytravels.Models.Hotel;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
@@ -76,9 +77,9 @@ public class HotelFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hotel, container, false);
-        Button galleryButton = (Button) view.findViewById(R.id.galleryButton);
+        ImageButton photoButton = (ImageButton) view.findViewById(R.id.photoImageButton);
 
-        galleryButton.setOnClickListener(new View.OnClickListener() {
+        photoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentManager fragmentManager = getFragmentManager();

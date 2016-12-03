@@ -72,8 +72,6 @@ public class AirportFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_airport, container, false);
 
-        Toast.makeText(getActivity().getApplicationContext(), mPlace.getName(), Toast.LENGTH_SHORT).show();
-
         return view;
     }
 

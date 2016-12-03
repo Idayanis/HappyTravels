@@ -36,10 +36,6 @@
         "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/layout/activity_dummy_content1.xml",
-        "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/layout/activity_dummy_content1.xml"
-    },
-    {
         "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
         "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout/notification_template_part_time.xml"
     },
