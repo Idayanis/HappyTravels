@@ -196,5 +196,7 @@
     <string name="reservation">Call or email for reservations.</string>
 
     <string name="open">Open 24/7</string>
+    <string name="share">Share</string>
+    <string name="email_us">Email</string>
 
 </resources>
