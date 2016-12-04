@@ -168,6 +168,7 @@
     <string name="restaurant_8_address">Dirección del Restaurante 8</string>
     <string name="restaurant_8_description">Restaurante 8 Descripción</string>
     <string msgid="146198913615257606" name="search_menu_title">"Buscar"</string>
+    <string name="share">Compartir</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
     <string name="taxi_availability">Disponibilidad del taxi - detalles</string>
     <string name="train">Tren</string>

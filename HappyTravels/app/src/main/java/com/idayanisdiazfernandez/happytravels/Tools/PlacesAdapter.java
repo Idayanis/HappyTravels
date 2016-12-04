@@ -1,5 +1,6 @@
 package com.idayanisdiazfernandez.happytravels.Tools;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,12 +10,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.idayanisdiazfernandez.happytravels.AirportFragment;
 import com.idayanisdiazfernandez.happytravels.BeachFragment;
 import com.idayanisdiazfernandez.happytravels.HotelFragment;
+import com.idayanisdiazfernandez.happytravels.MainActivity;
 import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.NightclubFragment;
 import com.idayanisdiazfernandez.happytravels.R;
@@ -78,6 +82,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
             @Override
             public void onClick(View view) {
                 FragmentTransaction ft = fragmentManager.beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
 
                 // Pass object to fragments.
                 Bundle bundle = new Bundle();
@@ -88,44 +93,32 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
                     Fragment hotelFragment = new HotelFragment();
                     hotelFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, hotelFragment);
-                    ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == mContext.getString(R.string.beach)) {
-                    // Instantiate BeachFragment and set bundle as argument.
                     Fragment beachFragment = new BeachFragment();
                     beachFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, beachFragment);
-                    ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == mContext.getString(R.string.restaurant)) {
-                    // Instantiate BeachFragment and set bundle as argument.
                     Fragment restaurantFragment = new RestaurantFragment();
                     restaurantFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, restaurantFragment);
-                    ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == mContext.getString(R.string.nightclub)) {
-                    // Instantiate BeachFragment and set bundle as argument.
                     Fragment nightClubFragment = new NightclubFragment();
                     nightClubFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, nightClubFragment);
-                    ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == mContext.getString(R.string.airport)) {
-                    // Instantiate AirportFragment and set bundle as argument.
                     Fragment airFragment = new AirportFragment();
                     airFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout,  airFragment);
-                    ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == mContext.getString(R.string.transport)) {
-                    // Instantiate BeachFragment and set bundle as argument.
                     Fragment transportationFragment = new TransportationFragment();
                     transportationFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, transportationFragment);
-                    ft.addToBackStack("tag").commit();
                 } else if (place.getPlaceType() == mContext.getString(R.string.emergency)) {
-                    // Instantiate BeachFragment and set bundle as argument.
                     Fragment emergencyFragment = new EmergencyFragment();
                     emergencyFragment.setArguments(bundle);
                     ft.replace(R.id.mainFragmenLayout, emergencyFragment);
-                    ft.addToBackStack("tag").commit();
                 }
+                ft.addToBackStack("tag").commit();
             }
         });
 

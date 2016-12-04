@@ -298,7 +298,6 @@ public class MainFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator()); // use default animation.
         recyclerView.setAdapter(adapter);
-
         return view;
     }
 

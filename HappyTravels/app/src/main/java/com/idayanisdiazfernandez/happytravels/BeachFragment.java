@@ -160,6 +160,7 @@ public class BeachFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
                 fragmentTransaction.replace(R.id.mainFragmenLayout, new GalleryFragmentPager())
                         .addToBackStack("tag").commit();
             }

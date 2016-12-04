@@ -90,9 +90,7 @@ public class MainActivity extends AppCompatActivity
         if (savedInstanceState == null) {
             // Host main Fragment
             ft = fm.beginTransaction();
-            ft.replace(R.id.mainFragmenLayout, new MainFragment());
-            ft.addToBackStack("tag");
-            ft.commit();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
