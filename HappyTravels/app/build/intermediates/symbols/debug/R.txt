@@ -883,7 +883,7 @@ int id nav_transport 0x7f0c00c1
 int id nav_view 0x7f0c0070
 int id navigation_header_container 0x7f0c007a
 int id never 0x7f0c003b
-int id nextButton 0x7f0c0092
+int id nextButton 0x7f0c0093
 int id none 0x7f0c0012
 int id normal 0x7f0c000e
 int id notification_background 0x7f0c00b1
@@ -895,7 +895,7 @@ int id phoneNumber 0x7f0c008e
 int id photoImageButton 0x7f0c0088
 int id pin 0x7f0c002f
 int id place_name 0x7f0c0081
-int id prevButton 0x7f0c0093
+int id prevButton 0x7f0c0092
 int id priceText 0x7f0c008c
 int id progress_circular 0x7f0c0006
 int id progress_horizontal 0x7f0c0007

@@ -2928,7 +2928,7 @@ containing a value of this type.
         public static final int nav_view=0x7f0c0070;
         public static final int navigation_header_container=0x7f0c007a;
         public static final int never=0x7f0c003b;
-        public static final int nextButton=0x7f0c0092;
+        public static final int nextButton=0x7f0c0093;
         public static final int none=0x7f0c0012;
         public static final int normal=0x7f0c000e;
         public static final int notification_background=0x7f0c00b1;
@@ -2940,7 +2940,7 @@ containing a value of this type.
         public static final int photoImageButton=0x7f0c0088;
         public static final int pin=0x7f0c002f;
         public static final int place_name=0x7f0c0081;
-        public static final int prevButton=0x7f0c0093;
+        public static final int prevButton=0x7f0c0092;
         public static final int priceText=0x7f0c008c;
         public static final int progress_circular=0x7f0c0006;
         public static final int progress_horizontal=0x7f0c0007;
