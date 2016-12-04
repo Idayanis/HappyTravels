@@ -79,14 +79,13 @@ public class HotelFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hotel, container, false);
+
         ImageButton emailButton = (ImageButton) view.findViewById(R.id.emailImageButton);
         ImageButton webButton = (ImageButton) view.findViewById(R.id.webImageButton);
         ImageButton mapButton = (ImageButton) view.findViewById(R.id.locationImageButton);
         ImageButton shareButton = (ImageButton) view.findViewById(R.id.shareImageButton);
         ImageButton callButton = (ImageButton) view.findViewById(R.id.callImageButton);
         ImageButton galleryButton = (ImageButton) view.findViewById(R.id.photoImageButton);
-
-
 
         emailButton.setOnClickListener(new View.OnClickListener() {
 
@@ -135,6 +134,7 @@ public class HotelFragment extends Fragment {
 
             }
         });
+
         shareButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -162,7 +162,7 @@ public class HotelFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
-                fragmentTransaction.replace(R.id.mainFragmenLayout, new GalleryFragmentPager())
+                fragmentTransaction.replace(R.id.mainFragmenLayout, GalleryFragmentPager.newInstance(mPlace))
                         .addToBackStack("tag").commit();
             }
         });
