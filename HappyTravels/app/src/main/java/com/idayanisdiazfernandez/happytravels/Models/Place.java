@@ -9,10 +9,10 @@ import android.os.Parcelable;
 
 public abstract class Place implements Parcelable {
 
-    String name, description, timing, address, placeType, geoCode, email, webPage;
+    String name, description, timing, address, placeType, geoCode, phoneNumber, email, webPage;
     double price;
     int[] photos;
-    int phoneNumber,thumbnail;
+    int thumbnail;
 
     // Empty constructor
     public Place() {
@@ -33,7 +33,7 @@ public abstract class Place implements Parcelable {
      * @param thumbnail
      */
     public Place(String name, String description, String timing, String address,
-                 int phoneNumber, String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage) {
+                 String phoneNumber, String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage) {
         this.name = name;
         this.description = description;
         this.timing = timing;
@@ -60,7 +60,7 @@ public abstract class Place implements Parcelable {
         parcel.writeString(address);
         parcel.writeString(placeType);
         parcel.writeDouble(price);
-        parcel.writeInt(phoneNumber);
+        parcel.writeString(phoneNumber);
         parcel.writeInt(thumbnail);
         parcel.writeIntArray(photos);
         parcel.writeString(geoCode);
@@ -80,7 +80,7 @@ public abstract class Place implements Parcelable {
         this.timing = in.readString();
         this.placeType = in.readString();
         this.price = in.readDouble();
-        this.phoneNumber = in.readInt();
+        this.phoneNumber = in.readString();
         this.thumbnail = in.readInt();
         this.photos = in.createIntArray();
         this.geoCode = in.readString();
@@ -122,11 +122,11 @@ public abstract class Place implements Parcelable {
         this.address = address;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int contactInfo) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

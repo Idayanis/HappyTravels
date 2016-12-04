@@ -144,20 +144,19 @@ public class AirportFragment extends Fragment implements View.OnClickListener {
 
         switch (view.getId()) {
             case R.id.emailImageButton:
-                String emailAddresses = "idayanis.diazfernandez53@stclairconnect.ca";
                 intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:"));
-                intent.putExtra(Intent.EXTRA_EMAIL, emailAddresses);
+                intent.putExtra(Intent.EXTRA_EMAIL, mPlace.getEmail());
                 break;
 
             case R.id.webImageButton:
-                Uri webPage = Uri.parse("http://holguin.airportcuba.net");
+                Uri webPage = Uri.parse(mPlace.getWebPage());
                 intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(webPage);
                 break;
 
             case R.id.locationImageButton:
-                Uri geolocation = Uri.parse("geo:0,0?q=@20.785278,-76.317194,17z(Airport Location)");
+                Uri geolocation = Uri.parse("geo:0,0?q=@"+mPlace.getGeoCode());
                 intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(geolocation);
                 break;
@@ -165,14 +164,14 @@ public class AirportFragment extends Fragment implements View.OnClickListener {
             case R.id.shareImageButton:
                 intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setType("text/plain");
-                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Checkout " + R.string.app_name + " app!");
-                intent.putExtra(android.content.Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id="
-                        + getActivity().getPackageName());
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Checkout this place!");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, mPlace.getName() + " " + mPlace.getAddress()
+                        + mPlace.getPhoneNumber() + " " + getActivity().getPackageName());
                 intent.createChooser(intent, "Share via");
                 break;
 
             case R.id.callImageButton:
-                intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "Your Phone_number"));
+                intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + mPlace.getPhoneNumber()));
                 break;
 
             case R.id.photoImageButton:
@@ -192,9 +191,6 @@ public class AirportFragment extends Fragment implements View.OnClickListener {
             } else {
                 if (view.getId() == R.id.shareImageButton) {
                     intent.setData(Uri.parse("smsto:"));
-                    intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Checkout " + R.string.app_name + " app!");
-                    intent.putExtra(android.content.Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id="
-                            + getActivity().getPackageName());
                     startActivity(intent);
                 } else {
                     Snackbar.make(getActivity().findViewById(android.R.id.content),

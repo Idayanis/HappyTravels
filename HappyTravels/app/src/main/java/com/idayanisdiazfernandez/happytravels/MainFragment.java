@@ -113,148 +113,148 @@ public class MainFragment extends Fragment {
         //============================Dummy Content=====================================//
         // Airports
         airport1 = new Airport(getString(R.string.airport_1), getString(R.string.airport_1_description), getString(R.string.open), getString(R.string.address),
-                789878787, getContext().getString(R.string.airport), 0, gallery[0], gallery[0][0], getString(R.string.flights));
+                "789878787", getContext().getString(R.string.airport), 0, photo[0], photo[0][0], "42.246696, -83.018326", "info@example.com", "www.example.com",  getString(R.string.flights));
 
         airport2 = new Airport(getString(R.string.airport_2), getString(R.string.airport_2_description), getString(R.string.open), getString(R.string.address_2),
-                789844787, getString(R.string.airport), 0, gallery[1], gallery[0][1], getString(R.string.flights));
+                "789844787", getString(R.string.airport), 0, photo[1], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.flights));
 
         airport3 = new Airport(getString(R.string.airport_3), getString(R.string.airport_3_description), getString(R.string.open), getString(R.string.address_3),
-                789844787, getString(R.string.airport), 0, gallery[2], gallery[0][2], getString(R.string.flights));
+                "789844787", getString(R.string.airport), 0, photo[2], photo[0][2], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.flights));
 
         airport4 = new Airport(getString(R.string.airport_4), getString(R.string.airport_4_description), getString(R.string.open), getString(R.string.address_4),
-                789844787, getString(R.string.airport), 0, gallery[3], gallery[1][0], getString(R.string.flights));
+                "789844787", getString(R.string.airport), 0, photo[3], photo[1][0], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.flights));
 
         airport5 = new Airport(getString(R.string.airport_5), getString(R.string.airport_5_description), getString(R.string.open), getString(R.string.address_5),
-                789844787, getString(R.string.airport), 0, gallery[4], gallery[1][1], getString(R.string.flights));
+                "789844787", getString(R.string.airport), 0, photo[4], photo[1][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.flights));
 
         airport6 = new Airport(getString(R.string.airport_6), getString(R.string.airport_6_description), getString(R.string.open), getString(R.string.address_6),
-                789844787, getString(R.string.airport), 0, gallery[5], gallery[1][2], getString(R.string.flights));
+                "789844787", getString(R.string.airport), 0, photo[5], photo[1][2], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.flights));
 
         airport7 = new Airport(getString(R.string.airport_7), getString(R.string.airport_7_description), getString(R.string.open), getString(R.string.address_7),
-                789844787, getString(R.string.airport), 0, gallery[1], gallery[2][0], getString(R.string.flights));
+                "789844787", getString(R.string.airport), 0, photo[1], photo[2][0], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.flights));
 
         airport8 = new Airport(getString(R.string.airport_8), getString(R.string.airport_8_description), getString(R.string.open), getString(R.string.address_8),
-                789844787, getString(R.string.airport), 0, gallery[2], gallery[2][1], getString(R.string.flights));
+                "789844787", getString(R.string.airport), 0, photo[2], photo[2][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.flights));
 
 
         // Emergency
-        emergency1 = new Emergency(getString(R.string.emergency_1), getString(R.string.police), 787878789, getString(R.string.emergency), R.drawable.place1);
-        emergency2 = new Emergency(getString(R.string.emergency_2), getString(R.string.fire_department), 787878789, getString(R.string.emergency), R.drawable.place2);
-        emergency3 = new Emergency(getString(R.string.emergency_3), getString(R.string.hospital_a), 787878789, getString(R.string.emergency), R.drawable.place3);
-        emergency4 = new Emergency(getString(R.string.emergency_4), getString(R.string.hospital_b), 787878789, getString(R.string.emergency), R.drawable.place4);
-        emergency5 = new Emergency(getString(R.string.emergency_6), getString(R.string.ambulance_a), 787878789, getString(R.string.emergency), R.drawable.place5);
-        emergency6 = new Emergency(getString(R.string.emergency_7), getString(R.string.ambulance_b), 787878789, getString(R.string.emergency), R.drawable.place6);
+        emergency1 = new Emergency(getString(R.string.emergency_1), getString(R.string.police), "789844787", getString(R.string.emergency), R.drawable.place1, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency2 = new Emergency(getString(R.string.emergency_2), getString(R.string.fire_department), "789844787", getString(R.string.emergency), R.drawable.place2, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency3 = new Emergency(getString(R.string.emergency_3), getString(R.string.hospital_a), "789844787", getString(R.string.emergency), R.drawable.place3, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency4 = new Emergency(getString(R.string.emergency_4), getString(R.string.hospital_b), "789844787", getString(R.string.emergency), R.drawable.place4, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency5 = new Emergency(getString(R.string.emergency_6), getString(R.string.ambulance_a), "789844787", getString(R.string.emergency), R.drawable.place5, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency6 = new Emergency(getString(R.string.emergency_7), getString(R.string.ambulance_b), "789844787", getString(R.string.emergency), R.drawable.place6, "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         // Hotel
         String[] roomType = {"Single", "Double", "Single, Double", "Single, Double, Studio"};
 
         hotel1 = new Hotel(getString(R.string.hotel_1), getString(R.string.hotel_1_description), getString(R.string.open), getString(R.string.hotel_1_address),
-                8989398, getString(R.string.hotel), 80, gallery[0], gallery[0][0], roomType[1], true, true, true, true, true);
+                "789844787", getString(R.string.hotel), 80, photo[0], photo[0][0], "42.246696, -83.018326", "info@example.com", "www.example.com", roomType[1], true, true, true, true, true);
 
         hotel2 = new Hotel(getString(R.string.hotel_2), getString(R.string.hotel_2_description), getString(R.string.open), getString(R.string.hotel_2_address),
-                8989498, getString(R.string.hotel), 80, gallery[1], gallery[0][1], roomType[1], true, true, true, true, true);
+                "789844787", getString(R.string.hotel), 80, photo[1], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", roomType[1], true, true, true, true, true);
 
         hotel3 = new Hotel(getString(R.string.hotel_3), getString(R.string.hotel_3_description), getString(R.string.open), getString(R.string.hotel_3_address),
-                8989598, getString(R.string.hotel), 80, gallery[2], gallery[0][2], roomType[1], true, true, true, true, true);
+                "789844787", getString(R.string.hotel), 80, photo[2], photo[0][2], "42.246696, -83.018326", "info@example.com", "www.example.com", roomType[1], true, true, true, true, true);
 
         hotel4 = new Hotel(getString(R.string.hotel_4), getString(R.string.hotel_4_description), getString(R.string.open), getString(R.string.hotel_4_address),
-                8989698, getString(R.string.hotel), 80, gallery[3], gallery[1][0], roomType[1], true, true, true, true, true);
+                "789844787", getString(R.string.hotel), 80, photo[3], photo[1][0], "42.246696, -83.018326", "info@example.com", "www.example.com", roomType[1], true, true, true, true, true);
 
         hotel5 = new Hotel(getString(R.string.hotel_5), getString(R.string.hotel_5_description), getString(R.string.open), getString(R.string.hotel_5_address),
-                8989798, getString(R.string.hotel), 80, gallery[4], gallery[1][1], roomType[1], true, true, true, true, true);
+                "789844787", getString(R.string.hotel), 80, photo[4], photo[1][1], "42.246696, -83.018326", "info@example.com", "www.example.com", roomType[1], true, true, true, true, true);
 
         hotel6 = new Hotel(getString(R.string.hotel_6), getString(R.string.hotel_6_description), getString(R.string.open), getString(R.string.hotel_6_address),
-                8989898, getString(R.string.hotel), 80, gallery[5], gallery[1][2], roomType[1], true, true, true, true, true);
+                "789844787", getString(R.string.hotel), 80, photo[5], photo[1][2], "42.246696, -83.018326", "info@example.com", "www.example.com", roomType[1], true, true, true, true, true);
 
         hotel7 = new Hotel(getString(R.string.hotel_7), getString(R.string.hotel_7_description), getString(R.string.open), getString(R.string.hotel_7_address),
-                8989998, getString(R.string.hotel), 80, gallery[1], gallery[2][0], roomType[1], true, true, true, true, true);
+                "789844787", getString(R.string.hotel), 80, photo[1], photo[2][0], "42.246696, -83.018326", "info@example.com", "www.example.com", roomType[1], true, true, true, true, true);
 
         hotel8 = new Hotel(getString(R.string.hotel_8), getString(R.string.hotel_8_description), getString(R.string.open), getString(R.string.hotel_8_address),
-                8989098, getString(R.string.hotel), 80, gallery[2], gallery[2][1], roomType[1], true, true, true, true, true);
+                "789844787", getString(R.string.hotel), 80, photo[2], photo[2][1], "42.246696, -83.018326", "info@example.com", "www.example.com", roomType[1], true, true, true, true, true);
 
 
         // NightClubs
         nightClub1 = new Nightclub(getString(R.string.nightclub_1), getString(R.string.nightclub_1_description), getString(R.string.open), getString(R.string.nightclub_1_address),
-                8989098, getString(R.string.nightclub), 10, gallery[0], gallery[0][0], true, true, true);
+                "789844787", getString(R.string.nightclub), 10, photo[0], photo[0][0], "42.246696, -83.018326", "info@example.com", "www.example.com", true, true, true);
 
         nightClub2 = new Nightclub(getString(R.string.nightclub_2), getString(R.string.nightclub_2_description), getString(R.string.open), getString(R.string.nightclub_2_address),
-                8989098, getString(R.string.nightclub), 10, gallery[1], gallery[0][2], true, true, true);
+                "789844787", getString(R.string.nightclub), 10, photo[1], photo[0][2], "42.246696, -83.018326", "info@example.com", "www.example.com", true, true, true);
 
         nightClub3 = new Nightclub(getString(R.string.nightclub_3), getString(R.string.nightclub_3_description), getString(R.string.open), getString(R.string.nightclub_3_address),
-                8989098, getString(R.string.nightclub), 10, gallery[2], gallery[4][2], true, true, true);
+                "789844787", getString(R.string.nightclub), 10, photo[2], photo[4][2], "42.246696, -83.018326", "info@example.com", "www.example.com", true, true, true);
 
         nightClub4 = new Nightclub(getString(R.string.nightclub_4), getString(R.string.nightclub_4_description), getString(R.string.open), getString(R.string.nightclub_4_address),
-                8989098, getString(R.string.nightclub), 10, gallery[3], gallery[3][1], true, true, true);
+                "789844787", getString(R.string.nightclub), 10, photo[3], photo[3][1], "42.246696, -83.018326", "info@example.com", "www.example.com", true, true, true);
 
         nightClub5 = new Nightclub(getString(R.string.nightclub_5), getString(R.string.nightclub_5_description), getString(R.string.open), getString(R.string.nightclub_5_address),
-                8989098, getString(R.string.nightclub), 10, gallery[4], gallery[5][2], true, true, true);
+                "789844787", getString(R.string.nightclub), 10, photo[4], photo[5][2], "42.246696, -83.018326", "info@example.com", "www.example.com", true, true, true);
 
         nightClub6 = new Nightclub(getString(R.string.nightclub_6), getString(R.string.nightclub_6_description), getString(R.string.open), getString(R.string.nightclub_6_address),
-                8989098, getString(R.string.nightclub), 10, gallery[5], gallery[5][1], true, true, true);
+                "789844787", getString(R.string.nightclub), 10, photo[5], photo[5][1], "42.246696, -83.018326", "info@example.com", "www.example.com", true, true, true);
 
         nightClub7 = new Nightclub(getString(R.string.nightclub_7), getString(R.string.nightclub_7_description), getString(R.string.open), getString(R.string.nightclub_7_address),
-                8989098, getString(R.string.nightclub), 10, gallery[1], gallery[3][0], true, true, true);
+                "789844787", getString(R.string.nightclub), 10, photo[1], photo[3][0], "42.246696, -83.018326", "info@example.com", "www.example.com", true, true, true);
 
         nightClub8 = new Nightclub(getString(R.string.nightclub_8), getString(R.string.nightclub_8_description), getString(R.string.open), getString(R.string.nightclub_8_address),
-                8989098, getString(R.string.nightclub), 10, gallery[2], gallery[0][1], true, true, true);
+                "789844787", getString(R.string.nightclub), 10, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", true, true, true);
 
         // Beaches
         beach1 = new Beach(getString(R.string.beach_1), getString(R.string.beach_1_description), getString(R.string.open), getString(R.string.beach_1_address),
-                1989098, getString(R.string.beach), 5, gallery[2], gallery[0][1]);
+                "789844787", getString(R.string.beach), 5, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         beach2 = new Beach(getString(R.string.beach_2), getString(R.string.beach_2_description), getString(R.string.open), getString(R.string.beach_2_address),
-                2989098, getString(R.string.beach), 6, gallery[2], gallery[0][1]);
+                "789844787", getString(R.string.beach), 6, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         beach3 = new Beach(getString(R.string.beach_3), getString(R.string.beach_3_description), getString(R.string.open), getString(R.string.beach_3_address),
-                3989098, getString(R.string.beach), 7, gallery[2], gallery[0][1]);
+                "789844787", getString(R.string.beach), 7, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         beach4 = new Beach(getString(R.string.beach_4), getString(R.string.beach_4_description), getString(R.string.open), getString(R.string.beach_4_address),
-                4989098, getString(R.string.beach), 8, gallery[2], gallery[0][1]);
+                "789844787", getString(R.string.beach), 8, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         beach5 = new Beach(getString(R.string.beach_5), getString(R.string.beach_5_description), getString(R.string.open), getString(R.string.beach_5_address),
-                5989098, getString(R.string.beach), 9, gallery[2], gallery[0][1]);
+                "789844787", getString(R.string.beach), 9, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         beach6 = new Beach(getString(R.string.beach_6), getString(R.string.beach_6_description), getString(R.string.open), getString(R.string.beach_6_address),
-                6989098, getString(R.string.beach), 0, gallery[2], gallery[0][1]);
+                "789844787", getString(R.string.beach), 0, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         beach7 = new Beach(getString(R.string.beach_7), getString(R.string.beach_7_description), getString(R.string.open), getString(R.string.beach_7_address),
-                7989098, getString(R.string.beach), 1, gallery[2], gallery[0][1]);
+                "789844787", getString(R.string.beach), 1, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         beach8 = new Beach(getString(R.string.beach_8), getString(R.string.beach_8_description), getString(R.string.open), getString(R.string.beach_8_address),
-                8989091, getString(R.string.beach), 3, gallery[2], gallery[0][1]);
+                "789844787", getString(R.string.beach), 3, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com");
 
 
         // Restaurants
         restaurant1 = new Restaurant(getString(R.string.restaurant_1), getString(R.string.restaurant_1_description), getString(R.string.open),
-                getString(R.string.restaurant_1_address), 2349091, getString(R.string.restaurant), 25, gallery[2], gallery[0][1], getString(R.string.foodType),
+                getString(R.string.restaurant_1_address), "789844787", getString(R.string.restaurant), 25, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.foodType),
                 getString(R.string.menu), true, getString(R.string.cuisine), getString(R.string.reservation));
 
         restaurant2 = new Restaurant(getString(R.string.restaurant_2), getString(R.string.restaurant_2_description), getString(R.string.open),
-                getString(R.string.restaurant_2_address), 2349091, getString(R.string.restaurant), 25, gallery[2], gallery[0][1], getString(R.string.foodType),
+                getString(R.string.restaurant_2_address), "789844787", getString(R.string.restaurant), 25, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.foodType),
                 getString(R.string.menu), true, getString(R.string.cuisine), getString(R.string.reservation));
 
         restaurant3 = new Restaurant(getString(R.string.restaurant_3), getString(R.string.restaurant_3_description), getString(R.string.open),
-                getString(R.string.restaurant_3_address), 2349091, getString(R.string.restaurant), 25, gallery[2], gallery[0][1], getString(R.string.foodType),
+                getString(R.string.restaurant_3_address), "789844787", getString(R.string.restaurant), 25, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.foodType),
                 getString(R.string.menu), true, getString(R.string.cuisine), getString(R.string.reservation));
 
         restaurant4 = new Restaurant(getString(R.string.restaurant_4), getString(R.string.restaurant_4_description), getString(R.string.open),
-                getString(R.string.restaurant_4_address), 2349091, getString(R.string.restaurant), 25, gallery[2], gallery[0][1], getString(R.string.foodType),
+                getString(R.string.restaurant_4_address), "789844787", getString(R.string.restaurant), 25, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.foodType),
                 getString(R.string.menu), true, getString(R.string.cuisine), getString(R.string.reservation));
 
         restaurant5 = new Restaurant(getString(R.string.restaurant_5), getString(R.string.restaurant), getString(R.string.open),
-                getString(R.string.restaurant_5_address), 2349091, getString(R.string.restaurant), 25, gallery[2], gallery[0][1], getString(R.string.foodType),
+                getString(R.string.restaurant_5_address), "789844787", getString(R.string.restaurant), 25, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.foodType),
                 getString(R.string.menu), true, getString(R.string.cuisine), getString(R.string.reservation));
 
         restaurant6 = new Restaurant(getString(R.string.restaurant_6), getString(R.string.restaurant_6_description), getString(R.string.open),
-                getString(R.string.restaurant_6_address), 2349091, getString(R.string.restaurant), 25, gallery[2], gallery[0][1], getString(R.string.foodType),
+                getString(R.string.restaurant_6_address), "789844787", getString(R.string.restaurant), 25, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.foodType),
                 getString(R.string.menu), true, getString(R.string.cuisine), getString(R.string.reservation));
 
         restaurant7 = new Restaurant(getString(R.string.restaurant_7), getString(R.string.restaurant_7_description), getString(R.string.open),
-                getString(R.string.restaurant_7_address), 2349091, getString(R.string.restaurant), 25, gallery[2], gallery[0][1], getString(R.string.foodType),
+                getString(R.string.restaurant_7_address), "789844787", getString(R.string.restaurant), 25, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.foodType),
                 getString(R.string.menu), true, getString(R.string.cuisine), getString(R.string.reservation));
 
         restaurant8 = new Restaurant(getString(R.string.restaurant_8), getString(R.string.restaurant_8_description), getString(R.string.open),
-                getString(R.string.restaurant_8_address), 2349091, getString(R.string.restaurant), 25, gallery[2], gallery[0][1], getString(R.string.foodType),
+                getString(R.string.restaurant_8_address), "789844787", getString(R.string.restaurant), 25, photo[2], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.foodType),
                 getString(R.string.menu), true, getString(R.string.cuisine), getString(R.string.reservation));
 
 
@@ -346,8 +346,8 @@ public class MainFragment extends Fragment {
     // Array to store objects
     private List<Place> objectsList = new ArrayList<>();
 
-    // Create array for gallery.
-    int[][] gallery = {
+    // Create array for photo.
+    int[][] photo = {
             {R.drawable.place1, R.drawable.place2, R.drawable.place3},
             {R.drawable.place4, R.drawable.place5, R.drawable.place6},
             {R.drawable.place7, R.drawable.place8, R.drawable.place9},

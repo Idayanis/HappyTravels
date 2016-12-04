@@ -198,5 +198,6 @@
     <string name="open">Open 24/7</string>
     <string name="share">Share</string>
     <string name="email_us">Email</string>
+    <string name="company_email">info@example.com</string>
 
 </resources>

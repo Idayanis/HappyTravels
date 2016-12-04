@@ -37,7 +37,7 @@ public class Hotel extends Place {
      * @param restaurant
      */
 
-    public Hotel(String name, String description, String timing, String address, int phoneNumber, String placeType,
+    public Hotel(String name, String description, String timing, String address, String phoneNumber, String placeType,
                  double price, int[] photos, int thumbnail, String geoCode, String email, String webPage, String roomType, Boolean swimmingPool,
                  Boolean longTable, Boolean disco, Boolean roomService, Boolean restaurant) {
         super(name, description, timing, address, phoneNumber, placeType, price, photos, thumbnail, geoCode, email, webPage);

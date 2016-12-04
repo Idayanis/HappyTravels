@@ -22,9 +22,9 @@ public class Emergency extends Place {
     /**
      *  The default constructor to instantiate objectc from it.
      * @param department
-     * @param contactNumber
+     * @param phoneNumber
      */
-    public Emergency(String name, String department, int contactNumber, String placeType, int thumbnail,
+    public Emergency(String name, String department, String phoneNumber, String placeType, int thumbnail,
                      String geoCode, String email, String webPage) {
         this.name = name;
         this.department = department;
