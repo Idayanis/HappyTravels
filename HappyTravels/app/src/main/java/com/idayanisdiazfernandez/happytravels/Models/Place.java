@@ -9,10 +9,10 @@ import android.os.Parcelable;
 
 public abstract class Place implements Parcelable {
 
-    String name, description, timing, address, placeType;
+    String name, description, timing, address, placeType, geoCode, phoneNumber, email, webPage;
     double price;
     int[] photos;
-    int contactInfo,thumbnail;
+    int thumbnail;
 
     // Empty constructor
     public Place() {
@@ -26,23 +26,26 @@ public abstract class Place implements Parcelable {
      * @param description
      * @param timing
      * @param address
-     * @param contactInfo
+     * @param phoneNumber
      * @param placeType
      * @param price
      * @param photos
      * @param thumbnail
      */
     public Place(String name, String description, String timing, String address,
-                 int contactInfo, String placeType, double price, int[] photos, int thumbnail) {
+                 String phoneNumber, String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage) {
         this.name = name;
         this.description = description;
         this.timing = timing;
         this.address = address;
-        this.contactInfo = contactInfo;
+        this.phoneNumber = phoneNumber;
         this.placeType = placeType;
         this.price = price;
         this.photos = photos;
         this.thumbnail = thumbnail;
+        this.geoCode = geoCode;
+        this.email = email;
+        this.webPage = webPage;
     }
 
     /**
@@ -57,9 +60,12 @@ public abstract class Place implements Parcelable {
         parcel.writeString(address);
         parcel.writeString(placeType);
         parcel.writeDouble(price);
-        parcel.writeInt(contactInfo);
+        parcel.writeString(phoneNumber);
         parcel.writeInt(thumbnail);
         parcel.writeIntArray(photos);
+        parcel.writeString(geoCode);
+        parcel.writeString(email);
+        parcel.writeString(webPage);
     }
 
     /**
@@ -74,9 +80,12 @@ public abstract class Place implements Parcelable {
         this.timing = in.readString();
         this.placeType = in.readString();
         this.price = in.readDouble();
-        this.contactInfo = in.readInt();
+        this.phoneNumber = in.readString();
         this.thumbnail = in.readInt();
         this.photos = in.createIntArray();
+        this.geoCode = in.readString();
+        this.email = in.readString();
+        this.webPage = in.readString();
     }
 
     // Create getters and setters.
@@ -113,12 +122,12 @@ public abstract class Place implements Parcelable {
         this.address = address;
     }
 
-    public int getContactInfo() {
-        return contactInfo;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setContactInfo(int contactInfo) {
-        this.contactInfo = contactInfo;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getPlaceType() {
@@ -151,5 +160,29 @@ public abstract class Place implements Parcelable {
 
     public void setThumbnail(int thumbnail) {
         this.thumbnail = thumbnail;
+    }
+
+    public String getGeoCode() {
+        return geoCode;
+    }
+
+    public void setGeoCode(String geoCode) {
+        this.geoCode = geoCode;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getWebPage() {
+        return webPage;
+    }
+
+    public void setWebPage(String webPage) {
+        this.webPage = webPage;
     }
 }
