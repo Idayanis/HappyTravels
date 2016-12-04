@@ -1,7 +1,9 @@
 package com.idayanisdiazfernandez.happytravels;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
@@ -90,9 +92,7 @@ public class MainActivity extends AppCompatActivity
         if (savedInstanceState == null) {
             // Host main Fragment
             ft = fm.beginTransaction();
-            ft.replace(R.id.mainFragmenLayout, new MainFragment());
-            ft.addToBackStack("tag");
-            ft.commit();
+            ft.replace(R.id.mainFragmenLayout, new MainFragment()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -201,6 +201,29 @@ public class MainActivity extends AppCompatActivity
             ft.replace(R.id.mainFragmenLayout, new MainFragment());
             ft.addToBackStack("tag");
             ft.commit();
+        } else if (id == R.id.nav_share) {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setType("text/plain");
+            intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Checkout" + R.string.app_name + " app!");
+            intent.putExtra(android.content.Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id="
+                    + getPackageName());
+            Intent.createChooser(intent, "Share via");
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            } else {
+                Snackbar.make(findViewById(android.R.id.content),
+                        "No installed application to complete the task", Snackbar.LENGTH_SHORT).show();
+            }
+        } else if (id == R.id.nav_send) {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:"));
+            intent.putExtra(Intent.EXTRA_EMAIL, getString(R.string.company_email));
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            } else {
+                Snackbar.make(findViewById(android.R.id.content),
+                        "No installed application to complete the task", Snackbar.LENGTH_SHORT).show();
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

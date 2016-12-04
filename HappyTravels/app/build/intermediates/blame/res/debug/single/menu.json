@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/menu/main.xml"
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/menu/activity_main_drawer.xml"
     },
     {
-        "merged": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
-        "source": "/Users/idasarav/Desktop/HappyTravels/HappyTravels/app/src/main/res/menu/activity_main_drawer.xml"
+        "merged": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/MaihanNijat/Desktop/AndroidDev/HappyTravels/HappyTravels/app/src/main/res/menu/main.xml"
     }
 ]

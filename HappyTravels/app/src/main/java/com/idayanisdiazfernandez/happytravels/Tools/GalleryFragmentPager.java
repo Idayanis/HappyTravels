@@ -1,6 +1,7 @@
 package com.idayanisdiazfernandez.happytravels.Tools;
 
 import android.content.Context;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,7 +14,10 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.idayanisdiazfernandez.happytravels.GalleryFragment;
+import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.R;
+
+import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLACE;
 
 
 /**
@@ -36,6 +40,7 @@ public class GalleryFragmentPager extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Place mPlace;
 
     private OnFragmentInteractionListener mListener;
 
@@ -47,16 +52,11 @@ public class GalleryFragmentPager extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment TipFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static GalleryFragmentPager newInstance(String param1, String param2) {
+    public static GalleryFragmentPager newInstance(Place mParam) {
         GalleryFragmentPager fragment = new GalleryFragmentPager();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putParcelable(ARG_PLACE, mParam);
         fragment.setArguments(args);
         return fragment;
     }
@@ -67,6 +67,7 @@ public class GalleryFragmentPager extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            mPlace = getArguments().getParcelable(ARG_PLACE);
         }
     }
 
@@ -146,20 +147,9 @@ public class GalleryFragmentPager extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return GalleryFragment.newInstance(R.drawable.place1);
-                case 1:
-                    return GalleryFragment.newInstance(R.drawable.place2);
-                case 2:
-                    return GalleryFragment.newInstance(R.drawable.place3);
-                case 3:
-                    return GalleryFragment.newInstance(R.drawable.place4);
-                case 4:
-                    return GalleryFragment.newInstance(R.drawable.place5);
-                default:
-                    return GalleryFragment.newInstance(R.drawable.place6);
-            }
+
+            return GalleryFragment.newInstance(mPlace.getPhotos()[position]);
+
         }
 
         @Override

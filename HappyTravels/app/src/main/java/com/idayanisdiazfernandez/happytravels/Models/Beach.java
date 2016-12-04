@@ -9,8 +9,9 @@ import android.os.Parcelable;
 
 public class Beach extends Place {
 
-    public Beach(String name, String description, String timing, String address, int contactInfo, String placeType, double price, int[] photos, int thumbnail) {
-        super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);
+    public Beach(String name, String description, String timing, String address, String phoneNumber,
+                 String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage) {
+        super(name, description, timing, address, phoneNumber, placeType, price, photos, thumbnail, geoCode, email, webPage);
     }
 
     @Override

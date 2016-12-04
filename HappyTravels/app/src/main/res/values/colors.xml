@@ -34,7 +34,7 @@
     <color name="dark_deep_orange">#E64A19</color>
     <color name="dark_brown">#5D4037</color>
 
-    <color name="button_text_color">#FFFFFF</color>
+    <color name="button_text_color">#ffffff</color>
     <color name="white">#FFFFFF</color>
 
     <color name="item_text_color">#666768</color>

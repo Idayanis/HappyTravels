@@ -24,7 +24,7 @@ public class Hotel extends Place {
      * @param description
      * @param timing
      * @param address
-     * @param contactInfo
+     * @param phoneNumber
      * @param placeType
      * @param price
      * @param photos
@@ -37,10 +37,10 @@ public class Hotel extends Place {
      * @param restaurant
      */
 
-    public Hotel(String name, String description, String timing, String address, int contactInfo, String placeType,
-                 double price, int[] photos, int thumbnail, String roomType, Boolean swimmingPool,
+    public Hotel(String name, String description, String timing, String address, String phoneNumber, String placeType,
+                 double price, int[] photos, int thumbnail, String geoCode, String email, String webPage, String roomType, Boolean swimmingPool,
                  Boolean longTable, Boolean disco, Boolean roomService, Boolean restaurant) {
-        super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);
+        super(name, description, timing, address, phoneNumber, placeType, price, photos, thumbnail, geoCode, email, webPage);
         this.roomType = roomType;
         this.swimmingPool = swimmingPool;
         this.longTable = longTable;
