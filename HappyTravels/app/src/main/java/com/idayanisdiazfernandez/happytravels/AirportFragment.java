@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.idayanisdiazfernandez.happytravels.Models.Airport;
 import com.idayanisdiazfernandez.happytravels.Tools.GalleryFragmentPager;
@@ -81,19 +83,55 @@ public class AirportFragment extends Fragment implements View.OnClickListener {
          * Set content to text boxes.
          * Set cover image.
          */
+        ImageView coverPhoto = (ImageView) view.findViewById(R.id.coverPhoto);
+        coverPhoto.setImageResource(mPlace.getThumbnail());
 
+        TextView nameText = (TextView) view.findViewById(R.id.nameText);
+        nameText.setText(mPlace.getName());
+
+        TextView descriptionText = (TextView) view.findViewById(R.id.descriptionText);
+        descriptionText.setText(mPlace.getDescription());
+
+        TextView timingText = (TextView) view.findViewById(R.id.timingText);
+        timingText.setText(mPlace.getTiming());
+
+        TextView priceText = (TextView) view.findViewById(R.id.priceText);
+        priceText.setText(String.valueOf(mPlace.getPrice()));
+
+        TextView flightsText = (TextView) view.findViewById(R.id.flightsText);
+        flightsText.setText(mPlace.getFlightsAvailability());
+
+        TextView addressText = (TextView) view.findViewById(R.id.addressText);
+        addressText.setText(mPlace.getAddress());
+
+        TextView phoneNumber = (TextView) view.findViewById(R.id.phoneNumber);
+        phoneNumber.setText(mPlace.getPhoneNumber());
+
+        TextView emailAddress = (TextView) view.findViewById(R.id.emailAddress);
+        emailAddress.setText(mPlace.getEmail());
+
+        TextView webPage = (TextView) view.findViewById(R.id.webPage);
+        webPage.setText(mPlace.getWebPage());
+
+        /**
+         *  Find the ImageButtons and set OnClick listener
+         */
         ImageButton emailButton = (ImageButton) view.findViewById(R.id.emailImageButton);
-        ImageButton webButton = (ImageButton) view.findViewById(R.id.webImageButton);
-        ImageButton mapButton = (ImageButton) view.findViewById(R.id.locationImageButton);
-        ImageButton shareButton = (ImageButton) view.findViewById(R.id.shareImageButton);
-        ImageButton callButton = (ImageButton) view.findViewById(R.id.callImageButton);
-        ImageButton photoButton = (ImageButton) view.findViewById(R.id.photoImageButton);
-
         emailButton.setOnClickListener(AirportFragment.this);
+
+        ImageButton webButton = (ImageButton) view.findViewById(R.id.webImageButton);
         webButton.setOnClickListener(AirportFragment.this);
+
+        ImageButton mapButton = (ImageButton) view.findViewById(R.id.locationImageButton);
         mapButton.setOnClickListener(AirportFragment.this);
+
+        ImageButton shareButton = (ImageButton) view.findViewById(R.id.shareImageButton);
         shareButton.setOnClickListener(AirportFragment.this);
+
+        ImageButton callButton = (ImageButton) view.findViewById(R.id.callImageButton);
         callButton.setOnClickListener(AirportFragment.this);
+
+        ImageButton photoButton = (ImageButton) view.findViewById(R.id.photoImageButton);
         photoButton.setOnClickListener(AirportFragment.this);
 
         return view;
