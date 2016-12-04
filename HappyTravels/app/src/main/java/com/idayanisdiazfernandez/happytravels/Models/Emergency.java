@@ -24,10 +24,11 @@ public class Emergency extends Place {
      * @param department
      * @param contactNumber
      */
-    public Emergency(String name, String department, int contactNumber, String placeType, int thumbnail) {
+    public Emergency(String name, String department, int contactNumber, String placeType, int thumbnail,
+                     String geoCode, String email, String webPage) {
         this.name = name;
         this.department = department;
-        ContactNumber = contactNumber;
+        phoneNumber = phoneNumber;
         this.placeType = placeType;
         this.thumbnail = thumbnail;
     }

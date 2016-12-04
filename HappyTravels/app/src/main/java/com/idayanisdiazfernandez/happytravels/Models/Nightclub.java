@@ -21,7 +21,7 @@ public class Nightclub extends Place {
      * @param description
      * @param timing
      * @param address
-     * @param contactInfo
+     * @param phoneNumber
      * @param placeType
      * @param price
      * @param photos
@@ -30,10 +30,10 @@ public class Nightclub extends Place {
      * @param freeDrinks
      * @param tableReservation
      */
-    public Nightclub(String name, String description, String timing, String address, int contactInfo,
-                     String placeType, double price, int[] photos, int thumbnail, Boolean paidDrinks,
+    public Nightclub(String name, String description, String timing, String address, int phoneNumber,
+                     String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage, Boolean paidDrinks,
                      Boolean freeDrinks, Boolean tableReservation) {
-        super(name, description, timing, address, contactInfo, placeType, price, photos, thumbnail);
+        super(name, description, timing, address, phoneNumber, placeType, price, photos, thumbnail, geoCode, email, webPage);
         this.paidDrinks = paidDrinks;
         this.freeDrinks = freeDrinks;
         this.tableReservation = tableReservation;

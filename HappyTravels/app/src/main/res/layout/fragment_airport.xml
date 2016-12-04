@@ -32,7 +32,7 @@
                     android:padding="@dimen/text_padding" />
 
                 <ImageView
-                    android:id="@+id/thumbnail"
+                    android:id="@+id/coverPhoto"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/cover_height"
                     android:background="?attr/selectableItemBackgroundBorderless"
