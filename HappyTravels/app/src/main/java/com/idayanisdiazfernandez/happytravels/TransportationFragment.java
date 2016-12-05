@@ -77,7 +77,7 @@ public class TransportationFragment extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_airport, container, false);
+        View view = inflater.inflate(R.layout.fragment_transportation, container, false);
 
         /**
          * Set content to text boxes.
@@ -93,13 +93,13 @@ public class TransportationFragment extends Fragment implements View.OnClickList
         descriptionText.setText(mPlace.getDescription());
 
         TextView timingText = (TextView) view.findViewById(R.id.timingText);
-        timingText.setText(mPlace.getTiming());
+        timingText.setText(getString(R.string.open_time) + ": " + mPlace.getTiming());
 
-        TextView TypeText = (TextView) view.findViewById(R.id.TypeText);
-        TypeText.setText(mPlace.getType());
+        TextView TypeText = (TextView) view.findViewById(R.id.typeText);
+        TypeText.setText(getString(R.string.transport_type)+ ": " + mPlace.getType());
 
         TextView priceRangeText = (TextView) view.findViewById(R.id.priceRangeText);
-        priceRangeText.setText(mPlace.getPriceRange());
+        priceRangeText.setText(getString(R.string.transport_priceText) + ": " + mPlace.getPriceRange());
 
         /**
          *  Find the ImageButtons and set OnClick listener

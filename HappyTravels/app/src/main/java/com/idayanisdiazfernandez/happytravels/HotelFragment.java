@@ -80,7 +80,7 @@ public class HotelFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_airport, container, false);
+        View view = inflater.inflate(R.layout.fragment_hotel, container, false);
 
         /**
          * Set content to text boxes.
@@ -96,36 +96,54 @@ public class HotelFragment extends Fragment implements View.OnClickListener {
         descriptionText.setText(mPlace.getDescription());
 
         TextView timingText = (TextView) view.findViewById(R.id.timingText);
-        timingText.setText(mPlace.getTiming());
+        timingText.setText(getString(R.string.open_time) + ": " + mPlace.getTiming());
 
         TextView priceText = (TextView) view.findViewById(R.id.priceText);
-        priceText.setText(String.valueOf(mPlace.getPrice()));
+        priceText.setText(getString(R.string.price) + ": " + String.valueOf(mPlace.getPrice()));
+
+        TextView roomText = (TextView) view.findViewById(R.id.roomText);
+        roomText.setText(getString(R.string.room_type) + ": " + mPlace.getRoomType());
+
+        TextView swimmingPoolText = (TextView) view.findViewById(R.id.swimmingPoolText);
+        if (mPlace.getSwimmingPool() == true) {
+            swimmingPoolText.setText(getString(R.string.swimming_pool) +  ": " + getString(R.string.yes));
+        } else {
+            swimmingPoolText.setText(getString(R.string.swimming_pool) + ": " + getString(R.string.no));
+        }
+
+        TextView longTableText = (TextView) view.findViewById(R.id.longTableText);
+        if (mPlace.getLongTable() == true) {
+            longTableText.setText(getString(R.string.longtable) + ": " + getString(R.string.yes));
+        } else {
+            longTableText.setText(getString(R.string.longtable) + ": " + getString(R.string.no));
+        }
+
+        TextView discoText = (TextView) view.findViewById(R.id.discoText);
+        if (mPlace.getDisco() == true) {
+            discoText.setText(getString(R.string.disco) + ": " + getString(R.string.yes));
+        } else {
+            discoText.setText(getString(R.string.disco) + getString(R.string.no));
+        }
+
+        TextView roomServiceText = (TextView) view.findViewById(R.id.roomServiceText);
+        if (mPlace.getRoomService() == true) {
+            roomServiceText.setText(getString(R.string.room_service) + ": " + getString(R.string.yes));
+        } else {
+            roomServiceText.setText(getString(R.string.room_service) + getString(R.string.no));
+        }
+
+        TextView restaurantText = (TextView) view.findViewById(R.id.restaurantText);
+        if (mPlace.getRestaurant() == true) {
+            restaurantText.setText(getString(R.string.restaurant) + ": " + getString(R.string.yes));
+        } else {
+            restaurantText.setText(getString(R.string.restaurant) + getString(R.string.no));
+        }
 
         TextView addressText = (TextView) view.findViewById(R.id.addressText);
         addressText.setText(mPlace.getAddress());
 
-        TextView roomText = (TextView) view.findViewById(R.id.roomText);
-        roomText.setText(mPlace.getRoomType());
-
-        TextView swimmingPoolText = (TextView) view.findViewById(R.id.swimmingPoolText);
-        swimmingPoolText.setText(String.valueOf(mPlace.getSwimmingPool()));
-
-        TextView longTableText = (TextView) view.findViewById(R.id.longTableText);
-        longTableText.setText(String.valueOf(mPlace.getLongTable()));
-
-        TextView discoText = (TextView) view.findViewById(R.id.discoText);
-        discoText.setText(String.valueOf(mPlace.getDisco()));
-
-        TextView roomServiceText = (TextView) view.findViewById(R.id.roomServiceText);
-        roomServiceText.setText(String.valueOf(mPlace.getRoomService()));
-
-        TextView restaurantText = (TextView) view.findViewById(R.id.restaurantText);
-        restaurantText.setText(String.valueOf(mPlace.getRestaurant()));
-
-
-
         TextView phoneNumber = (TextView) view.findViewById(R.id.phoneNumber);
-        phoneNumber.setText(mPlace.getPhoneNumber());
+        phoneNumber.setText((getString(R.string.phone) + ": " + mPlace.getPhoneNumber()));
 
         TextView emailAddress = (TextView) view.findViewById(R.id.emailAddress);
         emailAddress.setText(mPlace.getEmail());
@@ -176,7 +194,7 @@ public class HotelFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.locationImageButton:
-                Uri geolocation = Uri.parse("geo:0,0?q=@"+mPlace.getGeoCode());
+                Uri geolocation = Uri.parse("geo:0,0?q=@" + mPlace.getGeoCode());
                 intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(geolocation);
                 break;

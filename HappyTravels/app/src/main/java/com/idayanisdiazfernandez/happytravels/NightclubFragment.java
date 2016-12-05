@@ -77,7 +77,7 @@ public class NightclubFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_airport, container, false);
+        View view = inflater.inflate(R.layout.fragment_night_club, container, false);
 
         /**
          * Set content to text boxes.
@@ -93,25 +93,38 @@ public class NightclubFragment extends Fragment implements View.OnClickListener 
         descriptionText.setText(mPlace.getDescription());
 
         TextView timingText = (TextView) view.findViewById(R.id.timingText);
-        timingText.setText(mPlace.getTiming());
+        timingText.setText(getString(R.string.open_time) + ": " + mPlace.getTiming());
 
         TextView priceText = (TextView) view.findViewById(R.id.priceText);
-        priceText.setText(String.valueOf(mPlace.getPrice()));
+        priceText.setText(getString(R.string.price) + ": " + String.valueOf(mPlace.getPrice()));
 
         TextView paidDrinksText = (TextView) view.findViewById(R.id.paidDrinksText);
-        paidDrinksText.setText(String.valueOf(mPlace.getPaidDrinks()));
+        if (mPlace.getPaidDrinks() == true) {
+            paidDrinksText.setText(getString(R.string.paid_drink) + ": " + getString(R.string.yes));
+        } else {
+            paidDrinksText.setText(getString(R.string.paid_drink) + ": " + getString(R.string.no));
+        }
+
 
         TextView FreeDrinksText = (TextView) view.findViewById(R.id.FreeDrinksText);
-        FreeDrinksText.setText(String.valueOf(mPlace.getFreeDrinks()));
+        if (mPlace.getFreeDrinks() == true) {
+            FreeDrinksText.setText(getString(R.string.free_drink) + ": " + getString(R.string.yes));
+        } else {
+            FreeDrinksText.setText(getString(R.string.paid_drink) + ": " + getString(R.string.no));
+        }
 
         TextView reservationsText = (TextView) view.findViewById(R.id.reservationsText);
-        reservationsText.setText(String.valueOf(mPlace.getTableReservation()));
+        if (mPlace.getTableReservation()) {
+            reservationsText.setText(getString(R.string.reservation_text) + ": " + getString(R.string.yes));
+        } else {
+            reservationsText.setText(getString(R.string.reservation_text) + ": " + getString(R.string.no));
+        }
 
         TextView addressText = (TextView) view.findViewById(R.id.addressText);
         addressText.setText(mPlace.getAddress());
 
         TextView phoneNumber = (TextView) view.findViewById(R.id.phoneNumber);
-        phoneNumber.setText(mPlace.getPhoneNumber());
+        phoneNumber.setText((getString(R.string.phone) + ": " + mPlace.getPhoneNumber()));
 
         TextView emailAddress = (TextView) view.findViewById(R.id.emailAddress);
         emailAddress.setText(mPlace.getEmail());
@@ -162,7 +175,7 @@ public class NightclubFragment extends Fragment implements View.OnClickListener 
                 break;
 
             case R.id.locationImageButton:
-                Uri geolocation = Uri.parse("geo:0,0?q=@"+mPlace.getGeoCode());
+                Uri geolocation = Uri.parse("geo:0,0?q=@" + mPlace.getGeoCode());
                 intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(geolocation);
                 break;

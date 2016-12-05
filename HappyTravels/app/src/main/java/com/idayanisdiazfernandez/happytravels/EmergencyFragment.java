@@ -76,7 +76,7 @@ public class EmergencyFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_airport, container, false);
+        View view = inflater.inflate(R.layout.fragment_emergency, container, false);
 
         /**
          * Set content to text boxes.
@@ -92,16 +92,13 @@ public class EmergencyFragment extends Fragment implements View.OnClickListener 
         descriptionText.setText(mPlace.getDescription());
 
         TextView timingText = (TextView) view.findViewById(R.id.timingText);
-        timingText.setText(mPlace.getTiming());
-
-        TextView priceText = (TextView) view.findViewById(R.id.priceText);
-        priceText.setText(String.valueOf(mPlace.getPrice()));
+        timingText.setText(getString(R.string.open_time) + ": " + mPlace.getTiming());
 
         TextView addressText = (TextView) view.findViewById(R.id.addressText);
         addressText.setText(mPlace.getAddress());
 
         TextView phoneNumber = (TextView) view.findViewById(R.id.phoneNumber);
-        phoneNumber.setText(mPlace.getPhoneNumber());
+        phoneNumber.setText((getString(R.string.phone) + ": " + mPlace.getPhoneNumber()));
 
         TextView emailAddress = (TextView) view.findViewById(R.id.emailAddress);
         emailAddress.setText(mPlace.getEmail());

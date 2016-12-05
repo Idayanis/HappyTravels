@@ -93,19 +93,16 @@ public class AirportFragment extends Fragment implements View.OnClickListener {
         descriptionText.setText(mPlace.getDescription());
 
         TextView timingText = (TextView) view.findViewById(R.id.timingText);
-        timingText.setText(mPlace.getTiming());
-
-        TextView priceText = (TextView) view.findViewById(R.id.priceText);
-        priceText.setText(String.valueOf(mPlace.getPrice()));
+        timingText.setText(getString(R.string.open_time) + ": " + mPlace.getTiming());
 
         TextView flightsText = (TextView) view.findViewById(R.id.flightsText);
-        flightsText.setText(mPlace.getFlightsAvailability());
+        flightsText.setText(getString(R.string.flights_available) + ": " + mPlace.getFlightsAvailability());
 
         TextView addressText = (TextView) view.findViewById(R.id.addressText);
         addressText.setText(mPlace.getAddress());
 
         TextView phoneNumber = (TextView) view.findViewById(R.id.phoneNumber);
-        phoneNumber.setText(mPlace.getPhoneNumber());
+        phoneNumber.setText((getString(R.string.phone) + ": " + mPlace.getPhoneNumber()));
 
         TextView emailAddress = (TextView) view.findViewById(R.id.emailAddress);
         emailAddress.setText(mPlace.getEmail());

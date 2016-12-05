@@ -196,8 +196,28 @@
     <string name="reservation">Call or email for reservations.</string>
 
     <string name="open">Open 24/7</string>
+    <string name="open_time">Open</string>
     <string name="share">Share</string>
     <string name="email_us">Email</string>
     <string name="company_email">info@example.com</string>
+    <string name="swimming_pool">Swimming Pool</string>
+    <string name="longtable">Longtable</string>
+    <string name="disco">Disco</string>
+    <string name="room_service">Room Service</string>
+    <string name="yes">: Yes</string>
+    <string name="no">: No</string>
+    <string name="phone">Phone :</string>
+    <string name="price">Price</string>
+    <string name="room_type">Room Type</string>
+    <string name="flights_available">Available Flights</string>
+    <string name="food_type">Food Type</string>
+    <string name="menu_list">Menu</string>
+    <string name="paid_drink">Paid Drink</string>
+    <string name="free_drink">Free Drink</string>
+    <string name="drink_text">Drink</string>
+    <string name="cuisine_text">Cuisine</string>
+    <string name="reservation_text">Reservation</string>
+    <string name="transport_type">Type</string>
+    <string name="transport_priceText">Price</string>
 
 </resources>

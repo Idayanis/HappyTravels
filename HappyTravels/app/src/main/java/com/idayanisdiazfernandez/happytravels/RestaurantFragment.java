@@ -76,7 +76,7 @@ public class RestaurantFragment extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_airport, container, false);
+        View view = inflater.inflate(R.layout.fragment_restaurant, container, false);
 
         /**
          * Set content to text boxes.
@@ -92,31 +92,35 @@ public class RestaurantFragment extends Fragment implements View.OnClickListener
         descriptionText.setText(mPlace.getDescription());
 
         TextView timingText = (TextView) view.findViewById(R.id.timingText);
-        timingText.setText(mPlace.getTiming());
+        timingText.setText(getString(R.string.open_time) + ": " + mPlace.getTiming());
 
         TextView priceText = (TextView) view.findViewById(R.id.priceText);
-        priceText.setText(String.valueOf(mPlace.getPrice()));
+        priceText.setText(getString(R.string.price) + ": " + String.valueOf(mPlace.getPrice()));
 
         TextView TypeOfFoodText = (TextView) view.findViewById(R.id.TypeOfFoodText);
-        TypeOfFoodText.setText(String.valueOf(mPlace.getTypeOfFood()));
+        TypeOfFoodText.setText(getString(R.string.food_type) + ": " + mPlace.getTypeOfFood());
 
         TextView menuListText = (TextView) view.findViewById(R.id.menuListText);
-        menuListText.setText(String.valueOf(mPlace.getMenuList()));
+        menuListText.setText(getString(R.string.menu_list) + ": " + mPlace.getMenuList());
 
         TextView drinkText = (TextView) view.findViewById(R.id.drinkText);
-        drinkText.setText(String.valueOf(mPlace.getDrink()));
+        if(mPlace.getDrink() == true) {
+            drinkText.setText(getString(R.string.drink_text) + ": " + getString(R.string.no));
+        } else {
+            drinkText.setText(getString(R.string.drink_text) + ": " + getString(R.string.no));
+        }
 
         TextView cuisineText = (TextView) view.findViewById(R.id.cuisineText);
-        cuisineText.setText(String.valueOf(mPlace.getCuisine()));
+        cuisineText.setText(getString(R.string.cuisine_text) + ": " + mPlace.getCuisine());
 
         TextView reservationsText = (TextView) view.findViewById(R.id.reservationsText);
-        reservationsText.setText(String.valueOf(mPlace.getReservations()));
+        reservationsText.setText(getString(R.string.reservation_text) + ": " + mPlace.getReservations());
 
         TextView addressText = (TextView) view.findViewById(R.id.addressText);
         addressText.setText(mPlace.getAddress());
 
         TextView phoneNumber = (TextView) view.findViewById(R.id.phoneNumber);
-        phoneNumber.setText(mPlace.getPhoneNumber());
+        phoneNumber.setText((getString(R.string.phone) + ": " + mPlace.getPhoneNumber()));
 
         TextView emailAddress = (TextView) view.findViewById(R.id.emailAddress);
         emailAddress.setText(mPlace.getEmail());

@@ -260,28 +260,28 @@ public class MainFragment extends Fragment {
 
         // Transportation
         transportation1 = new Transportation(getString(R.string.taxi), getString(R.string.taxi_availability),
-                getString(R.string.transport_price), R.drawable.place1, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place1, getString(R.string.transport), getString(R.string.open));
 
         transportation2 = new Transportation(getString(R.string.bus), getString(R.string.bus_availability),
-                getString(R.string.transport_price), R.drawable.place2, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place2, getString(R.string.transport), getString(R.string.open));
 
         transportation3 = new Transportation(getString(R.string.train), getString(R.string.train_availability),
-                getString(R.string.transport_price), R.drawable.place3, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place3, getString(R.string.transport), getString(R.string.open));
 
         transportation4 = new Transportation(getString(R.string.train), getString(R.string.train_availability),
-                getString(R.string.transport_price), R.drawable.place4, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place4, getString(R.string.transport), getString(R.string.open));
 
         transportation5 = new Transportation(getString(R.string.bus), getString(R.string.bus_availability),
-                getString(R.string.transport_price), R.drawable.place5, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place5, getString(R.string.transport), getString(R.string.open));
 
         transportation6 = new Transportation(getString(R.string.bus), getString(R.string.bus_availability),
-                getString(R.string.transport_price), R.drawable.place6, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place6, getString(R.string.transport), getString(R.string.open));
 
         transportation7 = new Transportation(getString(R.string.bike), getString(R.string.bike_availability),
-                getString(R.string.transport_price), R.drawable.place7, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place7, getString(R.string.transport), getString(R.string.open));
 
         transportation8 = new Transportation(getString(R.string.bus), getString(R.string.bus_availability),
-                getString(R.string.transport_price), R.drawable.place8, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place8, getString(R.string.transport), getString(R.string.open));
         //============================Dummy Content=====================================//
         //============================Dummy Content=====================================//
         //============================Dummy Content=====================================//
