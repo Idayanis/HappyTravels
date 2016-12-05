@@ -101,6 +101,22 @@
                     android:padding="@dimen/text_padding" />
 
                 <TextView
+                    android:id="@+id/placeTypeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Place Type"
+                    android:textSize="@dimen/text_size"
+                    android:padding="@dimen/text_padding" />
+
+                <TextView
+                    android:id="@+id/TypeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textSize="@dimen/text_size"
+                    android:padding="@dimen/text_padding" />
+
+                <TextView
                     android:id="@+id/timingText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -109,34 +125,10 @@
                     android:padding="@dimen/text_padding" />
 
                 <TextView
-                    android:id="@+id/priceText"
+                    android:id="@+id/priceRangeText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Price"
-                    android:textSize="@dimen/text_size"
-                    android:padding="@dimen/text_padding" />
-
-                <TextView
-                    android:id="@+id/flightsText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Flights"
-                    android:textSize="@dimen/text_size"
-                    android:padding="@dimen/text_padding" />
-
-                <TextView
-                    android:id="@+id/phoneNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Phone Number"
-                    android:textSize="@dimen/text_size"
-                    android:padding="@dimen/text_padding" />
-
-                <TextView
-                    android:id="@+id/locationText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Location"
+                    android:text="Price Range"
                     android:textSize="@dimen/text_size"
                     android:padding="@dimen/text_padding" />
 
