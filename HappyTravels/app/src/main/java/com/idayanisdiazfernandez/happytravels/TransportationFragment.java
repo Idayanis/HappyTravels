@@ -101,6 +101,18 @@ public class TransportationFragment extends Fragment implements View.OnClickList
         TextView priceRangeText = (TextView) view.findViewById(R.id.priceRangeText);
         priceRangeText.setText(getString(R.string.transport_priceText) + ": " + mPlace.getPriceRange());
 
+        TextView addressText = (TextView) view.findViewById(R.id.addressText);
+        addressText.setText(mPlace.getAddress());
+
+        TextView phoneNumber = (TextView) view.findViewById(R.id.phoneNumber);
+        phoneNumber.setText((getString(R.string.phone) + ": " + mPlace.getPhoneNumber()));
+
+        TextView emailAddress = (TextView) view.findViewById(R.id.emailAddress);
+        emailAddress.setText(mPlace.getEmail());
+
+        TextView webPage = (TextView) view.findViewById(R.id.webPage);
+        webPage.setText(mPlace.getWebPage());
+
         /**
          *  Find the ImageButtons and set OnClick listener
          */
@@ -118,9 +130,6 @@ public class TransportationFragment extends Fragment implements View.OnClickList
 
         ImageButton callButton = (ImageButton) view.findViewById(R.id.callImageButton);
         callButton.setOnClickListener(TransportationFragment.this);
-
-        ImageButton photoButton = (ImageButton) view.findViewById(R.id.photoImageButton);
-        photoButton.setOnClickListener(TransportationFragment.this);
 
         return view;
     }
@@ -160,14 +169,6 @@ public class TransportationFragment extends Fragment implements View.OnClickList
 
             case R.id.callImageButton:
                 intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + mPlace.getPhoneNumber()));
-                break;
-
-            case R.id.photoImageButton:
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
-                fragmentTransaction.replace(R.id.mainFragmenLayout, GalleryFragmentPager.newInstance(mPlace))
-                        .addToBackStack("tag").commit();
                 break;
 
             default:

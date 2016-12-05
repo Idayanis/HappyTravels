@@ -13,7 +13,7 @@ import com.idayanisdiazfernandez.happytravels.Models.Place;
 public class Restaurant extends Place {
 
     // The properties for Restaurant class.
-    String TypeOfFood;
+    String typeOfFood;
     String menuList;
     Boolean drink;
     String cuisine;
@@ -40,7 +40,7 @@ public class Restaurant extends Place {
                       String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage, String typeOfFood,
                       String menuList, Boolean drink, String cuisine, String reservations) {
         super(name, description, timing, address, phoneNumber, placeType, price, photos, thumbnail, geoCode, email, webPage);
-        TypeOfFood = typeOfFood;
+        this.typeOfFood = typeOfFood;
         this.menuList = menuList;
         this.drink = drink;
         this.cuisine = cuisine;
@@ -55,7 +55,7 @@ public class Restaurant extends Place {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         super.writeToParcel(parcel, i);
-        parcel.writeString(TypeOfFood);
+        parcel.writeString(typeOfFood);
         parcel.writeString(menuList);
         parcel.writeByte((byte) (drink ? 1 : 0));
         parcel.writeString(cuisine);
@@ -69,7 +69,7 @@ public class Restaurant extends Place {
      **/
     private Restaurant(Parcel in){
         super(in);
-        this.TypeOfFood = in.readString();
+        this.typeOfFood = in.readString();
         this.menuList = in.readString();
         this.drink = in.readByte() != 0;
         this.cuisine = in.readString();
@@ -90,11 +90,11 @@ public class Restaurant extends Place {
     // Getters and Setters
 
     public String getTypeOfFood() {
-        return TypeOfFood;
+        return typeOfFood;
     }
 
     public void setTypeOfFood(String typeOfFood) {
-        TypeOfFood = typeOfFood;
+        typeOfFood = typeOfFood;
     }
 
     public String getMenuList() {

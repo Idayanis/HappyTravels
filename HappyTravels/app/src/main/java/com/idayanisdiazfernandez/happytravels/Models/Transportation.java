@@ -19,7 +19,7 @@ public class Transportation extends Place {
      * @param description
      * @param priceRange
      */
-    public Transportation(String type, String description, String priceRange, int thumbnail, String placeType, String timing) {
+    public Transportation(String type, String description, String priceRange, int thumbnail, String placeType, String timing, String phoneNumber, String address, String geoCode, String email, String webPage) {
         this.type = type;
         this.name = type;
         this.placeType = placeType;
@@ -27,6 +27,12 @@ public class Transportation extends Place {
         this.priceRange = priceRange;
         this.thumbnail = thumbnail;
         this.timing = timing;
+        this.geoCode = geoCode;
+        this.email = email;
+        this.webPage = webPage;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+
     }
 
     @Override

@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.idayanisdiazfernandez.happytravels.Models.Emergency;
+import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.Tools.GalleryFragmentPager;
 
 import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLACE;
@@ -88,8 +89,8 @@ public class EmergencyFragment extends Fragment implements View.OnClickListener 
         TextView nameText = (TextView) view.findViewById(R.id.nameText);
         nameText.setText(mPlace.getName());
 
-        TextView descriptionText = (TextView) view.findViewById(R.id.descriptionText);
-        descriptionText.setText(mPlace.getDescription());
+        TextView departmentText = (TextView) view.findViewById(R.id.departmentText);
+        departmentText.setText(mPlace.getDepartment());
 
         TextView timingText = (TextView) view.findViewById(R.id.timingText);
         timingText.setText(getString(R.string.open_time) + ": " + mPlace.getTiming());

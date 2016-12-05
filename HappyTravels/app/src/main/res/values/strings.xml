@@ -140,6 +140,13 @@
     <string name="train">Train</string>
     <string name="bike">Bike</string>
 
+    <string name="transport_1_address">Address for Transport 1</string>
+    <string name="transport_2_address">Address for Transport 2</string>
+    <string name="transport_3_address">Address for Transport 3</string>
+    <string name="transport_4_address">Address for Transport 4</string>
+    <string name="transport_5_address">Address for Transport 5</string>
+    <string name="transport_6_address">Address for Transport 6</string>
+
     <string name="taxi_availability">The taxi is available - details</string>
     <string name="bus_availability">The Bus is available - details</string>
     <string name="train_availability">The Train is available - details</string>
@@ -159,8 +166,15 @@
     <string name="emergency_2">Emergency 2</string>
     <string name="emergency_3">Emergency 3</string>
     <string name="emergency_4">Emergency 4</string>
-    <string name="emergency_6">Emergency 5</string>
-    <string name="emergency_7">Emergency 6</string>
+    <string name="emergency_5">Emergency 5</string>
+    <string name="emergency_6">Emergency 6</string>
+
+    <string name="emergency_1_address">Address for Emergency 1</string>
+    <string name="emergency_2_address">Address for Emergency 2</string>
+    <string name="emergency_3_address">Address for Emergency 3</string>
+    <string name="emergency_4_address">Address for Emergency 4</string>
+    <string name="emergency_5_address">Address for Emergency 5</string>
+    <string name="emergency_6_address">Address for Emergency 6</string>
 
     <string name="restaurant">Restaurant</string>
     <string name="restaurant_1">Restaurant 1</string>
@@ -204,9 +218,9 @@
     <string name="longtable">Longtable</string>
     <string name="disco">Disco</string>
     <string name="room_service">Room Service</string>
-    <string name="yes">: Yes</string>
-    <string name="no">: No</string>
-    <string name="phone">Phone :</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="phone">Phone</string>
     <string name="price">Price</string>
     <string name="room_type">Room Type</string>
     <string name="flights_available">Available Flights</string>
