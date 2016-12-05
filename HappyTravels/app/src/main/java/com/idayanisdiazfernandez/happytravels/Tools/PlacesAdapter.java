@@ -44,11 +44,13 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView nameText;
+        public TextView typeText;
         public ImageView thumbnail;
 
         public MyViewHolder(View view) {
             super(view);
             nameText = (TextView) view.findViewById(R.id.nameText);
+            typeText = (TextView) view.findViewById(R.id.typeText);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
         }
     }
@@ -73,6 +75,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.MyViewHold
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         final Place place = placeList.get(position);
         holder.nameText.setText(place.getName());
+        holder.typeText.setText(place.getPlaceType());
 
 
         // loading place cover using Glide library

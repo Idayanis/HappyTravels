@@ -113,7 +113,7 @@ public class MainFragment extends Fragment {
         //============================Dummy Content=====================================//
         // Airports
         airport1 = new Airport(getString(R.string.airport_1), getString(R.string.airport_1_description), getString(R.string.open), getString(R.string.address),
-                "789878787", getContext().getString(R.string.airport), 0, photo[0], photo[0][0], "42.246696, -83.018326", "info@example.com", "www.example.com",  getString(R.string.flights));
+                "789878787", getContext().getString(R.string.airport), 0, photo[0], photo[0][0], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.flights));
 
         airport2 = new Airport(getString(R.string.airport_2), getString(R.string.airport_2_description), getString(R.string.open), getString(R.string.address_2),
                 "789844787", getString(R.string.airport), 0, photo[1], photo[0][1], "42.246696, -83.018326", "info@example.com", "www.example.com", getString(R.string.flights));
@@ -138,12 +138,12 @@ public class MainFragment extends Fragment {
 
 
         // Emergency
-        emergency1 = new Emergency(getString(R.string.emergency_1), getString(R.string.police), "789844787", getString(R.string.emergency), R.drawable.place1, "42.246696, -83.018326", "info@example.com", "www.example.com");
-        emergency2 = new Emergency(getString(R.string.emergency_2), getString(R.string.fire_department), "789844787", getString(R.string.emergency), R.drawable.place2, "42.246696, -83.018326", "info@example.com", "www.example.com");
-        emergency3 = new Emergency(getString(R.string.emergency_3), getString(R.string.hospital_a), "789844787", getString(R.string.emergency), R.drawable.place3, "42.246696, -83.018326", "info@example.com", "www.example.com");
-        emergency4 = new Emergency(getString(R.string.emergency_4), getString(R.string.hospital_b), "789844787", getString(R.string.emergency), R.drawable.place4, "42.246696, -83.018326", "info@example.com", "www.example.com");
-        emergency5 = new Emergency(getString(R.string.emergency_6), getString(R.string.ambulance_a), "789844787", getString(R.string.emergency), R.drawable.place5, "42.246696, -83.018326", "info@example.com", "www.example.com");
-        emergency6 = new Emergency(getString(R.string.emergency_7), getString(R.string.ambulance_b), "789844787", getString(R.string.emergency), R.drawable.place6, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency1 = new Emergency(getString(R.string.emergency_1), getString(R.string.police), "789844787", getString(R.string.open), getString(R.string.emergency_1_address), getString(R.string.emergency), R.drawable.place1, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency2 = new Emergency(getString(R.string.emergency_2), getString(R.string.fire_department), "789844787", getString(R.string.open), getString(R.string.emergency_2_address), getString(R.string.emergency), R.drawable.place2, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency3 = new Emergency(getString(R.string.emergency_3), getString(R.string.hospital_a), "789844787", getString(R.string.open), getString(R.string.emergency_3_address), getString(R.string.emergency), R.drawable.place3, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency4 = new Emergency(getString(R.string.emergency_4), getString(R.string.hospital_b), "789844787", getString(R.string.open), getString(R.string.emergency_4_address), getString(R.string.emergency), R.drawable.place4, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency5 = new Emergency(getString(R.string.emergency_5), getString(R.string.ambulance_a), "789844787", getString(R.string.open), getString(R.string.emergency_5_address), getString(R.string.emergency), R.drawable.place5, "42.246696, -83.018326", "info@example.com", "www.example.com");
+        emergency6 = new Emergency(getString(R.string.emergency_6), getString(R.string.ambulance_b), "789844787", getString(R.string.open), getString(R.string.emergency_6_address), getString(R.string.emergency), R.drawable.place6, "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         // Hotel
         String[] roomType = {"Single", "Double", "Single, Double", "Single, Double, Studio"};
@@ -260,28 +260,28 @@ public class MainFragment extends Fragment {
 
         // Transportation
         transportation1 = new Transportation(getString(R.string.taxi), getString(R.string.taxi_availability),
-                getString(R.string.transport_price), R.drawable.place1, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place1, getString(R.string.transport), getString(R.string.open), "7878787878", getString(R.string.transport_1_address), "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         transportation2 = new Transportation(getString(R.string.bus), getString(R.string.bus_availability),
-                getString(R.string.transport_price), R.drawable.place2, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place2, getString(R.string.transport), getString(R.string.open), "7878787878", getString(R.string.transport_1_address), "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         transportation3 = new Transportation(getString(R.string.train), getString(R.string.train_availability),
-                getString(R.string.transport_price), R.drawable.place3, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place3, getString(R.string.transport), getString(R.string.open), "7878787878", getString(R.string.transport_1_address), "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         transportation4 = new Transportation(getString(R.string.train), getString(R.string.train_availability),
-                getString(R.string.transport_price), R.drawable.place4, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place4, getString(R.string.transport), getString(R.string.open), "7878787878", getString(R.string.transport_1_address), "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         transportation5 = new Transportation(getString(R.string.bus), getString(R.string.bus_availability),
-                getString(R.string.transport_price), R.drawable.place5, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place5, getString(R.string.transport), getString(R.string.open), "7878787878", getString(R.string.transport_1_address), "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         transportation6 = new Transportation(getString(R.string.bus), getString(R.string.bus_availability),
-                getString(R.string.transport_price), R.drawable.place6, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place6, getString(R.string.transport), getString(R.string.open), "7878787878", getString(R.string.transport_1_address), "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         transportation7 = new Transportation(getString(R.string.bike), getString(R.string.bike_availability),
-                getString(R.string.transport_price), R.drawable.place7, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place7, getString(R.string.transport), getString(R.string.open), "7878787878", getString(R.string.transport_1_address), "42.246696, -83.018326", "info@example.com", "www.example.com");
 
         transportation8 = new Transportation(getString(R.string.bus), getString(R.string.bus_availability),
-                getString(R.string.transport_price), R.drawable.place8, getString(R.string.transport));
+                getString(R.string.transport_price), R.drawable.place8, getString(R.string.transport), getString(R.string.open), "7878787878", getString(R.string.transport_1_address), "42.246696, -83.018326", "info@example.com", "www.example.com");
         //============================Dummy Content=====================================//
         //============================Dummy Content=====================================//
         //============================Dummy Content=====================================//
