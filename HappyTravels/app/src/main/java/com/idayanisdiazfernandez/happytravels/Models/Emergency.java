@@ -10,7 +10,6 @@ import android.os.Parcelable;
 public class Emergency extends Place {
 
     String department;
-    int ContactNumber;
 
     /**
      *  The Empty constructor.
@@ -20,17 +19,21 @@ public class Emergency extends Place {
     }
 
     /**
-     *  The default constructor to instantiate objectc from it.
+     *  The default constructor to instantiate object from it.
      * @param department
-     * @param phoneNumber
      */
-    public Emergency(String name, String department, String phoneNumber, String placeType, int thumbnail,
+    public Emergency(String name, String department, String phoneNumber, String timing, String address, String placeType, int thumbnail,
                      String geoCode, String email, String webPage) {
         this.name = name;
         this.department = department;
-        phoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber;
         this.placeType = placeType;
         this.thumbnail = thumbnail;
+        this.geoCode = geoCode;
+        this.email = email;
+        this.webPage = webPage;
+        this.address = address;
+        this.timing = timing;
     }
 
     @Override
@@ -42,7 +45,6 @@ public class Emergency extends Place {
     public void writeToParcel(Parcel parcel, int i) {
         super.writeToParcel(parcel, i);
         parcel.writeString(department);
-        parcel.writeInt(ContactNumber);
     }
 
     /**
@@ -52,7 +54,6 @@ public class Emergency extends Place {
      **/
     private Emergency(Parcel in){
         super(in);
-        this.ContactNumber = in.readInt();
         this.department = in.readString();
     }
 
@@ -78,13 +79,5 @@ public class Emergency extends Place {
 
     public void setDepartment(String department) {
         this.department = department;
-    }
-
-    public int getContactNumber() {
-        return ContactNumber;
-    }
-
-    public void setContactNumber(int contactNumber) {
-        ContactNumber = contactNumber;
     }
 }

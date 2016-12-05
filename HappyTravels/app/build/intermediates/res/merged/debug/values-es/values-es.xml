@@ -82,11 +82,17 @@
     <string name="deep_orange">Naranja</string>
     <string name="emergency">Emergencia</string>
     <string name="emergency_1">Emergencia 1</string>
+    <string name="emergency_1_address">Dirección del Emergencia 1</string>
     <string name="emergency_2">Emergencia 2</string>
+    <string name="emergency_2_address">Dirección del Emergencia 2</string>
     <string name="emergency_3">Emergencia 3</string>
+    <string name="emergency_3_address">Dirección del Emergencia 3</string>
     <string name="emergency_4">Emergencia 4</string>
-    <string name="emergency_6">Emergencia 5</string>
-    <string name="emergency_7">Emergencia 6</string>
+    <string name="emergency_4_address">Dirección del Emergencia 4</string>
+    <string name="emergency_5">Emergencia 5</string>
+    <string name="emergency_5_address">Dirección del Emergencia 5</string>
+    <string name="emergency_6">Emergencia 6</string>
+    <string name="emergency_6_address">Dirección del Emergencia 6</string>
     <string name="fire_department">Departament de Bomberos</string>
     <string name="flights">International and domestic flights.</string>
     <string name="foodType">Mxicana, Asiatica, Mariscos</string>
@@ -174,5 +180,11 @@
     <string name="train">Tren</string>
     <string name="train_availability">Disponibilidad del Tren - detalles</string>
     <string name="transport">Transportación</string>
+    <string name="transport_1_address">Dirección for Transportación 1</string>
+    <string name="transport_2_address">Dirección for Transportación 2</string>
+    <string name="transport_3_address">Dirección for Transportación 3</string>
+    <string name="transport_4_address">Dirección for Transportación 4</string>
+    <string name="transport_5_address">Dirección for Transportación 5</string>
+    <string name="transport_6_address">Dirección for Transportación 6</string>
     <string name="transport_price">El precio es de 20 por km.</string>
 </resources>

@@ -127,6 +127,13 @@
     <string name="train">Tren</string>
     <string name="bike">Bicicletas</string>
 
+    <string name="transport_1_address">Dirección for Transportación 1</string>
+    <string name="transport_2_address">Dirección for Transportación 2</string>
+    <string name="transport_3_address">Dirección for Transportación 3</string>
+    <string name="transport_4_address">Dirección for Transportación 4</string>
+    <string name="transport_5_address">Dirección for Transportación 5</string>
+    <string name="transport_6_address">Dirección for Transportación 6</string>
+
     <string name="taxi_availability">Disponibilidad del taxi - detalles</string>
     <string name="bus_availability">Disponibilidad del Autobus Público 1 - detalles</string>
     <string name="train_availability">Disponibilidad del Tren - detalles</string>
@@ -142,8 +149,15 @@
     <string name="emergency_2">Emergencia 2</string>
     <string name="emergency_3">Emergencia 3</string>
     <string name="emergency_4">Emergencia 4</string>
-    <string name="emergency_6">Emergencia 5</string>
-    <string name="emergency_7">Emergencia 6</string>
+    <string name="emergency_5">Emergencia 5</string>
+    <string name="emergency_6">Emergencia 6</string>
+
+    <string name="emergency_1_address">Dirección del Emergencia 1</string>
+    <string name="emergency_2_address">Dirección del Emergencia 2</string>
+    <string name="emergency_3_address">Dirección del Emergencia 3</string>
+    <string name="emergency_4_address">Dirección del Emergencia 4</string>
+    <string name="emergency_5_address">Dirección del Emergencia 5</string>
+    <string name="emergency_6_address">Dirección del Emergencia 6</string>
 
     <string name="restaurant">Restaurante</string>
     <string name="restaurant_1">Restaurante 1</string>

@@ -13,8 +13,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.idayanisdiazfernandez.happytravels.Models.Emergency;
+import com.idayanisdiazfernandez.happytravels.Models.Place;
 import com.idayanisdiazfernandez.happytravels.Tools.GalleryFragmentPager;
 
 import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLACE;
@@ -28,7 +31,7 @@ import static com.idayanisdiazfernandez.happytravels.Tools.PlacesAdapter.ARG_PLA
  * Use the {@link EmergencyFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class EmergencyFragment extends Fragment {
+public class EmergencyFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -76,107 +79,119 @@ public class EmergencyFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_emergency, container, false);
 
+        /**
+         * Set content to text boxes.
+         * Set cover image.
+         */
+        ImageView coverPhoto = (ImageView) view.findViewById(R.id.coverPhoto);
+        coverPhoto.setImageResource(mPlace.getThumbnail());
+
+        TextView nameText = (TextView) view.findViewById(R.id.nameText);
+        nameText.setText(mPlace.getName());
+
+        TextView departmentText = (TextView) view.findViewById(R.id.departmentText);
+        departmentText.setText(mPlace.getDepartment());
+
+        TextView timingText = (TextView) view.findViewById(R.id.timingText);
+        timingText.setText(getString(R.string.open_time) + ": " + mPlace.getTiming());
+
+        TextView addressText = (TextView) view.findViewById(R.id.addressText);
+        addressText.setText(mPlace.getAddress());
+
+        TextView phoneNumber = (TextView) view.findViewById(R.id.phoneNumber);
+        phoneNumber.setText((getString(R.string.phone) + ": " + mPlace.getPhoneNumber()));
+
+        TextView emailAddress = (TextView) view.findViewById(R.id.emailAddress);
+        emailAddress.setText(mPlace.getEmail());
+
+        TextView webPage = (TextView) view.findViewById(R.id.webPage);
+        webPage.setText(mPlace.getWebPage());
+
+        /**
+         *  Find the ImageButtons and set OnClick listener
+         */
         ImageButton emailButton = (ImageButton) view.findViewById(R.id.emailImageButton);
+        emailButton.setOnClickListener(EmergencyFragment.this);
+
         ImageButton webButton = (ImageButton) view.findViewById(R.id.webImageButton);
+        webButton.setOnClickListener(EmergencyFragment.this);
+
         ImageButton mapButton = (ImageButton) view.findViewById(R.id.locationImageButton);
+        mapButton.setOnClickListener(EmergencyFragment.this);
+
         ImageButton shareButton = (ImageButton) view.findViewById(R.id.shareImageButton);
+        shareButton.setOnClickListener(EmergencyFragment.this);
+
         ImageButton callButton = (ImageButton) view.findViewById(R.id.callImageButton);
-        ImageButton galleryButton = (ImageButton) view.findViewById(R.id.photoImageButton);
+        callButton.setOnClickListener(EmergencyFragment.this);
 
+        ImageButton photoButton = (ImageButton) view.findViewById(R.id.photoImageButton);
+        photoButton.setOnClickListener(EmergencyFragment.this);
 
+        return view;
+    }
 
-        emailButton.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
 
-            @Override
-            public void onClick(View v) {
-                String[]emailAddresses = {"idayanis.diazfernandez53@stclairconnect.ca"};
-                Intent intent = new Intent(Intent.ACTION_SENDTO);
+        Intent intent = null;
+
+        switch (view.getId()) {
+            case R.id.emailImageButton:
+                intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:"));
-                intent.putExtra(Intent.EXTRA_EMAIL,emailAddresses);
-                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-                    startActivity(intent);
-                }
-            }
-        });
+                intent.putExtra(Intent.EXTRA_EMAIL, mPlace.getEmail());
+                break;
 
-        webButton.setOnClickListener(new View.OnClickListener() {
+            case R.id.webImageButton:
+                Uri webPage = Uri.parse(mPlace.getWebPage());
+                intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(webPage);
+                break;
 
-            @Override
-            public void onClick(View v) {
-                Uri webpage = Uri.parse("http://www.holguincuba.net");
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(webpage);
-                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-                    startActivity(intent);
-                }
-            }
-        });
-
-        mapButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Uri geolocation = Uri.parse("geo:0,0?q=@20.8879678,-76.2714672,17z(Hospital Location)");
-                Intent intent = new Intent(Intent.ACTION_VIEW);
+            case R.id.locationImageButton:
+                Uri geolocation = Uri.parse("geo:0,0?q=@"+mPlace.getGeoCode());
+                intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(geolocation);
+                break;
 
-                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-                    startActivity(intent);
+            case R.id.shareImageButton:
+                intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setType("text/plain");
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Checkout this place!");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, mPlace.getName() + " " + mPlace.getAddress()
+                        + mPlace.getPhoneNumber() + " " + getActivity().getPackageName());
+                intent.createChooser(intent, "Share via");
+                break;
 
-                }
-                else{
-                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),
-                            "No instaled software to complete the task", Snackbar.LENGTH_SHORT);
-                    snackbar.show();
-                }
+            case R.id.callImageButton:
+                intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + mPlace.getPhoneNumber()));
+                break;
 
-            }
-        });
-        shareButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("smsto:"));
-                intent.putExtra("sms_body", " " );
-
-                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-                    startActivity(intent );
-                }
-                else{
-                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content),
-                            "No instaled software to complete the task", Snackbar.LENGTH_SHORT);
-                    snackbar.show();
-                }
-
-            }
-        });
-
-        galleryButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            case R.id.photoImageButton:
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
-                fragmentTransaction.replace(R.id.mainFragmenLayout, new GalleryFragmentPager())
+                fragmentTransaction.replace(R.id.mainFragmenLayout, GalleryFragmentPager.newInstance(mPlace))
                         .addToBackStack("tag").commit();
-            }
-        });
+                break;
 
-
-        callButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "Your Phone_number"));
+            default:
+                break;
+        }
+        if (view.getId() != R.id.photoImageButton) {
+            if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
                 startActivity(intent);
-
+            } else {
+                if (view.getId() == R.id.shareImageButton) {
+                    intent.setData(Uri.parse("smsto:"));
+                    startActivity(intent);
+                } else {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No installed application to complete the task", Snackbar.LENGTH_SHORT).show();
+                }
             }
-        });
-
-
-        return view;
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
