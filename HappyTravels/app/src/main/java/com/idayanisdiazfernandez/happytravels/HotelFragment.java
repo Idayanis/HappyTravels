@@ -108,19 +108,19 @@ public class HotelFragment extends Fragment implements View.OnClickListener {
         roomText.setText(mPlace.getRoomType());
 
         TextView swimmingPoolText = (TextView) view.findViewById(R.id.swimmingPoolText);
-        swimmingPoolText.setText(mPlace.getSwimmingPool());
+        swimmingPoolText.setText(String.valueOf(mPlace.getSwimmingPool()));
 
         TextView longTableText = (TextView) view.findViewById(R.id.longTableText);
-        longTableText.setText(mPlace.getLongTable());
+        longTableText.setText(String.valueOf(mPlace.getLongTable()));
 
         TextView discoText = (TextView) view.findViewById(R.id.discoText);
-        discoText.setText(mPlace.getDisco());
+        discoText.setText(String.valueOf(mPlace.getDisco()));
 
         TextView roomServiceText = (TextView) view.findViewById(R.id.roomServiceText);
-        roomServiceText.setText(mPlace.getRoomService());
+        roomServiceText.setText(String.valueOf(mPlace.getRoomService()));
 
         TextView restaurantText = (TextView) view.findViewById(R.id.restaurantText);
-        restaurantText.setText(mPlace.getRestaurant());
+        restaurantText.setText(String.valueOf(mPlace.getRestaurant()));
 
 
 
