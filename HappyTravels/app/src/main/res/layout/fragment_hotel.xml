@@ -96,49 +96,101 @@
                     android:id="@+id/descriptionText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
                     android:text="Description of the place"
-                    android:textSize="@dimen/text_size"
-                    android:padding="@dimen/text_padding" />
+                    android:textSize="@dimen/text_size" />
 
                 <TextView
                     android:id="@+id/timingText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
                     android:text="Timing"
-                    android:textSize="@dimen/text_size"
-                    android:padding="@dimen/text_padding" />
+                    android:textSize="@dimen/text_size" />
 
                 <TextView
                     android:id="@+id/priceText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
                     android:text="Price"
-                    android:textSize="@dimen/text_size"
-                    android:padding="@dimen/text_padding" />
+                    android:textSize="@dimen/text_size" />
 
                 <TextView
-                    android:id="@+id/flightsText"
+                    android:id="@+id/addressText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Flights"
-                    android:textSize="@dimen/text_size"
-                    android:padding="@dimen/text_padding" />
+                    android:padding="@dimen/text_padding"
+                    android:text="Location"
+                    android:textSize="@dimen/text_size" />
+                <TextView
+                    android:id="@+id/roomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
+                    android:text="Rooms Type"
+                    android:textSize="@dimen/text_size" />
+                <TextView
+                    android:id="@+id/swimmingPoolText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
+                    android:text="Swimming Pool"
+                    android:textSize="@dimen/text_size" />
+                <TextView
+                    android:id="@+id/longTableText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
+                    android:text="Long Table"
+                    android:textSize="@dimen/text_size" />
+                <TextView
+                    android:id="@+id/discoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
+                    android:text="Disco"
+                    android:textSize="@dimen/text_size" />
+                <TextView
+                    android:id="@+id/roomServiceText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
+                    android:text="Room Service"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/restaurantText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
+                    android:text="Restaurants"
+                    android:textSize="@dimen/text_size" />
+
 
                 <TextView
                     android:id="@+id/phoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
                     android:text="Phone Number"
-                    android:textSize="@dimen/text_size"
-                    android:padding="@dimen/text_padding" />
+                    android:textSize="@dimen/text_size" />
 
                 <TextView
-                    android:id="@+id/locationText"
+                    android:id="@+id/emailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Location"
-                    android:textSize="@dimen/text_size"
-                    android:padding="@dimen/text_padding" />
+                    android:padding="@dimen/text_padding"
+                    android:text="Email Address"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/webPage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/text_padding"
+                    android:text="Web Page"
+                    android:textSize="@dimen/text_size" />
 
             </LinearLayout>
 
