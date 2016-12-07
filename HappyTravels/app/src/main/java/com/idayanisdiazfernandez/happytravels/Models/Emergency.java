@@ -23,7 +23,7 @@ public class Emergency extends Place {
      * @param department
      */
     public Emergency(String name, String department, String phoneNumber, String timing, String address, String placeType, int thumbnail,
-                     String geoCode, String email, String webPage) {
+                     String geoCode, String email, String webPage, int cover) {
         this.name = name;
         this.department = department;
         this.phoneNumber = phoneNumber;
@@ -34,6 +34,7 @@ public class Emergency extends Place {
         this.webPage = webPage;
         this.address = address;
         this.timing = timing;
+        this.cover = cover;
     }
 
     @Override

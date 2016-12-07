@@ -13,6 +13,7 @@ public abstract class Place implements Parcelable {
     double price;
     int[] photos;
     int thumbnail;
+    int cover;
 
     // Empty constructor
     public Place() {
@@ -33,7 +34,7 @@ public abstract class Place implements Parcelable {
      * @param thumbnail
      */
     public Place(String name, String description, String timing, String address,
-                 String phoneNumber, String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage) {
+                 String phoneNumber, String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage, int cover) {
         this.name = name;
         this.description = description;
         this.timing = timing;
@@ -46,6 +47,7 @@ public abstract class Place implements Parcelable {
         this.geoCode = geoCode;
         this.email = email;
         this.webPage = webPage;
+        this.cover = cover;
     }
 
     /**
@@ -62,6 +64,7 @@ public abstract class Place implements Parcelable {
         parcel.writeDouble(price);
         parcel.writeString(phoneNumber);
         parcel.writeInt(thumbnail);
+        parcel.writeInt(cover);
         parcel.writeIntArray(photos);
         parcel.writeString(geoCode);
         parcel.writeString(email);
@@ -82,6 +85,7 @@ public abstract class Place implements Parcelable {
         this.price = in.readDouble();
         this.phoneNumber = in.readString();
         this.thumbnail = in.readInt();
+        this.cover = in.readInt();
         this.photos = in.createIntArray();
         this.geoCode = in.readString();
         this.email = in.readString();
@@ -184,5 +188,13 @@ public abstract class Place implements Parcelable {
 
     public void setWebPage(String webPage) {
         this.webPage = webPage;
+    }
+
+    public int getCover() {
+        return cover;
+    }
+
+    public void setCover(int cover) {
+        this.cover = cover;
     }
 }

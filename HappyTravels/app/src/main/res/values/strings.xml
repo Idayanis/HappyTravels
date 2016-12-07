@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Happy Travels</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
 
@@ -13,7 +13,7 @@
     <string name="indigo">Indigo</string>
     <string name="blue">Blue</string>
     <string name="cyan">Cyan</string>
-    <string name="teal">Teal</string>
+    <string name="teal" translatable="false">Teal</string>
     <string name="green">Green</string>
     <string name="light_green">Light Green</string>
     <string name="orange">Orange</string>
@@ -50,15 +50,15 @@
 
     <string name="flights">International and domestic flights.</string>
 
-    <string name="hotel">Hotel</string>
-    <string name="hotel_1">Hotel 1</string>
-    <string name="hotel_2">Hotel 2</string>
-    <string name="hotel_3">Hotel 3</string>
-    <string name="hotel_4">Hotel 4</string>
-    <string name="hotel_5">Hotel 5</string>
-    <string name="hotel_6">Hotel 6</string>
-    <string name="hotel_7">Hotel 7</string>
-    <string name="hotel_8">Hotel 8</string>
+    <string name="hotel" translatable="false">Hotel</string>
+    <string name="hotel_1" translatable="false">Hotel 1</string>
+    <string name="hotel_2" translatable="false">Hotel 2</string>
+    <string name="hotel_3" translatable="false">Hotel 3</string>
+    <string name="hotel_4" translatable="false">Hotel 4</string>
+    <string name="hotel_5" translatable="false">Hotel 5</string>
+    <string name="hotel_6" translatable="false">Hotel 6</string>
+    <string name="hotel_7" translatable="false">Hotel 7</string>
+    <string name="hotel_8" translatable="false">Hotel 8</string>
 
     <string name="hotel_1_description">Hotel 1 description</string>
     <string name="hotel_2_description">Hotel 2 description</string>
@@ -135,7 +135,7 @@
     <string name="beach_8_address">Address for Beach 8</string>
 
     <string name="transport">Transportation</string>
-    <string name="taxi">Taxi</string>
+    <string name="taxi" translatable="false">Taxi</string>
     <string name="bus">Bus</string>
     <string name="train">Train</string>
     <string name="bike">Bike</string>
@@ -156,8 +156,8 @@
 
     <string name="police">Police</string>
     <string name="fire_department">Fire Department</string>
-    <string name="hospital_a">Hospital A</string>
-    <string name="hospital_b">Hospital B</string>
+    <string name="hospital_a" translatable="false">Hospital A</string>
+    <string name="hospital_b" translatable="false">Hospital B</string>
     <string name="ambulance_a">Ambulance A</string>
     <string name="ambulance_b">Ambulance B</string>
 
@@ -213,19 +213,19 @@
     <string name="open_time">Open</string>
     <string name="share">Share</string>
     <string name="email_us">Email</string>
-    <string name="company_email">info@example.com</string>
+    <string name="company_email" translatable="false">info@example.com</string>
     <string name="swimming_pool">Swimming Pool</string>
     <string name="longtable">Longtable</string>
-    <string name="disco">Disco</string>
+    <string name="disco" translatable="false">Disco</string>
     <string name="room_service">Room Service</string>
     <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="no" translatable="false">No</string>
     <string name="phone">Phone</string>
     <string name="price">Price</string>
     <string name="room_type">Room Type</string>
     <string name="flights_available">Available Flights</string>
     <string name="food_type">Food Type</string>
-    <string name="menu_list">Menu</string>
+    <string name="menu_list" translatable="false">Menu</string>
     <string name="paid_drink">Paid Drink</string>
     <string name="free_drink">Free Drink</string>
     <string name="drink_text">Drink</string>

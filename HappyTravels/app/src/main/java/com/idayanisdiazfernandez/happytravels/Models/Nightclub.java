@@ -32,8 +32,8 @@ public class Nightclub extends Place {
      */
     public Nightclub(String name, String description, String timing, String address, String phoneNumber,
                      String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage, Boolean paidDrinks,
-                     Boolean freeDrinks, Boolean tableReservation) {
-        super(name, description, timing, address, phoneNumber, placeType, price, photos, thumbnail, geoCode, email, webPage);
+                     Boolean freeDrinks, Boolean tableReservation, int cover) {
+        super(name, description, timing, address, phoneNumber, placeType, price, photos, thumbnail, geoCode, email, webPage, cover);
         this.paidDrinks = paidDrinks;
         this.freeDrinks = freeDrinks;
         this.tableReservation = tableReservation;
