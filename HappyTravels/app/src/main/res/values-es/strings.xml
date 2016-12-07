@@ -194,4 +194,24 @@
 
     <string name="open">Abiero 24 horas</string>
     <string name="share">Compartir</string>
+    <string name="ambulance_a">Ambulancia A</string>
+    <string name="ambulance_b">Ambulancia B</string>
+    <string name="cuisine_text">Cocina</string>
+    <string name="drink_text">Bebida</string>
+    <string name="email_us">Correo Elctrónico</string>
+    <string name="flights_available">Vuelos Disponibles</string>
+    <string name="food_type">Tipo de Comida</string>
+    <string name="free_drink">"Bebida Gratis "</string>
+    <string name="longtable">Mesa Larga</string>
+    <string name="open_time">Abrir</string>
+    <string name="paid_drink">Bebidas a Pagar</string>
+    <string name="phone">"Número de Teléfono "</string>
+    <string name="price">Precio</string>
+    <string name="reservation_text">Reservación</string>
+    <string name="room_service">Servicio a la Habitación</string>
+    <string name="room_type">Tipo de Habitación</string>
+    <string name="swimming_pool">"Piscina "</string>
+    <string name="transport_priceText">Precio</string>
+    <string name="transport_type">Tipo de Trasportación</string>
+    <string name="yes">Si</string>
 </resources>

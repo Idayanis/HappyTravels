@@ -38,7 +38,7 @@
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:scaleType="fitXY"
-                    android:src="@drawable/place11"
+                    android:src="@drawable/cover"
                     android:adjustViewBounds="true"
                     android:cropToPadding="true"
                     android:layout_gravity="center_horizontal"/>

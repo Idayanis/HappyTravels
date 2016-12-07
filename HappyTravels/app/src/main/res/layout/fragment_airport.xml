@@ -41,7 +41,7 @@
                     android:clickable="true"
                     android:cropToPadding="true"
                     android:scaleType="fitXY"
-                    android:src="@drawable/place11" />
+                    android:src="@drawable/cover" />
 
                 <LinearLayout
                     android:id="@+id/actionButtonsLayout"

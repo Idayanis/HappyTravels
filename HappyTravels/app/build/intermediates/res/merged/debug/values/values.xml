@@ -699,12 +699,12 @@
     <string name="bus">Bus</string>
     <string name="bus_availability">The Bus is available - details</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="company_email">info@example.com</string>
+    <string name="company_email" translatable="false">info@example.com</string>
     <string name="cuisine">Cuisine details</string>
     <string name="cuisine_text">Cuisine</string>
     <string name="cyan">Cyan</string>
     <string name="deep_orange">Deep Orange</string>
-    <string name="disco">Disco</string>
+    <string name="disco" translatable="false">Disco</string>
     <string name="drink_text">Drink</string>
     <string name="email_us">Email</string>
     <string name="emergency">Emergency</string>
@@ -727,40 +727,40 @@
     <string name="food_type">Food Type</string>
     <string name="free_drink">Free Drink</string>
     <string name="green">Green</string>
-    <string name="hospital_a">Hospital A</string>
-    <string name="hospital_b">Hospital B</string>
-    <string name="hotel">Hotel</string>
-    <string name="hotel_1">Hotel 1</string>
+    <string name="hospital_a" translatable="false">Hospital A</string>
+    <string name="hospital_b" translatable="false">Hospital B</string>
+    <string name="hotel" translatable="false">Hotel</string>
+    <string name="hotel_1" translatable="false">Hotel 1</string>
     <string name="hotel_1_address">Address for Hotel 1</string>
     <string name="hotel_1_description">Hotel 1 description</string>
-    <string name="hotel_2">Hotel 2</string>
+    <string name="hotel_2" translatable="false">Hotel 2</string>
     <string name="hotel_2_address">Address for Hotel 2</string>
     <string name="hotel_2_description">Hotel 2 description</string>
-    <string name="hotel_3">Hotel 3</string>
+    <string name="hotel_3" translatable="false">Hotel 3</string>
     <string name="hotel_3_address">Address for Hotel 3</string>
     <string name="hotel_3_description">Hotel 3 description</string>
-    <string name="hotel_4">Hotel 4</string>
+    <string name="hotel_4" translatable="false">Hotel 4</string>
     <string name="hotel_4_address">Address for Hotel 4</string>
     <string name="hotel_4_description">Hotel 4 description</string>
-    <string name="hotel_5">Hotel 5</string>
+    <string name="hotel_5" translatable="false">Hotel 5</string>
     <string name="hotel_5_address">Address for Hotel 5</string>
     <string name="hotel_5_description">Hotel 5 description</string>
-    <string name="hotel_6">Hotel 6</string>
+    <string name="hotel_6" translatable="false">Hotel 6</string>
     <string name="hotel_6_address">Address for Hotel 6</string>
     <string name="hotel_6_description">Hotel 6 description</string>
-    <string name="hotel_7">Hotel 7</string>
+    <string name="hotel_7" translatable="false">Hotel 7</string>
     <string name="hotel_7_address">Address for Hotel 7</string>
     <string name="hotel_7_description">Hotel 7 description</string>
-    <string name="hotel_8">Hotel 8</string>
+    <string name="hotel_8" translatable="false">Hotel 8</string>
     <string name="hotel_8_address">Address for Hotel 8</string>
     <string name="hotel_8_description">Hotel 8 description</string>
     <string name="indigo">Indigo</string>
     <string name="light_green">Light Green</string>
     <string name="longtable">Longtable</string>
     <string name="menu">Fish, Sushi, BBQ, Rice</string>
-    <string name="menu_list">Menu</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="menu_list" translatable="false">Menu</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="nightclub">Nightclub</string>
     <string name="nightclub_1">Nightclub 1</string>
     <string name="nightclub_1_address">Address for Nightclub 1</string>
@@ -786,7 +786,7 @@
     <string name="nightclub_8">Nightclub 8</string>
     <string name="nightclub_8_address">Address for Nightclub 8</string>
     <string name="nightclub_8_description">Nightclub 8 description</string>
-    <string name="no">No</string>
+    <string name="no" translatable="false">No</string>
     <string name="open">Open 24/7</string>
     <string name="open_time">Open</string>
     <string name="orange">Orange</string>
@@ -830,9 +830,9 @@
     <string name="share">Share</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="swimming_pool">Swimming Pool</string>
-    <string name="taxi">Taxi</string>
+    <string name="taxi" translatable="false">Taxi</string>
     <string name="taxi_availability">The taxi is available - details</string>
-    <string name="teal">Teal</string>
+    <string name="teal" translatable="false">Teal</string>
     <string name="train">Train</string>
     <string name="train_availability">The Train is available - details</string>
     <string name="transport">Transportation</string>

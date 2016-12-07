@@ -83,7 +83,7 @@ public class RestaurantFragment extends Fragment implements View.OnClickListener
          * Set cover image.
          */
         ImageView coverPhoto = (ImageView) view.findViewById(R.id.coverPhoto);
-        coverPhoto.setImageResource(mPlace.getThumbnail());
+        coverPhoto.setImageResource(mPlace.getCover());
 
         TextView nameText = (TextView) view.findViewById(R.id.nameText);
         nameText.setText(mPlace.getName());
@@ -155,38 +155,67 @@ public class RestaurantFragment extends Fragment implements View.OnClickListener
     @Override
     public void onClick(View view) {
 
-        Intent intent = null;
-
         switch (view.getId()) {
             case R.id.emailImageButton:
-                intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:"));
-                intent.putExtra(Intent.EXTRA_EMAIL, mPlace.getEmail());
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                emailIntent.setData(Uri.parse("mailto:"));
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Checkout this place! " + mPlace.getName() + " " + mPlace.getAddress()
+                        + mPlace.getPhoneNumber());
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, mPlace.getEmail());
+
+                if (emailIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(emailIntent);
+                } else {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No installed application to complete the task", Snackbar.LENGTH_SHORT).show();
+                }
                 break;
 
             case R.id.webImageButton:
-                Uri webPage = Uri.parse(mPlace.getWebPage());
-                intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(webPage);
-                break;
+                String webPage = "http://" + mPlace.getWebPage();
+                Intent webIntent  = new Intent(Intent.ACTION_VIEW);
+                webIntent.setData(Uri.parse(webPage));
+                if (webIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(webIntent);
+                } else {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No installed application to complete the task", Snackbar.LENGTH_SHORT).show();
+                }                break;
 
             case R.id.locationImageButton:
                 Uri geolocation = Uri.parse("geo:0,0?q=@"+mPlace.getGeoCode());
-                intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(geolocation);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW);
+                mapIntent.setData(geolocation);
+                if (mapIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(mapIntent);
+                } else {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No installed application to complete the task", Snackbar.LENGTH_SHORT).show();
+                }
                 break;
 
             case R.id.shareImageButton:
-                intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setType("text/plain");
-                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Checkout this place!");
-                intent.putExtra(android.content.Intent.EXTRA_TEXT, mPlace.getName() + " " + mPlace.getAddress()
-                        + mPlace.getPhoneNumber() + " " + getActivity().getPackageName());
-                intent.createChooser(intent, "Share via");
+                Intent shareIntent = new Intent(Intent.ACTION_SENDTO);
+                //intent.setType("text/plain");
+                shareIntent.setData(Uri.parse("smsto:"));
+                shareIntent.putExtra("sms_body", "Checkout this place! " + mPlace.getName() + " " + mPlace.getAddress()
+                        + mPlace.getPhoneNumber());
+                if (shareIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(shareIntent);
+                } else {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No installed application to complete the task", Snackbar.LENGTH_SHORT).show();
+                }
                 break;
 
             case R.id.callImageButton:
-                intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + mPlace.getPhoneNumber()));
+                Intent callIntent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + mPlace.getPhoneNumber()));
+                if (callIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(callIntent);
+                } else {
+                    Snackbar.make(getActivity().findViewById(android.R.id.content),
+                            "No installed application to complete the task", Snackbar.LENGTH_SHORT).show();
+                }
                 break;
 
             case R.id.photoImageButton:
@@ -199,19 +228,6 @@ public class RestaurantFragment extends Fragment implements View.OnClickListener
 
             default:
                 break;
-        }
-        if (view.getId() != R.id.photoImageButton) {
-            if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-                startActivity(intent);
-            } else {
-                if (view.getId() == R.id.shareImageButton) {
-                    intent.setData(Uri.parse("smsto:"));
-                    startActivity(intent);
-                } else {
-                    Snackbar.make(getActivity().findViewById(android.R.id.content),
-                            "No installed application to complete the task", Snackbar.LENGTH_SHORT).show();
-                }
-            }
         }
     }
 

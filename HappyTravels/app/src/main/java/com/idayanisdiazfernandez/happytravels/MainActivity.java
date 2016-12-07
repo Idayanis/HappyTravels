@@ -203,11 +203,12 @@ public class MainActivity extends AppCompatActivity
             ft.commit();
         } else if (id == R.id.nav_share) {
             Intent intent = new Intent(Intent.ACTION_SENDTO);
-            intent.setType("text/plain");
-            intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Checkout" + R.string.app_name + " app!");
-            intent.putExtra(android.content.Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id="
-                    + getPackageName());
-            Intent.createChooser(intent, "Share via");
+            intent.setData(Uri.parse("smsto:"));
+            //intent.setType("text/plain");
+            intent.putExtra("sms_body", "Checkout" + R.string.app_name + " app: https://play.google.com/store/apps/details?id=" + getPackageName());
+            // intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Checkout" + R.string.app_name + " app!");
+            //intent.putExtra(android.content.Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=" + getPackageName());
+            //Intent.createChooser(intent, "Share via");
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             } else {
