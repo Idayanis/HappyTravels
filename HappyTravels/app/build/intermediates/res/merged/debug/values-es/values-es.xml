@@ -45,6 +45,8 @@
     <string name="airport_7_description">Aeropuerto 7 Descripción</string>
     <string name="airport_8">Aeropuerto 8</string>
     <string name="airport_8_description">Aeropuerto 8 Descripción</string>
+    <string name="ambulance_a">Ambulancia A</string>
+    <string name="ambulance_b">Ambulancia B</string>
     <string name="app_name">Happy Travels</string>
     <string name="beach">Playa</string>
     <string name="beach_1">Playa 1</string>
@@ -78,8 +80,11 @@
     <string name="bus">Autobus</string>
     <string name="bus_availability">Disponibilidad del Autobus Público 1 - detalles</string>
     <string name="cuisine">Detalles de la comida</string>
+    <string name="cuisine_text">Cocina</string>
     <string name="cyan">Ciánico</string>
     <string name="deep_orange">Naranja</string>
+    <string name="drink_text">Bebida</string>
+    <string name="email_us">Correo Elctrónico</string>
     <string name="emergency">Emergencia</string>
     <string name="emergency_1">Emergencia 1</string>
     <string name="emergency_1_address">Dirección del Emergencia 1</string>
@@ -95,7 +100,10 @@
     <string name="emergency_6_address">Dirección del Emergencia 6</string>
     <string name="fire_department">Departament de Bomberos</string>
     <string name="flights">International and domestic flights.</string>
+    <string name="flights_available">Vuelos Disponibles</string>
     <string name="foodType">Mxicana, Asiatica, Mariscos</string>
+    <string name="food_type">Tipo de Comida</string>
+    <string name="free_drink">"Bebida Gratis "</string>
     <string name="green">Verde</string>
     <string name="hotel_1_address">Dirección del Hotel 1</string>
     <string name="hotel_1_description">Hotel 1 Descripción</string>
@@ -115,6 +123,7 @@
     <string name="hotel_8_description">Hotel 8 Descripción</string>
     <string name="indigo">Azul Fuerte</string>
     <string name="light_green">Verde Claro</string>
+    <string name="longtable">Mesa Larga</string>
     <string name="menu">Pescado, Suchy, Barbacoa, Arroz</string>
     <string name="nightclub">Discoteca</string>
     <string name="nightclub_1">Discoteca 1</string>
@@ -142,12 +151,17 @@
     <string name="nightclub_8_address">Dirección del Discoteca 8</string>
     <string name="nightclub_8_description">Discoteca 8 Descripción</string>
     <string name="open">Abiero 24 horas</string>
+    <string name="open_time">Abrir</string>
     <string name="orange">Anaranjado</string>
+    <string name="paid_drink">Bebidas a Pagar</string>
+    <string name="phone">"Número de Teléfono "</string>
     <string name="pink">Rosado</string>
     <string name="police">Policía</string>
+    <string name="price">Precio</string>
     <string name="purple">Violeta</string>
     <string name="red">Rojo</string>
     <string name="reservation">Llame o envíe un correo electrónica para reservar</string>
+    <string name="reservation_text">Reservación</string>
     <string name="restaurant">Restaurante</string>
     <string name="restaurant_1">Restaurante 1</string>
     <string name="restaurant_1_address">Dirección del Restaurante 1</string>
@@ -173,9 +187,12 @@
     <string name="restaurant_8">Restaurante 8</string>
     <string name="restaurant_8_address">Dirección del Restaurante 8</string>
     <string name="restaurant_8_description">Restaurante 8 Descripción</string>
+    <string name="room_service">Servicio a la Habitación</string>
+    <string name="room_type">Tipo de Habitación</string>
     <string msgid="146198913615257606" name="search_menu_title">"Buscar"</string>
     <string name="share">Compartir</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
+    <string name="swimming_pool">"Piscina "</string>
     <string name="taxi_availability">Disponibilidad del taxi - detalles</string>
     <string name="train">Tren</string>
     <string name="train_availability">Disponibilidad del Tren - detalles</string>
@@ -187,4 +204,7 @@
     <string name="transport_5_address">Dirección for Transportación 5</string>
     <string name="transport_6_address">Dirección for Transportación 6</string>
     <string name="transport_price">El precio es de 20 por km.</string>
+    <string name="transport_priceText">Precio</string>
+    <string name="transport_type">Tipo de Trasportación</string>
+    <string name="yes">Si</string>
 </resources>

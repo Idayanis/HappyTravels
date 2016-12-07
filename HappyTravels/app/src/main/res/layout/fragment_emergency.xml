@@ -38,7 +38,7 @@
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:scaleType="fitXY"
-                    android:src="@drawable/place11"
+                    android:src="@drawable/cover"
                     android:adjustViewBounds="true"
                     android:cropToPadding="true"
                     android:layout_gravity="center_horizontal"/>
@@ -76,13 +76,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         card_view:srcCompat="@drawable/ic_location_on_black_24dp" />
-
-                    <ImageButton
-                        android:id="@+id/photoImageButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        card_view:srcCompat="@drawable/ic_collections_black_24dp" />
 
                     <ImageButton
                         android:id="@+id/shareImageButton"

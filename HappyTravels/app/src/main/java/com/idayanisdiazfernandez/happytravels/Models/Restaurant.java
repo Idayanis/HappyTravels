@@ -38,8 +38,8 @@ public class Restaurant extends Place {
      */
     public Restaurant(String name, String description, String timing, String address, String phoneNumber,
                       String placeType, double price, int[] photos, int thumbnail, String geoCode, String email, String webPage, String typeOfFood,
-                      String menuList, Boolean drink, String cuisine, String reservations) {
-        super(name, description, timing, address, phoneNumber, placeType, price, photos, thumbnail, geoCode, email, webPage);
+                      String menuList, Boolean drink, String cuisine, String reservations, int cover) {
+        super(name, description, timing, address, phoneNumber, placeType, price, photos, thumbnail, geoCode, email, webPage, cover);
         this.typeOfFood = typeOfFood;
         this.menuList = menuList;
         this.drink = drink;
